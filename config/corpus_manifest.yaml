@@ -1,0 +1,45 @@
+﻿dataset:
+  name: "PER0675AH"
+  repository: "https://github.com/OpenITI/PER0675AH"
+  commit: "7fff2ba2e59a086477b2c37b4d1d2f7f06e12929"
+
+works:
+  "0667BabaAfzal.Diwan":
+    title_fa: "دیوان بابا افضل"
+    profile: "structured_poetry"
+    canonical_version: "0667BabaAfzal.Diwan.PDL00046-per1"
+    include_in_index: true
+
+  "0670IbnAscadHanati.Masalik":
+    title_fa: "مسالک و ممالک"
+    profile: "mixed_prose_ocr"
+    canonical_version: "0670IbnAscadHanati.Masalik.AOCP202605141788-per1"
+    include_in_index: true
+    reference_versions:
+      - version_id: "0670IbnAscadHanati.Masalik.Kraken220107010708-per1"
+        profile: "raw_ocr_reference"
+        include_in_index: false
+
+  "0672JalalDinRumi.Diwan":
+    title_fa: "دیوان شمس"
+    profile: "structured_poetry"
+    canonical_version: "0672JalalDinRumi.Diwan.PDL00047-per1"
+    include_in_index: true
+
+  "0672JalalDinRumi.MajalisSabica":
+    title_fa: "مجالس سبعه"
+    profile: "mixed_prose_ocr"
+    canonical_version: "0672JalalDinRumi.MajalisSabica.AOCP202502141236-per1"
+    include_in_index: true
+
+  "0672JalalDinRumi.Mathnawi":
+    title_fa: "مثنوی معنوی"
+    profile: "structured_poetry"
+    canonical_version: "0672JalalDinRumi.Mathnawi.PDL00048-per1"
+    include_in_index: true
+
+  "0672NasirDinTusi.AkhlaqMuhtashami":
+    title_fa: "اخلاق محتشمی"
+    profile: "mixed_prose_ocr"
+    canonical_version: "0672NasirDinTusi.AkhlaqMuhtashami.AOCP202502141237-per1"
+    include_in_index: true

@@ -1,0 +1,45 @@
+﻿{
+  "0667BabaAfzal.Diwan.PDL00046-per1": {
+    "page_markers": 201,
+    "headings": 201,
+    "verses": 484,
+    "milestones": 27
+  },
+  "0670IbnAscadHanati.Masalik.AOCP202605141788-per1": {
+    "page_markers": 380,
+    "images": 380,
+    "raw_headings": 151,
+    "milestones": 313
+  },
+  "0670IbnAscadHanati.Masalik.Kraken220107010708-per1": {
+    "page_markers": 637,
+    "images": 0,
+    "raw_headings": 0,
+    "milestones": 449
+  },
+  "0672JalalDinRumi.Diwan.PDL00047-per1": {
+    "page_markers": 5269,
+    "headings": 5269,
+    "verses": 40164,
+    "milestones": 2105
+  },
+  "0672JalalDinRumi.MajalisSabica.AOCP202502141236-per1": {
+    "page_markers": 123,
+    "images": 123,
+    "raw_headings": 69,
+    "semantic_councils": 7,
+    "milestones": 118
+  },
+  "0672JalalDinRumi.Mathnawi.PDL00048-per1": {
+    "daftars": 6,
+    "page_markers": 972,
+    "verses": 25635,
+    "milestones": 1130
+  },
+  "0672NasirDinTusi.AkhlaqMuhtashami.AOCP202502141237-per1": {
+    "page_markers": 572,
+    "images": 571,
+    "raw_headings": 333,
+    "milestones": 347
+  }
+}
