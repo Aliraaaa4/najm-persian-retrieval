@@ -7,9 +7,10 @@ from enum import Enum
 from pathlib import Path
 import re
 from typing import Any
-
 import yaml
 
+from najm_retrieval.corpus.manifest import WorkConfig
+from najm_retrieval.corpus.scanner import CorpusVersionFiles
 
 OPENITI_MAGIC_LINE = "######OpenITI#"
 HEADER_END_MARKER = "#META#Header#End#"
@@ -662,4 +663,383 @@ def extract_text_header(
         fields=tuple(fields),
         raw_lines=tuple(raw_lines),
         issues=tuple(issues),
+    )
+    
+    
+@dataclass(frozen=True)
+class MetadataBundle:
+    """All raw metadata sources belonging to one corpus version."""
+
+    author_yml: OpenITIYamlRecord
+    work_yml: OpenITIYamlRecord
+    version_yml: OpenITIYamlRecord
+    text_header: OpenITITextHeader
+
+    @property
+    def issues(self) -> tuple[MetadataIssue, ...]:
+        """Return diagnostics from all raw metadata sources."""
+
+        return (
+            self.author_yml.issues
+            + self.work_yml.issues
+            + self.version_yml.issues
+            + self.text_header.issues
+        )
+
+
+@dataclass(frozen=True)
+class DocumentMetadata:
+    """Normalized metadata used by passages, search, and the API."""
+
+    author_id: str
+    author_name: str
+    author_name_ar: str | None
+    author_name_en: str | None
+
+    work_id: str
+    title_fa: str
+    title_transliterated: str | None
+
+    version_id: str
+    language_code: str | None
+    language: str | None
+
+    source_url: str | None
+    text_quality: tuple[str, ...]
+    origin: str | None
+    transcription_layer: str | None
+    ocr_confidence: float | None
+
+    profile: str
+    is_canonical: bool
+    include_in_index: bool
+
+    issues: tuple[MetadataIssue, ...]
+
+
+def _first_valid_value(
+    record: OpenITIYamlRecord | OpenITITextHeader,
+    *field_names: str,
+) -> str | None:
+    """Return the first valid value matching one of the field names."""
+
+    for field_name in field_names:
+        for field in record.get_all(field_name):
+            if (
+                field.status is MetadataStatus.VALID
+                and field.value is not None
+            ):
+                return field.value
+
+    return None
+
+
+def _first_valid_url(
+    record: OpenITIYamlRecord | OpenITITextHeader,
+    *field_names: str,
+) -> str | None:
+    """Return the first valid HTTP or HTTPS URL."""
+
+    for field_name in field_names:
+        value = _first_valid_value(record, field_name)
+
+        if value is not None and value.startswith(
+            ("http://", "https://")
+        ):
+            return value
+
+    return None
+
+
+def _language_from_version_id(
+    version_id: str,
+) -> tuple[str | None, str | None]:
+    """Derive language from the OpenITI version suffix."""
+
+    match = re.search(
+        r"-(?P<code>[a-z]{3})\d+$",
+        version_id,
+        flags=re.IGNORECASE,
+    )
+
+    if match is None:
+        return None, None
+
+    code = match.group("code").lower()
+
+    language_names = {
+        "per": "Persian",
+        "ara": "Arabic",
+    }
+
+    return code, language_names.get(code, code)
+
+
+def _split_comma_separated(
+    value: str | None,
+) -> tuple[str, ...]:
+    """Split a comma-separated metadata value."""
+
+    if value is None:
+        return ()
+
+    return tuple(
+        item.strip()
+        for item in value.split(",")
+        if item.strip()
+    )
+
+
+def _check_identifier(
+    *,
+    expected: str,
+    actual: str | None,
+    label: str,
+    path: Path,
+    field_name: str,
+    issues: list[MetadataIssue],
+) -> None:
+    """Compare a YAML identifier with the Scanner identifier."""
+
+    code_prefix = label.lower().replace(" ", "_")
+
+    if actual is None:
+        issues.append(
+            MetadataIssue(
+                code=f"missing_{code_prefix}",
+                message=(
+                    f"{label} is missing; the Scanner value "
+                    f"'{expected}' will be used."
+                ),
+                path=path,
+                field_name=field_name,
+            )
+        )
+        return
+
+    if actual != expected:
+        issues.append(
+            MetadataIssue(
+                code=f"{code_prefix}_mismatch",
+                message=(
+                    f"{label} '{actual}' does not match "
+                    f"the Scanner value '{expected}'."
+                ),
+                path=path,
+                field_name=field_name,
+            )
+        )
+
+
+def load_version_metadata(
+    version: CorpusVersionFiles,
+) -> MetadataBundle:
+    """Load all raw metadata sources for one corpus version."""
+
+    return MetadataBundle(
+        author_yml=load_openiti_yml(
+            version.author_yml_path
+        ),
+        work_yml=load_openiti_yml(
+            version.work_yml_path
+        ),
+        version_yml=load_openiti_yml(
+            version.version_yml_path
+        ),
+        text_header=extract_text_header(
+            version.text_path
+        ),
+    )
+
+
+def build_document_metadata(
+    version: CorpusVersionFiles,
+    work: WorkConfig,
+    bundle: MetadataBundle,
+) -> DocumentMetadata:
+    """Combine Manifest, Scanner, YAML, and header metadata."""
+
+    if work.work_id != version.work_id:
+        raise MetadataError(
+            f"Work configuration '{work.work_id}' does not match "
+            f"version work ID '{version.work_id}'."
+        )
+
+    issues = list(bundle.issues)
+
+    author_uri = _first_valid_value(
+        bundle.author_yml,
+        "00#AUTH#URI######",
+    )
+
+    work_uri = _first_valid_value(
+        bundle.work_yml,
+        "00#BOOK#URI######",
+    )
+
+    version_uri = _first_valid_value(
+        bundle.version_yml,
+        "00#VERS#URI######",
+    )
+
+    _check_identifier(
+        expected=version.author_id,
+        actual=author_uri,
+        label="author URI",
+        path=version.author_yml_path,
+        field_name="00#AUTH#URI######",
+        issues=issues,
+    )
+
+    _check_identifier(
+        expected=version.work_id,
+        actual=work_uri,
+        label="work URI",
+        path=version.work_yml_path,
+        field_name="00#BOOK#URI######",
+        issues=issues,
+    )
+
+    _check_identifier(
+        expected=version.version_id,
+        actual=version_uri,
+        label="version URI",
+        path=version.version_yml_path,
+        field_name="00#VERS#URI######",
+        issues=issues,
+    )
+
+    author_name_ar = _first_valid_value(
+        bundle.author_yml,
+        "10#AUTH#SHUHRA#AR",
+    )
+
+    author_name_en = _first_valid_value(
+        bundle.author_yml,
+        "10#AUTH#SHUHRA#EN",
+    )
+
+    # Arabic-script/transliterated OpenITI name is available
+    # consistently for all selected authors.
+    author_name = (
+        author_name_ar
+        or author_name_en
+        or version.author_id
+    )
+
+    title_transliterated = _first_valid_value(
+        bundle.work_yml,
+        "10#BOOK#TITLEA#AR",
+    )
+
+    source_url = _first_valid_url(
+        bundle.version_yml,
+        "80#VERS#BASED####",
+    )
+
+    if source_url is None:
+        source_url = _first_valid_url(
+            bundle.text_header,
+            "url",
+        )
+
+    if source_url is None:
+        source_url = _first_valid_url(
+            bundle.version_yml,
+            "80#VERS#LINKS####",
+        )
+
+    quality_value = _first_valid_value(
+        bundle.version_yml,
+        "90#VERS#ISSUES###",
+    )
+
+    text_quality = _split_comma_separated(
+        quality_value
+    )
+
+    origin = _first_valid_value(
+        bundle.text_header,
+        "Origin",
+    )
+
+    transcription_layer = _first_valid_value(
+        bundle.text_header,
+        "transcription layer name",
+    )
+
+    confidence_value = _first_valid_value(
+        bundle.text_header,
+        "avg transcription confidence",
+    )
+
+    ocr_confidence: float | None = None
+
+    if confidence_value is not None:
+        try:
+            ocr_confidence = float(confidence_value)
+        except ValueError:
+            issues.append(
+                MetadataIssue(
+                    code="invalid_ocr_confidence",
+                    message=(
+                        "OCR confidence could not be converted "
+                        f"to a number: {confidence_value!r}"
+                    ),
+                    path=version.text_path,
+                    field_name="avg transcription confidence",
+                )
+            )
+
+    language_code, language = _language_from_version_id(
+        version.version_id
+    )
+
+    if language_code is None:
+        issues.append(
+            MetadataIssue(
+                code="missing_language_code",
+                message=(
+                    "Language could not be derived from "
+                    f"version ID '{version.version_id}'."
+                ),
+                path=version.text_path,
+            )
+        )
+
+    return DocumentMetadata(
+        author_id=version.author_id,
+        author_name=author_name,
+        author_name_ar=author_name_ar,
+        author_name_en=author_name_en,
+        work_id=version.work_id,
+        title_fa=work.title_fa,
+        title_transliterated=title_transliterated,
+        version_id=version.version_id,
+        language_code=language_code,
+        language=language,
+        source_url=source_url,
+        text_quality=text_quality,
+        origin=origin,
+        transcription_layer=transcription_layer,
+        ocr_confidence=ocr_confidence,
+        profile=version.profile,
+        is_canonical=version.is_canonical,
+        include_in_index=version.include_in_index,
+        issues=tuple(issues),
+    )
+
+
+def load_document_metadata(
+    version: CorpusVersionFiles,
+    work: WorkConfig,
+) -> DocumentMetadata:
+    """Load and normalize metadata for one corpus version."""
+
+    bundle = load_version_metadata(version)
+
+    return build_document_metadata(
+        version,
+        work,
+        bundle,
     )

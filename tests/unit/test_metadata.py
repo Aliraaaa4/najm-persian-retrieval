@@ -1,5 +1,6 @@
 """Tests for OpenITI metadata loading and header extraction."""
-
+from najm_retrieval.corpus.manifest import WorkConfig
+from najm_retrieval.corpus.scanner import CorpusVersionFiles
 from pathlib import Path
 
 import pytest
@@ -7,6 +8,7 @@ import pytest
 from najm_retrieval.corpus.metadata import (
     MetadataError,
     MetadataStatus,
+    load_document_metadata,
     classify_metadata_value,
     extract_text_header,
     load_openiti_yml,
@@ -208,3 +210,129 @@ def test_missing_yaml_raises_clear_error(tmp_path: Path) -> None:
 
     with pytest.raises(MetadataError, match="not found"):
         load_openiti_yml(missing_path)
+        
+        
+        
+def _write_document_file(
+    path: Path,
+    content: str,
+) -> None:
+    path.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+    path.write_text(
+        content,
+        encoding="utf-8",
+    )
+
+
+def test_load_document_metadata_combines_sources(
+    tmp_path: Path,
+) -> None:
+    author_id = "0001Author"
+    work_id = "0001Author.Work"
+    version_id = "0001Author.Work.Version-per1"
+
+    author_dir = tmp_path / author_id
+    work_dir = author_dir / work_id
+
+    author_yml = author_dir / f"{author_id}.yml"
+    work_yml = work_dir / f"{work_id}.yml"
+    version_yml = work_dir / f"{version_id}.yml"
+    text_path = work_dir / version_id
+
+    _write_document_file(
+        author_yml,
+        (
+            "00#AUTH#URI######: 0001Author\n"
+            "10#AUTH#SHUHRA#AR: Author Arabic\n"
+            "10#AUTH#SHUHRA#EN: Author English\n"
+        ),
+    )
+
+    _write_document_file(
+        work_yml,
+        (
+            "00#BOOK#URI######: 0001Author.Work\n"
+            "10#BOOK#TITLEA#AR: Kitab Test\n"
+        ),
+    )
+
+    _write_document_file(
+        version_yml,
+        (
+            "00#VERS#URI######: "
+            "0001Author.Work.Version-per1\n"
+            "80#VERS#BASED####: "
+            "https://example.com/source\n"
+            "90#VERS#ISSUES###: "
+            "UNCORRECTED_OCR, PRIMARY_VERSION\n"
+        ),
+    )
+
+    _write_document_file(
+        text_path,
+        (
+            "######OpenITI#\n"
+            "#META# Origin: eScriptorium\n"
+            "#META# transcription layer name: kraken:test\n"
+            "#META# avg transcription confidence: 0.98\n"
+            "#META#Header#End#\n"
+            "Test text\n"
+        ),
+    )
+
+    version = CorpusVersionFiles(
+        author_id=author_id,
+        work_id=work_id,
+        version_id=version_id,
+        text_path=text_path,
+        author_yml_path=author_yml,
+        work_yml_path=work_yml,
+        version_yml_path=version_yml,
+        profile="mixed_prose_ocr",
+        include_in_index=True,
+        is_canonical=True,
+    )
+
+    work = WorkConfig(
+        work_id=work_id,
+        title_fa="اثر آزمایشی",
+        profile="mixed_prose_ocr",
+        canonical_version=version_id,
+        include_in_index=True,
+    )
+
+    metadata = load_document_metadata(
+        version,
+        work,
+    )
+
+    assert metadata.author_id == author_id
+    assert metadata.author_name == "Author Arabic"
+    assert metadata.author_name_en == "Author English"
+
+    assert metadata.work_id == work_id
+    assert metadata.title_fa == "اثر آزمایشی"
+    assert metadata.title_transliterated == "Kitab Test"
+
+    assert metadata.version_id == version_id
+    assert metadata.language_code == "per"
+    assert metadata.language == "Persian"
+
+    assert metadata.source_url == (
+        "https://example.com/source"
+    )
+
+    assert metadata.text_quality == (
+        "UNCORRECTED_OCR",
+        "PRIMARY_VERSION",
+    )
+
+    assert metadata.origin == "eScriptorium"
+    assert metadata.transcription_layer == "kraken:test"
+    assert metadata.ocr_confidence == 0.98
+
+    assert metadata.is_canonical is True
+    assert metadata.include_in_index is True
