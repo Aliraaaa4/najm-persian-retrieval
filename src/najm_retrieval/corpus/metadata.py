@@ -29,7 +29,7 @@ PLACEHOLDER_PATTERN = re.compile(
         |
         \byyyy(?:-mm-dd)?\b
         |
-        \bn/?a\b
+        ^\s*n/?a\s*$
         |
         \bnone\b
         |
@@ -40,6 +40,20 @@ PLACEHOLDER_PATTERN = re.compile(
         \bpermalink\b
         |
         \bthe\s+name\s+of\s+the\s+annotator\b
+        |
+        \bfulān\b
+        |
+        \buris?\s+from\s+althurayya\b
+        |
+        \bauth_uri\s+from\s+openiti\b
+        |
+        \bbook_uri\s+from\s+openiti\b
+        |
+        \byear-mon-da\b
+        |
+        \ba\s+free\s+running\s+comment\s+here\b
+        |
+        \bviaf@id,\s*wikidata@id,\s*src@id\b
     )
     """,
     flags=re.IGNORECASE | re.VERBOSE,

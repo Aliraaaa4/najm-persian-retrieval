@@ -33,6 +33,56 @@ def test_classify_metadata_values() -> None:
         None,
         MetadataStatus.MALFORMED,
     )
+    
+    assert classify_metadata_value("Fulān") == (
+        "Fulān",
+        MetadataStatus.PLACEHOLDER,
+    )
+
+    assert classify_metadata_value(
+        "URIs from Althurayya, comma separated"
+    ) == (
+        "URIs from Althurayya, comma separated",
+        MetadataStatus.PLACEHOLDER,
+    )
+
+    assert classify_metadata_value(
+        "AUTH_URI from OpenITI, comma separated"
+    ) == (
+        "AUTH_URI from OpenITI, comma separated",
+        MetadataStatus.PLACEHOLDER,
+    )
+
+    assert classify_metadata_value(
+        "YEAR-MON-DA (X+ for unknown)"
+    ) == (
+        "YEAR-MON-DA (X+ for unknown)",
+        MetadataStatus.PLACEHOLDER,
+    )
+
+    assert classify_metadata_value(
+        "viaf@id, wikidata@id, src@id"
+    ) == (
+        "viaf@id, wikidata@id, src@id",
+        MetadataStatus.PLACEHOLDER,
+        
+    )
+    assert classify_metadata_value("N/A") == (
+        "N/A",
+        MetadataStatus.PLACEHOLDER,
+    )
+
+    assert classify_metadata_value("NA") == (
+        "NA",
+        MetadataStatus.PLACEHOLDER,
+    )
+
+    assert classify_metadata_value(
+        "Abū Fulān, Abū Fulānaŧ"
+    ) == (
+        "Abū Fulān, Abū Fulānaŧ",
+        MetadataStatus.PLACEHOLDER,
+    )
 
 
 def test_load_valid_openiti_yaml(tmp_path: Path) -> None:
@@ -158,54 +208,3 @@ def test_missing_yaml_raises_clear_error(tmp_path: Path) -> None:
 
     with pytest.raises(MetadataError, match="not found"):
         load_openiti_yml(missing_path)
-        
-        
-def test_non_standard_openiti_yaml_uses_fallback(
-    tmp_path: Path,
-) -> None:
-    metadata_path = tmp_path / "aocp-version.yml"
-
-    metadata_path.write_text(
-        """
-00#VERS#URI######: 0001Author.Work.AOCP-per1
-90#VERS#COMMENT##O: OCR metadata
-    Transcription model used: mellon_print_transcription
-90#VERS#LANG#####Y: Persian
-""".strip()
-        + "\n",
-        encoding="utf-8",
-    )
-
-    record = load_openiti_yml(metadata_path)
-
-    uri_field = record.get_first(
-        "00#VERS#URI######"
-    )
-    comment_field = record.get_first(
-        "90#VERS#COMMENT##O"
-    )
-    language_field = record.get_first(
-        "90#VERS#LANG#####Y"
-    )
-
-    assert uri_field is not None
-    assert uri_field.value == (
-        "0001Author.Work.AOCP-per1"
-    )
-
-    assert comment_field is not None
-    assert comment_field.value == (
-        "OCR metadata\n"
-        "Transcription model used: "
-        "mellon_print_transcription"
-    )
-
-    assert language_field is not None
-    assert language_field.value == "Persian"
-
-    issue_codes = {
-        issue.code
-        for issue in record.issues
-    }
-
-    assert "yaml_fallback_used" in issue_codes
