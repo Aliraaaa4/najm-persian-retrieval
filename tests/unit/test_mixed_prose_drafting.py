@@ -27,6 +27,8 @@ def make_mixed_prose_sample() -> dict:
         "# paragraph ms158 text\r\n",
         "~~continued ms159 text\r\n",
         "### | heading\r\n",
+        "# embedded verse %~% second hemistich\r\n",
+        "# ~~مجلس دوم\r\n",
     ]
 
     line_records = []
@@ -52,7 +54,7 @@ def make_mixed_prose_sample() -> dict:
         "profile": "mixed_prose_ocr",
         "split": "development",
         "line_start": 500,
-        "line_end": 507,
+        "line_end": 500 + len(line_texts) - 1,
         "char_start": 1000,
         "char_end": cursor,
         "source_path": "example.txt",
@@ -108,6 +110,8 @@ def test_mixed_prose_draft_detects_types() -> None:
     assert counts["image_reference"] == 1
     assert counts["milestone"] == 2
     assert counts["heading"] == 1
+    assert counts["verse"] == 1
+    assert counts["section"] == 1
     assert counts["paragraph"] >= 4
 
 
@@ -208,6 +212,59 @@ def test_image_reference_attributes() -> None:
     assert image_blocks[0]["attributes"] == {
         "target": "./page_249.png",
         "alt_text": "image filename",
+    }
+
+
+def test_embedded_verse_is_detected() -> None:
+    sample = make_mixed_prose_sample()
+
+    blocks = draft_mixed_prose_blocks(
+        sample
+    )
+
+    verse_blocks = [
+        block
+        for block in blocks
+        if block["block_type"] == "verse"
+    ]
+
+    assert len(verse_blocks) == 1
+
+    verse = verse_blocks[0]
+
+    assert verse["line_start"] == 508
+    assert verse["group_id"] == "verse_0001"
+
+    assert verse["attributes"] == {
+        "has_hemistich_separator": True,
+        "continuation": False,
+        "embedded_in_prose": True,
+    }
+
+
+def test_majlis_section_is_detected() -> None:
+    sample = make_mixed_prose_sample()
+
+    blocks = draft_mixed_prose_blocks(
+        sample
+    )
+
+    sections = [
+        block
+        for block in blocks
+        if block["block_type"] == "section"
+    ]
+
+    assert len(sections) == 1
+
+    section = sections[0]
+
+    assert section["line_start"] == 509
+    assert section["group_id"] == "section_0001"
+
+    assert section["attributes"] == {
+        "section_type": "majlis",
+        "title": "مجلس دوم",
     }
 
 

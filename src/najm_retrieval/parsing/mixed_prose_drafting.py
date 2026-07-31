@@ -26,12 +26,20 @@ IMAGE_REFERENCE_PATTERN = re.compile(
 )
 
 
+MAJLIS_SECTION_PATTERN = re.compile(
+    r"^\s*#\s*~{0,2}\s*"
+    r"(?P<title>مجلس\s+.+?)\s*$"
+)
+
+
 @dataclass
 class _DraftState:
     """Mutable drafting state for one mixed-prose sample."""
 
     paragraph_count: int = 0
     heading_count: int = 0
+    section_count: int = 0
+    verse_count: int = 0
 
     current_paragraph_group: str | None = None
     current_paragraph_is_orphan: bool = False
@@ -355,7 +363,11 @@ def _classify_content_line(
 ]:
     """Classify nonblank and non-image prose content."""
 
-    stripped = line_text.lstrip()
+    content = line_text.rstrip(
+        "\r\n"
+    )
+
+    stripped = content.lstrip()
 
     if stripped.startswith("###"):
         state.heading_count += 1
@@ -367,6 +379,48 @@ def _classify_content_line(
             f"heading_{state.heading_count:04d}",
             {
                 "level": 3,
+            },
+        )
+
+    section_match = (
+        MAJLIS_SECTION_PATTERN.fullmatch(
+            content
+        )
+    )
+
+    if section_match is not None:
+        state.section_count += 1
+        state.current_paragraph_group = None
+        state.current_paragraph_is_orphan = False
+
+        title = section_match.group(
+            "title"
+        ).strip()
+
+        return (
+            "section",
+            f"section_{state.section_count:04d}",
+            {
+                "section_type": "majlis",
+                "title": title,
+            },
+        )
+
+    if (
+        stripped.startswith("#")
+        and "%~%" in line_text
+    ):
+        state.verse_count += 1
+        state.current_paragraph_group = None
+        state.current_paragraph_is_orphan = False
+
+        return (
+            "verse",
+            f"verse_{state.verse_count:04d}",
+            {
+                "has_hemistich_separator": True,
+                "continuation": False,
+                "embedded_in_prose": True,
             },
         )
 
@@ -424,7 +478,6 @@ def _classify_content_line(
         None,
         {},
     )
-
 
 def _match_image_reference(
     line_text: str,

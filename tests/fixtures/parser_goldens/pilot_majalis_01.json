@@ -465,8 +465,1127 @@
   ],
   "annotations": {
     "schema_version": 1,
-    "status": "draft",
-    "blocks": [],
-    "notes": ""
+    "status": "complete",
+    "blocks": [
+      {
+        "block_id": "b0001",
+        "block_type": "page_marker",
+        "char_start": 100059,
+        "char_end": 100072,
+        "line_start": 2315,
+        "line_end": 2315,
+        "raw_text": "PageV01P063\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 63
+        }
+      },
+      {
+        "block_id": "b0002",
+        "block_type": "blank",
+        "char_start": 100072,
+        "char_end": 100074,
+        "line_start": 2316,
+        "line_end": 2316,
+        "raw_text": "\r\n",
+        "group_id": null,
+        "attributes": {}
+      },
+      {
+        "block_id": "b0003",
+        "block_type": "image_reference",
+        "char_start": 100074,
+        "char_end": 100138,
+        "line_start": 2317,
+        "line_end": 2317,
+        "raw_text": "# ![image filename](./0672JalalDinRumi.MajalisSabica_0075.png)\r\n",
+        "group_id": null,
+        "attributes": {
+          "target": "./0672JalalDinRumi.MajalisSabica_0075.png",
+          "alt_text": "image filename"
+        }
+      },
+      {
+        "block_id": "b0004",
+        "block_type": "blank",
+        "char_start": 100138,
+        "char_end": 100140,
+        "line_start": 2318,
+        "line_end": 2318,
+        "raw_text": "\r\n",
+        "group_id": null,
+        "attributes": {}
+      },
+      {
+        "block_id": "b0005",
+        "block_type": "heading",
+        "char_start": 100140,
+        "char_end": 100158,
+        "line_start": 2319,
+        "line_end": 2319,
+        "raw_text": "### | مجالس سیعه\r\n",
+        "group_id": "heading_0001",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0006",
+        "block_type": "verse",
+        "char_start": 100158,
+        "char_end": 100215,
+        "line_start": 2320,
+        "line_end": 2320,
+        "raw_text": "# ««گنجینهآ اسرار الهی ماییم %~% بحر درر نامتناهی ماییم\r\n",
+        "group_id": "verse_0001",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "embedded_in_prose": true
+        }
+      },
+      {
+        "block_id": "b0007",
+        "block_type": "verse",
+        "char_start": 100215,
+        "char_end": 100282,
+        "line_start": 2321,
+        "line_end": 2321,
+        "raw_text": "# بنشسته به تخت پادشاهی ماییم %~% بگرفته زماه تا به ماهی ماییم»25\r\n",
+        "group_id": "verse_0002",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "embedded_in_prose": true
+        }
+      },
+      {
+        "block_id": "b0008",
+        "block_type": "paragraph",
+        "char_start": 100282,
+        "char_end": 100354,
+        "line_start": 2322,
+        "line_end": 2322,
+        "raw_text": "# ~~هنوز گذریان وجود، در بازار شهود ننشسته بودند26، هنوز نه ولولهآ ملک\r\n",
+        "group_id": "paragraph_0001",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0009",
+        "block_type": "paragraph",
+        "char_start": 100354,
+        "char_end": 100377,
+        "line_start": 2323,
+        "line_end": 2323,
+        "raw_text": "~~بود، نه مشعلهآ فلک،\r\n",
+        "group_id": "paragraph_0001",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0010",
+        "block_type": "paragraph",
+        "char_start": 100377,
+        "char_end": 100449,
+        "line_start": 2324,
+        "line_end": 2324,
+        "raw_text": "# ~~نه سمک در زیر زمین جنبیده، نه سماک برافلاک درخشیده، هنوزنقاشان قدر\r\n",
+        "group_id": "paragraph_0002",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0011",
+        "block_type": "paragraph",
+        "char_start": 100449,
+        "char_end": 100470,
+        "line_start": 2325,
+        "line_end": 2325,
+        "raw_text": "~~این صفهآ گچ اندود\r\n",
+        "group_id": "paragraph_0002",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0012",
+        "block_type": "paragraph",
+        "char_start": 100470,
+        "char_end": 100539,
+        "line_start": 2326,
+        "line_end": 2326,
+        "raw_text": "# ~~صف آسمان رایردهآ لاژوردی نکشیده بودند، هنوزفراشان قضا، فضای این\r\n",
+        "group_id": "paragraph_0003",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0013",
+        "block_type": "paragraph",
+        "char_start": 100539,
+        "char_end": 100555,
+        "line_start": 2327,
+        "line_end": 2327,
+        "raw_text": "~~چارطاق عناصر\r\n",
+        "group_id": "paragraph_0003",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0014",
+        "block_type": "paragraph",
+        "char_start": 100555,
+        "char_end": 100627,
+        "line_start": 2328,
+        "line_end": 2328,
+        "raw_text": "# ~~در بیدای وجود27 نزده بودند که نور وجود من که صبح شهود بود، از مشرق\r\n",
+        "group_id": "paragraph_0004",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0015",
+        "block_type": "paragraph",
+        "char_start": 100627,
+        "char_end": 100648,
+        "line_start": 2329,
+        "line_end": 2329,
+        "raw_text": "~~«(انا ارسلناک»»28\r\n",
+        "group_id": "paragraph_0004",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0016",
+        "block_type": "paragraph",
+        "char_start": 100648,
+        "char_end": 100719,
+        "line_start": 2330,
+        "line_end": 2330,
+        "raw_text": "# ~~لمعان نموده، به امر «کن»29 هست گشتم وبه شراب «(قل»30 مست گشتم، تا\r\n",
+        "group_id": "paragraph_0005",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0017",
+        "block_type": "paragraph",
+        "char_start": 100719,
+        "char_end": 100732,
+        "line_start": 2331,
+        "line_end": 2331,
+        "raw_text": "~~نوبت نبوت\r\n",
+        "group_id": "paragraph_0005",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0018",
+        "block_type": "paragraph",
+        "char_start": 100732,
+        "char_end": 100803,
+        "line_start": 2332,
+        "line_end": 2332,
+        "raw_text": "# ~~من، نوبتیان قضا، بر در سراپردهآ آدم نزده بودند،31 هیچ فرشته ای را\r\n",
+        "group_id": "paragraph_0006",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0019",
+        "block_type": "paragraph",
+        "char_start": 100803,
+        "char_end": 100837,
+        "line_start": 2333,
+        "line_end": 2333,
+        "raw_text": "~~زهرهآ آن نبود که پایهآ تخت آدم\r\n",
+        "group_id": "paragraph_0006",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0020",
+        "block_type": "paragraph",
+        "char_start": 100837,
+        "char_end": 100849,
+        "line_start": 2334,
+        "line_end": 2334,
+        "raw_text": "# ~~ببوسد.\r\n",
+        "group_id": "paragraph_0007",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0021",
+        "block_type": "paragraph",
+        "char_start": 100849,
+        "char_end": 100875,
+        "line_start": 2335,
+        "line_end": 2335,
+        "raw_text": "# ((مقصود ز عالم آدم آمد\r\n",
+        "group_id": "paragraph_0008",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0022",
+        "block_type": "paragraph",
+        "char_start": 100875,
+        "char_end": 100903,
+        "line_start": 2336,
+        "line_end": 2336,
+        "raw_text": "# مقصود ز آدم آن دم امد»32\r\n",
+        "group_id": "paragraph_0009",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0023",
+        "block_type": "paragraph",
+        "char_start": 100903,
+        "char_end": 100972,
+        "line_start": 2337,
+        "line_end": 2337,
+        "raw_text": "# ~~چون به عالم وجود آمدم، مستخبران روزگار به استفسار حال من آمدند.\r\n",
+        "group_id": "paragraph_0010",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0024",
+        "block_type": "verse",
+        "char_start": 100972,
+        "char_end": 101027,
+        "line_start": 2338,
+        "line_end": 2338,
+        "raw_text": "# ای مسند تو ورای افلاک %~% قدر تو و خاک توده ، خاشاک\r\n",
+        "group_id": "verse_0003",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "embedded_in_prose": true
+        }
+      },
+      {
+        "block_id": "b0025",
+        "block_type": "verse",
+        "char_start": 101027,
+        "char_end": 101075,
+        "line_start": 2339,
+        "line_end": 2339,
+        "raw_text": "# طغرای جلال تو لعمرک %~% منشور ولایت تو لولاک\r\n",
+        "group_id": "verse_0004",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "embedded_in_prose": true
+        }
+      },
+      {
+        "block_id": "b0026",
+        "block_type": "verse",
+        "char_start": 101075,
+        "char_end": 101128,
+        "line_start": 2340,
+        "line_end": 2340,
+        "raw_text": "# نه حقه وهفت مهره پیشت %~% دست تو و دامن توزان پاک\r\n",
+        "group_id": "verse_0005",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "embedded_in_prose": true
+        }
+      },
+      {
+        "block_id": "b0027",
+        "block_type": "verse",
+        "char_start": 101128,
+        "char_end": 101180,
+        "line_start": 2341,
+        "line_end": 2341,
+        "raw_text": "# نقش صفحات رایت تو %~% لولاک لما خلقت الا فلاک)33\r\n",
+        "group_id": "verse_0006",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "embedded_in_prose": true
+        }
+      },
+      {
+        "block_id": "b0028",
+        "block_type": "paragraph",
+        "char_start": 101180,
+        "char_end": 101216,
+        "line_start": 2342,
+        "line_end": 2342,
+        "raw_text": "# ~~که محمدا تویی عادل، تویی در شهر ",
+        "group_id": "paragraph_0011",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0029",
+        "block_type": "milestone",
+        "char_start": 101216,
+        "char_end": 101221,
+        "line_start": 2342,
+        "line_end": 2342,
+        "raw_text": "ms060",
+        "group_id": null,
+        "attributes": {
+          "number": 60
+        }
+      },
+      {
+        "block_id": "b0030",
+        "block_type": "paragraph",
+        "char_start": 101221,
+        "char_end": 101259,
+        "line_start": 2342,
+        "line_end": 2342,
+        "raw_text": " شریعت. گفتم چه جای این است! که همهآ\r\n",
+        "group_id": "paragraph_0011",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0031",
+        "block_type": "paragraph",
+        "char_start": 101259,
+        "char_end": 101272,
+        "line_start": 2343,
+        "line_end": 2343,
+        "raw_text": "~~بیغامبران\r\n",
+        "group_id": "paragraph_0011",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0032",
+        "block_type": "paragraph",
+        "char_start": 101272,
+        "char_end": 101345,
+        "line_start": 2344,
+        "line_end": 2344,
+        "raw_text": "# ~~منشور عمل توکیل در من یافته اند. دم آدم، فتح نوح، درس ادریس، مؤانست\r\n",
+        "group_id": "paragraph_0012",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0033",
+        "block_type": "paragraph",
+        "char_start": 101345,
+        "char_end": 101359,
+        "line_start": 2345,
+        "line_end": 2345,
+        "raw_text": "~~موسی، حدیث\r\n",
+        "group_id": "paragraph_0012",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0034",
+        "block_type": "paragraph",
+        "char_start": 101359,
+        "char_end": 101409,
+        "line_start": 2346,
+        "line_end": 2346,
+        "raw_text": "# ~~شیث، تبجیل اسماعیل وخلت خلیل، همه با من است.\r\n",
+        "group_id": "paragraph_0013",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0035",
+        "block_type": "verse",
+        "char_start": 101409,
+        "char_end": 101476,
+        "line_start": 2347,
+        "line_end": 2347,
+        "raw_text": "# # کشتی وجود مرد دانا عجب است %~% افتاده به چاه مرد بینا عجب است\r\n",
+        "group_id": "verse_0007",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "embedded_in_prose": true
+        }
+      },
+      {
+        "block_id": "b0036",
+        "block_type": "verse",
+        "char_start": 101476,
+        "char_end": 101549,
+        "line_start": 2348,
+        "line_end": 2348,
+        "raw_text": "# # کشتی که به دریا بود آن نیست عجب %~% در یک کشتی هزاردریا عجب است))34\r\n",
+        "group_id": "verse_0008",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "embedded_in_prose": true
+        }
+      },
+      {
+        "block_id": "b0037",
+        "block_type": "page_marker",
+        "char_start": 101549,
+        "char_end": 101564,
+        "line_start": 2349,
+        "line_end": 2349,
+        "raw_text": "~~PageV01P064\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 64
+        }
+      },
+      {
+        "block_id": "b0038",
+        "block_type": "image_reference",
+        "char_start": 101564,
+        "char_end": 101628,
+        "line_start": 2350,
+        "line_end": 2350,
+        "raw_text": "# ![image filename](./0672JalalDinRumi.MajalisSabica_0076.png)\r\n",
+        "group_id": null,
+        "attributes": {
+          "target": "./0672JalalDinRumi.MajalisSabica_0076.png",
+          "alt_text": "image filename"
+        }
+      },
+      {
+        "block_id": "b0039",
+        "block_type": "blank",
+        "char_start": 101628,
+        "char_end": 101630,
+        "line_start": 2351,
+        "line_end": 2351,
+        "raw_text": "\r\n",
+        "group_id": null,
+        "attributes": {}
+      },
+      {
+        "block_id": "b0040",
+        "block_type": "section",
+        "char_start": 101630,
+        "char_end": 101644,
+        "line_start": 2352,
+        "line_end": 2352,
+        "raw_text": "# ~~مجلس دوم\r\n",
+        "group_id": "section_0001",
+        "attributes": {
+          "section_type": "majlis",
+          "title": "مجلس دوم"
+        }
+      },
+      {
+        "block_id": "b0041",
+        "block_type": "paragraph",
+        "char_start": 101644,
+        "char_end": 101718,
+        "line_start": 2353,
+        "line_end": 2353,
+        "raw_text": "# ~~محمدا به حه کار آمده ای؟ آمدهام تا رندان محلت کفر را ادب کنم . مستان\r\n",
+        "group_id": "paragraph_0014",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0042",
+        "block_type": "paragraph",
+        "char_start": 101718,
+        "char_end": 101735,
+        "line_start": 2354,
+        "line_end": 2354,
+        "raw_text": "~~خرابات شرک را\r\n",
+        "group_id": "paragraph_0014",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0043",
+        "block_type": "paragraph",
+        "char_start": 101735,
+        "char_end": 101748,
+        "line_start": 2355,
+        "line_end": 2355,
+        "raw_text": "# ~~حد زنم.\r\n",
+        "group_id": "paragraph_0015",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0044",
+        "block_type": "paragraph",
+        "char_start": 101748,
+        "char_end": 101822,
+        "line_start": 2356,
+        "line_end": 2356,
+        "raw_text": "# روزی مهتر عالم و سروربنی آدم نشسته بود، و صحابه در پیش او حلقه زده، آن\r\n",
+        "group_id": "paragraph_0016",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0045",
+        "block_type": "paragraph",
+        "char_start": 101822,
+        "char_end": 101832,
+        "line_start": 2357,
+        "line_end": 2357,
+        "raw_text": "~~صدیقان\r\n",
+        "group_id": "paragraph_0016",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0046",
+        "block_type": "paragraph",
+        "char_start": 101832,
+        "char_end": 101902,
+        "line_start": 2358,
+        "line_end": 2358,
+        "raw_text": "# ~~صادق، آن خموشان ناطق، راز را با حضرت بی نیاز فرستاده بودند تا آن\r\n",
+        "group_id": "paragraph_0017",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0047",
+        "block_type": "paragraph",
+        "char_start": 101902,
+        "char_end": 101929,
+        "line_start": 2359,
+        "line_end": 2359,
+        "raw_text": "~~عنقای عالم غیب، به آواز\r\n",
+        "group_id": "paragraph_0017",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0048",
+        "block_type": "paragraph",
+        "char_start": 101929,
+        "char_end": 102003,
+        "line_start": 2360,
+        "line_end": 2360,
+        "raw_text": "# ~~«رقل)) آید و آن هزار دستان بوستان معرفت به شاخ گل آید و نوای عاشقانه\r\n",
+        "group_id": "paragraph_0018",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0049",
+        "block_type": "paragraph",
+        "char_start": 102003,
+        "char_end": 102026,
+        "line_start": 2361,
+        "line_end": 2361,
+        "raw_text": "~~بسراید و مراد دین و\r\n",
+        "group_id": "paragraph_0018",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0050",
+        "block_type": "paragraph",
+        "char_start": 102026,
+        "char_end": 102092,
+        "line_start": 2362,
+        "line_end": 2362,
+        "raw_text": "# ~~دنیا برآید. مهتر عالم، سردرج در اسرار بگشاد و این لفظ بر نطع\r\n",
+        "group_id": "paragraph_0019",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0051",
+        "block_type": "paragraph",
+        "char_start": 102092,
+        "char_end": 102122,
+        "line_start": 2363,
+        "line_end": 2363,
+        "raw_text": "~~بازرگانان جانباز جانان طلب\r\n",
+        "group_id": "paragraph_0019",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0052",
+        "block_type": "paragraph",
+        "char_start": 102122,
+        "char_end": 102194,
+        "line_start": 2364,
+        "line_end": 2364,
+        "raw_text": "# ~~معنی نهاد وچنین فرمود که: (من خرج من ذل المعاصی الی عزالتقوی»35 هر\r\n",
+        "group_id": "paragraph_0020",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0053",
+        "block_type": "paragraph",
+        "char_start": 102194,
+        "char_end": 102210,
+        "line_start": 2365,
+        "line_end": 2365,
+        "raw_text": "~~که قدم از ذل\r\n",
+        "group_id": "paragraph_0020",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0054",
+        "block_type": "paragraph",
+        "char_start": 102210,
+        "char_end": 102283,
+        "line_start": 2366,
+        "line_end": 2366,
+        "raw_text": "# ~~معصیت، بی تهمت ریا و غفلت به صحرای پرهیزگاری و ترسکاری نهد و کیمیای\r\n",
+        "group_id": "paragraph_0021",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0055",
+        "block_type": "paragraph",
+        "char_start": 102283,
+        "char_end": 102297,
+        "line_start": 2367,
+        "line_end": 2367,
+        "raw_text": "~~تقوی را به\r\n",
+        "group_id": "paragraph_0021",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0056",
+        "block_type": "paragraph",
+        "char_start": 102297,
+        "char_end": 102367,
+        "line_start": 2368,
+        "line_end": 2368,
+        "raw_text": "# ~~دست طلب معنی بر مس نفس سحارهآ غدارهآ مکارهآ اماره افکند و به قدم\r\n",
+        "group_id": "paragraph_0022",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0057",
+        "block_type": "paragraph",
+        "char_start": 102367,
+        "char_end": 102394,
+        "line_start": 2369,
+        "line_end": 2369,
+        "raw_text": "~~مجاهده سوی انوار مشاهده\r\n",
+        "group_id": "paragraph_0022",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0058",
+        "block_type": "paragraph",
+        "char_start": 102394,
+        "char_end": 102466,
+        "line_start": 2370,
+        "line_end": 2370,
+        "raw_text": "# ~~رود، ««اغناه الله بلامال» 36 کمال فضل الهیت به محض لطف ربوبیت، این\r\n",
+        "group_id": "paragraph_0023",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0059",
+        "block_type": "paragraph",
+        "char_start": 102466,
+        "char_end": 102484,
+        "line_start": 2371,
+        "line_end": 2371,
+        "raw_text": "~~بنده را بی مال\r\n",
+        "group_id": "paragraph_0023",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0060",
+        "block_type": "paragraph",
+        "char_start": 102484,
+        "char_end": 102504,
+        "line_start": 2372,
+        "line_end": 2372,
+        "raw_text": "# ~~توانگر گرداند.\r\n",
+        "group_id": "paragraph_0024",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0061",
+        "block_type": "verse",
+        "char_start": 102504,
+        "char_end": 102565,
+        "line_start": 2373,
+        "line_end": 2373,
+        "raw_text": "# # ((بس که شنیدی صفت روم وچین %~% خیز و بیا ملک سنایی ببین\r\n",
+        "group_id": "verse_0009",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "embedded_in_prose": true
+        }
+      },
+      {
+        "block_id": "b0062",
+        "block_type": "verse",
+        "char_start": 102565,
+        "char_end": 102631,
+        "line_start": 2374,
+        "line_end": 2374,
+        "raw_text": "# # تا همه دل بینی بی حرص وبخل %~% تا همه جان بینی، بی کبر و کین\r\n",
+        "group_id": "verse_0010",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "embedded_in_prose": true
+        }
+      },
+      {
+        "block_id": "b0063",
+        "block_type": "verse",
+        "char_start": 102631,
+        "char_end": 102690,
+        "line_start": 2375,
+        "line_end": 2375,
+        "raw_text": "# # پای نه و عرشن به زیر قدم %~% دست نه و ملک به زیر نگین\r\n",
+        "group_id": "verse_0011",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "embedded_in_prose": true
+        }
+      },
+      {
+        "block_id": "b0064",
+        "block_type": "verse",
+        "char_start": 102690,
+        "char_end": 102751,
+        "line_start": 2376,
+        "line_end": 2376,
+        "raw_text": "# # گاه ولی گوید: هست او چنان %~% گاه عدو گوید: هست او چنین\r\n",
+        "group_id": "verse_0012",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "embedded_in_prose": true
+        }
+      },
+      {
+        "block_id": "b0065",
+        "block_type": "verse",
+        "char_start": 102751,
+        "char_end": 102818,
+        "line_start": 2377,
+        "line_end": 2377,
+        "raw_text": "# # او زهمه فارغ و آزاد وخوش %~% چون گل و چون سوسن وچون یاسمین»37\r\n",
+        "group_id": "verse_0013",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "embedded_in_prose": true
+        }
+      },
+      {
+        "block_id": "b0066",
+        "block_type": "paragraph",
+        "char_start": 102818,
+        "char_end": 102852,
+        "line_start": 2378,
+        "line_end": 2378,
+        "raw_text": "# تقوی پیرایهآ او گردد، پرهیزگاری ",
+        "group_id": "paragraph_0025",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0067",
+        "block_type": "milestone",
+        "char_start": 102852,
+        "char_end": 102857,
+        "line_start": 2378,
+        "line_end": 2378,
+        "raw_text": "ms061",
+        "group_id": null,
+        "attributes": {
+          "number": 61
+        }
+      },
+      {
+        "block_id": "b0068",
+        "block_type": "paragraph",
+        "char_start": 102857,
+        "char_end": 102884,
+        "line_start": 2378,
+        "line_end": 2378,
+        "raw_text": " سرمایهآ او باشد. عاملان،\r\n",
+        "group_id": "paragraph_0025",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0069",
+        "block_type": "paragraph",
+        "char_start": 102884,
+        "char_end": 102916,
+        "line_start": 2379,
+        "line_end": 2379,
+        "raw_text": "# ~~توانگری به کثرت مال دانند.\r\n",
+        "group_id": "paragraph_0026",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0070",
+        "block_type": "paragraph",
+        "char_start": 102916,
+        "char_end": 102948,
+        "line_start": 2380,
+        "line_end": 2380,
+        "raw_text": "# «مرغی که خبر ندارد ازآب زلال\r\n",
+        "group_id": "paragraph_0027",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0071",
+        "block_type": "paragraph",
+        "char_start": 102948,
+        "char_end": 102983,
+        "line_start": 2381,
+        "line_end": 2381,
+        "raw_text": "# منقار در آب شور دارد همه سال»38\r\n",
+        "group_id": "paragraph_0028",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0072",
+        "block_type": "paragraph",
+        "char_start": 102983,
+        "char_end": 103052,
+        "line_start": 2382,
+        "line_end": 2382,
+        "raw_text": "# اما غلط کردهاند که می فرماید مهتر عالم : («الغنی، غنی القلب لاغنی\r\n",
+        "group_id": "paragraph_0029",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0073",
+        "block_type": "paragraph",
+        "char_start": 103052,
+        "char_end": 103064,
+        "line_start": 2383,
+        "line_end": 2383,
+        "raw_text": "~~المال»39\r\n",
+        "group_id": "paragraph_0029",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0074",
+        "block_type": "paragraph",
+        "char_start": 103064,
+        "char_end": 103136,
+        "line_start": 2384,
+        "line_end": 2384,
+        "raw_text": "# ~~توانگری، توانگری دل است نه توانگری مال. در می چند و دیناری چند، از\r\n",
+        "group_id": "paragraph_0030",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0075",
+        "block_type": "paragraph",
+        "char_start": 103136,
+        "char_end": 103157,
+        "line_start": 2385,
+        "line_end": 2385,
+        "raw_text": "~~مکان کان فانی، به\r\n",
+        "group_id": "paragraph_0030",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0076",
+        "block_type": "paragraph",
+        "char_start": 103157,
+        "char_end": 103229,
+        "line_start": 2386,
+        "line_end": 2386,
+        "raw_text": "# ~~صنع صانع و ابداع مبدع، گلغونهآ حمرت بر صفحات او کشیده، رنگی و هنگی\r\n",
+        "group_id": "paragraph_0031",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0077",
+        "block_type": "paragraph",
+        "char_start": 103229,
+        "char_end": 103243,
+        "line_start": 2387,
+        "line_end": 2387,
+        "raw_text": "~~به وی داده، ",
+        "group_id": "paragraph_0031",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0078",
+        "block_type": "page_marker",
+        "char_start": 103243,
+        "char_end": 103256,
+        "line_start": 2387,
+        "line_end": 2387,
+        "raw_text": "PageV01P065\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 65
+        }
+      },
+      {
+        "block_id": "b0079",
+        "block_type": "image_reference",
+        "char_start": 103256,
+        "char_end": 103320,
+        "line_start": 2388,
+        "line_end": 2388,
+        "raw_text": "# ![image filename](./0672JalalDinRumi.MajalisSabica_0077.png)\r\n",
+        "group_id": null,
+        "attributes": {
+          "target": "./0672JalalDinRumi.MajalisSabica_0077.png",
+          "alt_text": "image filename"
+        }
+      },
+      {
+        "block_id": "b0080",
+        "block_type": "blank",
+        "char_start": 103320,
+        "char_end": 103322,
+        "line_start": 2389,
+        "line_end": 2389,
+        "raw_text": "\r\n",
+        "group_id": null,
+        "attributes": {}
+      }
+    ],
+    "notes": "Manually reviewed: headings, embedded verses, Majalis section, paragraph groups, page markers, image references, milestones, inline splits, offsets, and exact reconstruction verified."
   }
 }
