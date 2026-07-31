@@ -22,12 +22,17 @@ VERSE_NUMBER_PATTERN = re.compile(
     r"^\s*#\s*(?P<number>\d+)\b"
 )
 
-
+DAFTAR_SECTION_PATTERN = re.compile(
+    r"^\s*###\s*\|\s*\[\s*daftar\s+"
+    r"(?P<number>\d+)\s*\]\s*$",
+    flags=re.IGNORECASE,
+)
 @dataclass
 class _DraftState:
     """Mutable drafting state for one structured-poetry sample."""
 
     heading_count: int = 0
+    section_count: int = 0
     verse_count: int = 0
 
     current_verse_group: str | None = None
@@ -345,6 +350,28 @@ def _classify_content_line(
     """Classify non-marker text from one physical line."""
 
     stripped = line_text.lstrip()
+    
+    daftar_match = DAFTAR_SECTION_PATTERN.match(
+        line_text
+    )
+
+    if daftar_match is not None:
+        state.section_count += 1
+        state.current_verse_group = None
+        state.current_verse_attributes = {}
+
+        section_number = int(
+            daftar_match.group("number")
+        )
+
+        return (
+            "section",
+            f"section_{state.section_count:04d}",
+            {
+                "section_type": "daftar",
+                "number": section_number,
+            },
+        )
 
     if stripped.startswith("###"):
         state.heading_count += 1

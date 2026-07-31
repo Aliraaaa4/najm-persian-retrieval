@@ -381,8 +381,1005 @@
   ],
   "annotations": {
     "schema_version": 1,
-    "status": "draft",
-    "blocks": [],
-    "notes": ""
+    "status": "complete",
+    "blocks": [
+      {
+        "block_id": "b0001",
+        "block_type": "page_marker",
+        "char_start": 805623,
+        "char_end": 805638,
+        "line_start": 12954,
+        "line_end": 12954,
+        "raw_text": "~~PageV03P228\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 3,
+          "page": 228
+        }
+      },
+      {
+        "block_id": "b0002",
+        "block_type": "section",
+        "char_start": 805638,
+        "char_end": 805658,
+        "line_start": 12955,
+        "line_end": 12955,
+        "raw_text": "### | [ daftar 4 ]\r\n",
+        "group_id": "section_0001",
+        "attributes": {
+          "section_type": "daftar",
+          "number": 4
+        }
+      },
+      {
+        "block_id": "b0003",
+        "block_type": "verse",
+        "char_start": 805658,
+        "char_end": 805722,
+        "line_start": 12956,
+        "line_end": 12956,
+        "raw_text": "# 1 ای ضیا الحق حسام الدین توی %~% که گذشت از مه به نورت مثنوی\r\n",
+        "group_id": "verse_0001",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0004",
+        "block_type": "verse",
+        "char_start": 805722,
+        "char_end": 805779,
+        "line_start": 12957,
+        "line_end": 12957,
+        "raw_text": "# 2 همت عالی تو ای مرتجا %~% می‌کشد این را خدا داند کجا\r\n",
+        "group_id": "verse_0002",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0005",
+        "block_type": "verse",
+        "char_start": 805779,
+        "char_end": 805841,
+        "line_start": 12958,
+        "line_end": 12958,
+        "raw_text": "# 3 گردن این مثنوی را بسته‌ای %~% می‌کشی آن سوی که دانسته‌ای\r\n",
+        "group_id": "verse_0003",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 3
+        }
+      },
+      {
+        "block_id": "b0006",
+        "block_type": "verse",
+        "char_start": 805841,
+        "char_end": 805903,
+        "line_start": 12959,
+        "line_end": 12959,
+        "raw_text": "# 4 مثنوی پویان کشنده ناپدید %~% ناپدید از جاهلی کش نیست دید\r\n",
+        "group_id": "verse_0004",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 4
+        }
+      },
+      {
+        "block_id": "b0007",
+        "block_type": "verse",
+        "char_start": 805903,
+        "char_end": 805968,
+        "line_start": 12960,
+        "line_end": 12960,
+        "raw_text": "# 5 مثنوی را چون تو مبدا بوده‌ای %~% گر فزون گردد توش افزوده‌ای\r\n",
+        "group_id": "verse_0005",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 5
+        }
+      },
+      {
+        "block_id": "b0008",
+        "block_type": "verse",
+        "char_start": 805968,
+        "char_end": 806029,
+        "line_start": 12961,
+        "line_end": 12961,
+        "raw_text": "# 6 چون چنین خواهی خدا خواهد چنین %~% می‌دهد حق آرزوی متقین\r\n",
+        "group_id": "verse_0006",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 6
+        }
+      },
+      {
+        "block_id": "b0009",
+        "block_type": "verse",
+        "char_start": 806029,
+        "char_end": 806091,
+        "line_start": 12962,
+        "line_end": 12962,
+        "raw_text": "# 7 کان لله بوده‌ای در ما مضی %~% تا که کان الله پیش آمد جزا\r\n",
+        "group_id": "verse_0007",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 7
+        }
+      },
+      {
+        "block_id": "b0010",
+        "block_type": "verse",
+        "char_start": 806091,
+        "char_end": 806155,
+        "line_start": 12963,
+        "line_end": 12963,
+        "raw_text": "# 8 مثنوی از تو هزاران شکر داشت %~% در دعا و شکر کفها بر فراشت\r\n",
+        "group_id": "verse_0008",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 8
+        }
+      },
+      {
+        "block_id": "b0011",
+        "block_type": "verse",
+        "char_start": 806155,
+        "char_end": 806218,
+        "line_start": 12964,
+        "line_end": 12964,
+        "raw_text": "# 9 در لب و کفش خدا شکر تو دید %~% فضل کرد و لطف فرمود و مزید\r\n",
+        "group_id": "verse_0009",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 9
+        }
+      },
+      {
+        "block_id": "b0012",
+        "block_type": "verse",
+        "char_start": 806218,
+        "char_end": 806281,
+        "line_start": 12965,
+        "line_end": 12965,
+        "raw_text": "# 10 زانک شاکر را زیادت وعده است %~% آنچنانک قرب مزد سجده است\r\n",
+        "group_id": "verse_0010",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 10
+        }
+      },
+      {
+        "block_id": "b0013",
+        "block_type": "verse",
+        "char_start": 806281,
+        "char_end": 806341,
+        "line_start": 12966,
+        "line_end": 12966,
+        "raw_text": "# 11 گفت واسجد واقترب یزدان ما %~% قرب جان شد سجده ابدان ما ",
+        "group_id": "verse_0011",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 11
+        }
+      },
+      {
+        "block_id": "b0014",
+        "block_type": "milestone",
+        "char_start": 806341,
+        "char_end": 806349,
+        "line_start": 12966,
+        "line_end": 12966,
+        "raw_text": "ms0556\r\n",
+        "group_id": null,
+        "attributes": {
+          "number": 556
+        }
+      },
+      {
+        "block_id": "b0015",
+        "block_type": "verse",
+        "char_start": 806349,
+        "char_end": 806416,
+        "line_start": 12967,
+        "line_end": 12967,
+        "raw_text": "# 12 گر زیادت می‌شود زین رو بود %~% نه از برای بوش و های و هو بود\r\n",
+        "group_id": "verse_0012",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 12
+        }
+      },
+      {
+        "block_id": "b0016",
+        "block_type": "verse",
+        "char_start": 806416,
+        "char_end": 806487,
+        "line_start": 12968,
+        "line_end": 12968,
+        "raw_text": "# 13 با تو ما چون رز به تابستان خوشیم %~% حکم داری هین بکش تا می‌کشیم\r\n",
+        "group_id": "verse_0013",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 13
+        }
+      },
+      {
+        "block_id": "b0017",
+        "block_type": "verse",
+        "char_start": 806487,
+        "char_end": 806552,
+        "line_start": 12969,
+        "line_end": 12969,
+        "raw_text": "# 14 خوش بکش این کاروان را تا به حج %~% ای امیر صبر مفتاح الفرج\r\n",
+        "group_id": "verse_0014",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 14
+        }
+      },
+      {
+        "block_id": "b0018",
+        "block_type": "verse",
+        "char_start": 806552,
+        "char_end": 806608,
+        "line_start": 12970,
+        "line_end": 12970,
+        "raw_text": "# 15 حج زیارت کردن خانه بود %~% حج رب البیت مردانه بود\r\n",
+        "group_id": "verse_0015",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 15
+        }
+      },
+      {
+        "block_id": "b0019",
+        "block_type": "verse",
+        "char_start": 806608,
+        "char_end": 806675,
+        "line_start": 12971,
+        "line_end": 12971,
+        "raw_text": "# 16 زان ضیا گفتم حسام‌الدین ترا %~% که تو خورشیدی و این دو وصفها\r\n",
+        "group_id": "verse_0016",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 16
+        }
+      },
+      {
+        "block_id": "b0020",
+        "block_type": "verse",
+        "char_start": 806675,
+        "char_end": 806742,
+        "line_start": 12972,
+        "line_end": 12972,
+        "raw_text": "# 17 کین حسام و این ضیا یکیست هین %~% تیغ خورشید از ضیا باشد یقین\r\n",
+        "group_id": "verse_0017",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 17
+        }
+      },
+      {
+        "block_id": "b0021",
+        "block_type": "verse",
+        "char_start": 806742,
+        "char_end": 806809,
+        "line_start": 12973,
+        "line_end": 12973,
+        "raw_text": "# 18 نور از آن ماه باشد وین ضیا %~% آن خورشید این فرو خوان از نبا\r\n",
+        "group_id": "verse_0018",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 18
+        }
+      },
+      {
+        "block_id": "b0022",
+        "block_type": "verse",
+        "char_start": 806809,
+        "char_end": 806881,
+        "line_start": 12974,
+        "line_end": 12974,
+        "raw_text": "# 19 شمس را قرآن ضیا خواند ای پدر %~% و آن قمر را نور خواند این را نگر\r\n",
+        "group_id": "verse_0019",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 19
+        }
+      },
+      {
+        "block_id": "b0023",
+        "block_type": "verse",
+        "char_start": 806881,
+        "char_end": 806952,
+        "line_start": 12975,
+        "line_end": 12975,
+        "raw_text": "# 20 شمس چون عالی‌تر آمد خود ز ماه %~% پس ضیا از نور افزون دان به جاه\r\n",
+        "group_id": "verse_0020",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 20
+        }
+      },
+      {
+        "block_id": "b0024",
+        "block_type": "verse",
+        "char_start": 806952,
+        "char_end": 807017,
+        "line_start": 12976,
+        "line_end": 12976,
+        "raw_text": "# 21 بس کس اندر نور مه منهج ندید %~% چون برآمد آفتاب آن شد پدید\r\n",
+        "group_id": "verse_0021",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 21
+        }
+      },
+      {
+        "block_id": "b0025",
+        "block_type": "verse",
+        "char_start": 807017,
+        "char_end": 807077,
+        "line_start": 12977,
+        "line_end": 12977,
+        "raw_text": "# 22 آفتاب اعواض را کامل نمود %~% لاجرم بازارها در روز بود\r\n",
+        "group_id": "verse_0022",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 22
+        }
+      },
+      {
+        "block_id": "b0026",
+        "block_type": "verse",
+        "char_start": 807077,
+        "char_end": 807145,
+        "line_start": 12978,
+        "line_end": 12978,
+        "raw_text": "# 23 تا که قلب و نقد نیک آید پدید %~% تا بود از غبن و از حیله بعید\r\n",
+        "group_id": "verse_0023",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 23
+        }
+      },
+      {
+        "block_id": "b0027",
+        "block_type": "verse",
+        "char_start": 807145,
+        "char_end": 807207,
+        "line_start": 12979,
+        "line_end": 12979,
+        "raw_text": "# 24 تا که نورش کامل آمد در زمین %~% تاجران را رحمة للعالمین\r\n",
+        "group_id": "verse_0024",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 24
+        }
+      },
+      {
+        "block_id": "b0028",
+        "block_type": "verse",
+        "char_start": 807207,
+        "char_end": 807276,
+        "line_start": 12980,
+        "line_end": 12980,
+        "raw_text": "# 25 لیک بر قلاب مبغوضست و سخت %~% زانک ازو شد کاسد او را نقد و رخت\r\n",
+        "group_id": "verse_0025",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 25
+        }
+      },
+      {
+        "block_id": "b0029",
+        "block_type": "verse",
+        "char_start": 807276,
+        "char_end": 807334,
+        "line_start": 12981,
+        "line_end": 12981,
+        "raw_text": "# 26 پس عدو جان صرافست قلب %~% دشمن درویش کی بود غیر کلب\r\n",
+        "group_id": "verse_0026",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 26
+        }
+      },
+      {
+        "block_id": "b0030",
+        "block_type": "verse",
+        "char_start": 807334,
+        "char_end": 807395,
+        "line_start": 12982,
+        "line_end": 12982,
+        "raw_text": "# 27 انبیا با دشمنان بر می‌تنند %~% پس ملایک رب سلم می‌زنند\r\n",
+        "group_id": "verse_0027",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 27
+        }
+      },
+      {
+        "block_id": "b0031",
+        "block_type": "verse",
+        "char_start": 807395,
+        "char_end": 807464,
+        "line_start": 12983,
+        "line_end": 12983,
+        "raw_text": "# 28 کین چراغی را که هست او نور کار %~% از پف و دمهای دزدان دور دار\r\n",
+        "group_id": "verse_0028",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 28
+        }
+      },
+      {
+        "block_id": "b0032",
+        "block_type": "verse",
+        "char_start": 807464,
+        "char_end": 807525,
+        "line_start": 12984,
+        "line_end": 12984,
+        "raw_text": "# 29 دزد و قلابست خصم نور بس %~% زین دو ای فریادرس فریاد رس\r\n",
+        "group_id": "verse_0029",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 29
+        }
+      },
+      {
+        "block_id": "b0033",
+        "block_type": "verse",
+        "char_start": 807525,
+        "char_end": 807586,
+        "line_start": 12985,
+        "line_end": 12985,
+        "raw_text": "# 30 روشنی بر دفتر چارم بریز %~% کآفتاب از چرخ چارم کرد خیز\r\n",
+        "group_id": "verse_0030",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 30
+        }
+      },
+      {
+        "block_id": "b0034",
+        "block_type": "verse",
+        "char_start": 807586,
+        "char_end": 807651,
+        "line_start": 12986,
+        "line_end": 12986,
+        "raw_text": "# 31 هین ز چارم نور ده خورشیدوار %~% تا بتابد بر بلاد و بر دیار\r\n",
+        "group_id": "verse_0031",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 31
+        }
+      },
+      {
+        "block_id": "b0035",
+        "block_type": "verse",
+        "char_start": 807651,
+        "char_end": 807721,
+        "line_start": 12987,
+        "line_end": 12987,
+        "raw_text": "# 32 هر کش افسانه بخواند افسانه است %~% وآنک دیدش نقد خود مردانه است\r\n",
+        "group_id": "verse_0032",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 32
+        }
+      },
+      {
+        "block_id": "b0036",
+        "block_type": "verse",
+        "char_start": 807721,
+        "char_end": 807754,
+        "line_start": 12988,
+        "line_end": 12988,
+        "raw_text": "# 33 آب نیلست و به قبطی خون نمود ",
+        "group_id": "verse_0033",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 33
+        }
+      },
+      {
+        "block_id": "b0037",
+        "block_type": "milestone",
+        "char_start": 807754,
+        "char_end": 807760,
+        "line_start": 12988,
+        "line_end": 12988,
+        "raw_text": "ms0557",
+        "group_id": null,
+        "attributes": {
+          "number": 557
+        }
+      },
+      {
+        "block_id": "b0038",
+        "block_type": "verse",
+        "char_start": 807760,
+        "char_end": 807795,
+        "line_start": 12988,
+        "line_end": 12988,
+        "raw_text": " %~% قوم موسی را نه خون بد آب بود\r\n",
+        "group_id": "verse_0033",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 33
+        }
+      },
+      {
+        "block_id": "b0039",
+        "block_type": "verse",
+        "char_start": 807795,
+        "char_end": 807856,
+        "line_start": 12989,
+        "line_end": 12989,
+        "raw_text": "# 34 دشمن این حرف این دم در نظر %~% شد ممثل سرنگون اندر سقر\r\n",
+        "group_id": "verse_0034",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 34
+        }
+      },
+      {
+        "block_id": "b0040",
+        "block_type": "verse",
+        "char_start": 807856,
+        "char_end": 807916,
+        "line_start": 12990,
+        "line_end": 12990,
+        "raw_text": "# 35 ای ضیا الحق تو دیدی حال او %~% حق نمودت پاسخ افعال او\r\n",
+        "group_id": "verse_0035",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 35
+        }
+      },
+      {
+        "block_id": "b0041",
+        "block_type": "verse",
+        "char_start": 807916,
+        "char_end": 807984,
+        "line_start": 12991,
+        "line_end": 12991,
+        "raw_text": "# 36 دیده غیبت چو غیبست اوستاد %~% کم مبادا زین جهان این دید و داد\r\n",
+        "group_id": "verse_0036",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 36
+        }
+      },
+      {
+        "block_id": "b0042",
+        "block_type": "verse",
+        "char_start": 807984,
+        "char_end": 808051,
+        "line_start": 12992,
+        "line_end": 12992,
+        "raw_text": "# 37 این حکایت را که نقد وقت ماست %~% گر تمامش می‌کنی اینجا رواست\r\n",
+        "group_id": "verse_0037",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 37
+        }
+      },
+      {
+        "block_id": "b0043",
+        "block_type": "verse",
+        "char_start": 808051,
+        "char_end": 808115,
+        "line_start": 12993,
+        "line_end": 12993,
+        "raw_text": "# 38 ناکسان را ترک کن بهر کسان %~% قصه را پایان بر و مخلص رسان\r\n",
+        "group_id": "verse_0038",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 38
+        }
+      },
+      {
+        "block_id": "b0044",
+        "block_type": "verse",
+        "char_start": 808115,
+        "char_end": 808176,
+        "line_start": 12994,
+        "line_end": 12994,
+        "raw_text": "# 39 این حکایت گر نشد آنجا تمام %~% چارمین جلدست آرش در نظام ",
+        "group_id": "verse_0039",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 39
+        }
+      },
+      {
+        "block_id": "b0045",
+        "block_type": "page_marker",
+        "char_start": 808176,
+        "char_end": 808189,
+        "line_start": 12994,
+        "line_end": 12994,
+        "raw_text": "PageV04P001\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 4,
+          "page": 1
+        }
+      },
+      {
+        "block_id": "b0046",
+        "block_type": "verse",
+        "char_start": 808189,
+        "char_end": 808253,
+        "line_start": 12995,
+        "line_end": 12995,
+        "raw_text": "# 1 اندر آن بودیم کان شخص از عسس %~% راند اندر باغ از خوفی فرس\r\n",
+        "group_id": "verse_0040",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0047",
+        "block_type": "verse",
+        "char_start": 808253,
+        "char_end": 808317,
+        "line_start": 12996,
+        "line_end": 12996,
+        "raw_text": "# 2 بود اندر باغ آن صاحب‌جمال %~% کز غمش این در عنا بد هشت سال\r\n",
+        "group_id": "verse_0041",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0048",
+        "block_type": "verse",
+        "char_start": 808317,
+        "char_end": 808381,
+        "line_start": 12997,
+        "line_end": 12997,
+        "raw_text": "# 3 سایه او را نبود امکان دید %~% هم‌چو عنقا وصف او را می‌شنید\r\n",
+        "group_id": "verse_0042",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 3
+        }
+      },
+      {
+        "block_id": "b0049",
+        "block_type": "verse",
+        "char_start": 808381,
+        "char_end": 808445,
+        "line_start": 12998,
+        "line_end": 12998,
+        "raw_text": "# 4 جز یکی لقیه که اول از قضا %~% بر وی افتاد و شد او را دلربا\r\n",
+        "group_id": "verse_0043",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 4
+        }
+      },
+      {
+        "block_id": "b0050",
+        "block_type": "verse",
+        "char_start": 808445,
+        "char_end": 808512,
+        "line_start": 12999,
+        "line_end": 12999,
+        "raw_text": "# 5 بعد از آن چندان که می‌کوشید او %~% خود مجالش می‌نداد آن تندخو\r\n",
+        "group_id": "verse_0044",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 5
+        }
+      },
+      {
+        "block_id": "b0051",
+        "block_type": "verse",
+        "char_start": 808512,
+        "char_end": 808579,
+        "line_start": 13000,
+        "line_end": 13000,
+        "raw_text": "# 6 نه بلا به چاره بودش نه به مال %~% چشم پر و بی‌طمع بود آن نهال\r\n",
+        "group_id": "verse_0045",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 6
+        }
+      },
+      {
+        "block_id": "b0052",
+        "block_type": "verse",
+        "char_start": 808579,
+        "char_end": 808635,
+        "line_start": 13001,
+        "line_end": 13001,
+        "raw_text": "# 7 عاشق هر پیشه‌ای و مطلبی %~% حق بیالود اول کارش لبی\r\n",
+        "group_id": "verse_0046",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 7
+        }
+      },
+      {
+        "block_id": "b0053",
+        "block_type": "verse",
+        "char_start": 808635,
+        "char_end": 808699,
+        "line_start": 13002,
+        "line_end": 13002,
+        "raw_text": "# 8 چون بدان آسیب در جست آمدند %~% پیش پاشان می‌نهد هر روز بند\r\n",
+        "group_id": "verse_0047",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 8
+        }
+      },
+      {
+        "block_id": "b0054",
+        "block_type": "verse",
+        "char_start": 808699,
+        "char_end": 808768,
+        "line_start": 13003,
+        "line_end": 13003,
+        "raw_text": "# 9 چون در افکندش بجست و جوی کار %~% بعد از آن در بست که کابین بیار\r\n",
+        "group_id": "verse_0048",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 9
+        }
+      },
+      {
+        "block_id": "b0055",
+        "block_type": "verse",
+        "char_start": 808768,
+        "char_end": 808834,
+        "line_start": 13004,
+        "line_end": 13004,
+        "raw_text": "# 10 هم بر آن بو می‌تنند و می‌روند %~% هر دمی راجی و آیس می‌شوند\r\n",
+        "group_id": "verse_0049",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 10
+        }
+      },
+      {
+        "block_id": "b0056",
+        "block_type": "verse",
+        "char_start": 808834,
+        "char_end": 808894,
+        "line_start": 13005,
+        "line_end": 13005,
+        "raw_text": "# 11 هر کسی را هست اومید بری %~% که گشادندش در آن روزی دری\r\n",
+        "group_id": "verse_0050",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 11
+        }
+      },
+      {
+        "block_id": "b0057",
+        "block_type": "verse",
+        "char_start": 808894,
+        "char_end": 808956,
+        "line_start": 13006,
+        "line_end": 13006,
+        "raw_text": "# 12 باز در بستندش و آن درپرست %~% بر همان اومید آتش پا شدست\r\n",
+        "group_id": "verse_0051",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 12
+        }
+      },
+      {
+        "block_id": "b0058",
+        "block_type": "verse",
+        "char_start": 808956,
+        "char_end": 809027,
+        "line_start": 13007,
+        "line_end": 13007,
+        "raw_text": "# 13 چون درآمد خوش در آن باغ آن جوان %~% خود فرو شد پا به گنجش ناگهان\r\n",
+        "group_id": "verse_0052",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 13
+        }
+      },
+      {
+        "block_id": "b0059",
+        "block_type": "verse",
+        "char_start": 809027,
+        "char_end": 809089,
+        "line_start": 13008,
+        "line_end": 13008,
+        "raw_text": "# 14 مر عسس را ساخته یزدان سبب %~% تا ز بیم او دود در باغ شب\r\n",
+        "group_id": "verse_0053",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 14
+        }
+      },
+      {
+        "block_id": "b0060",
+        "block_type": "verse",
+        "char_start": 809089,
+        "char_end": 809152,
+        "line_start": 13009,
+        "line_end": 13009,
+        "raw_text": "# 15 بیند آن معشوقه را او با چراغ %~% طالب انگشتری در جوی باغ\r\n",
+        "group_id": "verse_0054",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 15
+        }
+      },
+      {
+        "block_id": "b0061",
+        "block_type": "verse",
+        "char_start": 809152,
+        "char_end": 809165,
+        "line_start": 13010,
+        "line_end": 13010,
+        "raw_text": "# 16 پس قرین ",
+        "group_id": "verse_0055",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 16
+        }
+      },
+      {
+        "block_id": "b0062",
+        "block_type": "milestone",
+        "char_start": 809165,
+        "char_end": 809171,
+        "line_start": 13010,
+        "line_end": 13010,
+        "raw_text": "ms0558",
+        "group_id": null,
+        "attributes": {
+          "number": 558
+        }
+      },
+      {
+        "block_id": "b0063",
+        "block_type": "verse",
+        "char_start": 809171,
+        "char_end": 809221,
+        "line_start": 13010,
+        "line_end": 13010,
+        "raw_text": " می‌کرد از ذوق آن نفس %~% با ثنای حق دعای آن عسس\r\n",
+        "group_id": "verse_0055",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 16
+        }
+      },
+      {
+        "block_id": "b0064",
+        "block_type": "verse",
+        "char_start": 809221,
+        "char_end": 809290,
+        "line_start": 13011,
+        "line_end": 13011,
+        "raw_text": "# 17 که زیان کردم عسس را از گریز %~% بیست چندان سیم و زر بر وی بریز\r\n",
+        "group_id": "verse_0056",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 17
+        }
+      },
+      {
+        "block_id": "b0065",
+        "block_type": "verse",
+        "char_start": 809290,
+        "char_end": 809352,
+        "line_start": 13012,
+        "line_end": 13012,
+        "raw_text": "# 18 از عوانی مر ورا آزاد کن %~% آنچنان که شادم او را شاد کن\r\n",
+        "group_id": "verse_0057",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 18
+        }
+      },
+      {
+        "block_id": "b0066",
+        "block_type": "verse",
+        "char_start": 809352,
+        "char_end": 809416,
+        "line_start": 13013,
+        "line_end": 13013,
+        "raw_text": "# 19 سعد دارش این جهان و آن جهان %~% از عوانی و سگی‌اش وا رهان\r\n",
+        "group_id": "verse_0058",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 19
+        }
+      },
+      {
+        "block_id": "b0067",
+        "block_type": "verse",
+        "char_start": 809416,
+        "char_end": 809480,
+        "line_start": 13014,
+        "line_end": 13014,
+        "raw_text": "# 20 گرچه خوی آن عوان هست ای خدا %~% که هماره خلق را خواهد بلا\r\n",
+        "group_id": "verse_0059",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 20
+        }
+      }
+    ],
+    "notes": "Automatically drafted using deterministic structured-poetry rules. Manual review is required.\nManually reviewed: daftar section, verse blocks, marker attributes, logical groups, offsets, and reconstruction verified."
   }
 }

@@ -18,6 +18,7 @@ def make_structured_poetry_sample() -> dict[str, Any]:
 
     line_texts = [
         "~~PageV1P001\n",
+        "### | [ daftar 4 ]\n",
         "### || [genre: ms16 R]\n",
         (
             "# 1 متن نخست ms17 ادامه متن "
@@ -25,7 +26,7 @@ def make_structured_poetry_sample() -> dict[str, Any]:
         ),
         "\n",
     ]
-
+    
     sample_char_start = 100
     cursor = sample_char_start
     lines: list[dict[str, Any]] = []
@@ -106,6 +107,7 @@ def test_structured_poetry_draft_detects_markers() -> None:
     assert counts["page_marker"] == 2
     assert counts["milestone"] == 2
     assert counts["blank"] == 1
+    assert counts["section"] == 1
     assert counts["heading"] >= 1
     assert counts["verse"] >= 1
 
@@ -171,3 +173,36 @@ def test_draft_remains_draft() -> None:
     assert annotations["status"] == "draft"
     assert annotations["blocks"]
     assert "Manual review" in annotations["notes"]
+    
+    
+def test_daftar_heading_becomes_section() -> None:
+    sample = make_structured_poetry_sample()
+
+    updated = apply_structured_poetry_draft(
+        sample
+    )
+
+    section_blocks = [
+        block
+        for block in updated[
+            "annotations"
+        ]["blocks"]
+        if block["block_type"] == "section"
+    ]
+
+    assert len(section_blocks) == 1
+
+    section = section_blocks[0]
+
+    assert section["raw_text"] == (
+        "### | [ daftar 4 ]\n"
+    )
+
+    assert section["attributes"] == {
+        "section_type": "daftar",
+        "number": 4,
+    }
+
+    assert section["group_id"] == (
+        "section_0001"
+    )
