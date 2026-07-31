@@ -205,15 +205,17 @@ def test_document_collects_block_issues() -> None:
 
     assert document.all_issues == (issue,)
 
-
 def test_parse_metrics_lossless_gate() -> None:
     metrics = ParseMetrics(
         total_body_lines=100,
         covered_lines=100,
         uncovered_lines=0,
-        overlapping_lines=0,
         total_body_chars=1000,
+        covered_chars=1000,
+        uncovered_chars=0,
+        overlapping_chars=0,
         reconstructed_chars=1000,
+        reconstruction_matches_source=True,
         marker_count=10,
         raw_line_count=2,
         issue_count=1,
@@ -222,6 +224,32 @@ def test_parse_metrics_lossless_gate() -> None:
     )
 
     assert metrics.line_coverage == 1.0
+    assert metrics.char_coverage == 1.0
     assert metrics.reconstruction_ratio == 1.0
     assert metrics.raw_line_rate == 0.02
     assert metrics.passes_lossless_gate is True
+    
+    
+    
+    
+    
+    
+def test_parse_metrics_rejects_overlapping_characters() -> None:
+    metrics = ParseMetrics(
+        total_body_lines=10,
+        covered_lines=10,
+        uncovered_lines=0,
+        total_body_chars=100,
+        covered_chars=100,
+        uncovered_chars=0,
+        overlapping_chars=4,
+        reconstructed_chars=104,
+        reconstruction_matches_source=False,
+        marker_count=1,
+        raw_line_count=0,
+        issue_count=1,
+        runtime_seconds=0.01,
+        peak_memory_bytes=100,
+    )
+
+    assert metrics.passes_lossless_gate is False    

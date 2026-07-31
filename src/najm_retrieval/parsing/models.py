@@ -227,18 +227,21 @@ class ParsedDocument:
             for block in self.blocks
         )
 
-
 @dataclass(frozen=True)
 class ParseMetrics:
-    """Structural quality metrics for one parsed document."""
+    """Structural and loss-preservation metrics."""
 
     total_body_lines: int
     covered_lines: int
     uncovered_lines: int
-    overlapping_lines: int
 
     total_body_chars: int
+    covered_chars: int
+    uncovered_chars: int
+    overlapping_chars: int
+
     reconstructed_chars: int
+    reconstruction_matches_source: bool
 
     marker_count: int
     raw_line_count: int
@@ -249,7 +252,7 @@ class ParseMetrics:
 
     @property
     def line_coverage(self) -> float:
-        """Return the fraction of body lines covered by blocks."""
+        """Return the fraction of body lines touched by blocks."""
 
         if self.total_body_lines == 0:
             return 1.0
@@ -257,13 +260,25 @@ class ParseMetrics:
         return self.covered_lines / self.total_body_lines
 
     @property
-    def reconstruction_ratio(self) -> float:
-        """Return reconstructed-character coverage."""
+    def char_coverage(self) -> float:
+        """Return the fraction of source characters covered once."""
 
         if self.total_body_chars == 0:
             return 1.0
 
-        return self.reconstructed_chars / self.total_body_chars
+        return self.covered_chars / self.total_body_chars
+
+    @property
+    def reconstruction_ratio(self) -> float:
+        """Return reconstructed-character length coverage."""
+
+        if self.total_body_chars == 0:
+            return 1.0
+
+        return (
+            self.reconstructed_chars
+            / self.total_body_chars
+        )
 
     @property
     def raw_line_rate(self) -> float:
@@ -272,15 +287,19 @@ class ParseMetrics:
         if self.total_body_lines == 0:
             return 0.0
 
-        return self.raw_line_count / self.total_body_lines
+        return (
+            self.raw_line_count
+            / self.total_body_lines
+        )
 
     @property
     def passes_lossless_gate(self) -> bool:
-        """Return whether the basic lossless hard gate is satisfied."""
+        """Return whether strict lossless checks pass."""
 
         return (
-            self.line_coverage == 1.0
-            and self.uncovered_lines == 0
-            and self.overlapping_lines == 0
+            self.char_coverage == 1.0
+            and self.uncovered_chars == 0
+            and self.overlapping_chars == 0
             and self.reconstruction_ratio == 1.0
+            and self.reconstruction_matches_source
         )
