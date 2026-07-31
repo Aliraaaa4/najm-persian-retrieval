@@ -233,12 +233,16 @@ def validate_expected_metadata(
             "pilot split must equal development"
         )
 
-
 def validate_annotations(
     data: dict[str, Any],
     errors: list[str],
 ) -> None:
-    """Confirm pilot annotations are still intentionally empty."""
+    """Validate the basic annotation container.
+
+    This source-level pilot validator does not require annotations to
+    remain empty. Detailed block validation is performed by the golden
+    annotation validator.
+    """
 
     annotations = data.get("annotations")
 
@@ -248,11 +252,31 @@ def validate_annotations(
         )
         return
 
+    schema_version = annotations.get(
+        "schema_version"
+    )
+
+    if schema_version != 1:
+        errors.append(
+            "annotations.schema_version must equal 1"
+        )
+
+    status = annotations.get("status")
+
+    if status not in {
+        "draft",
+        "complete",
+    }:
+        errors.append(
+            "annotations.status must be "
+            "'draft' or 'complete'"
+        )
+
     blocks = annotations.get("blocks")
 
-    if blocks != []:
+    if not isinstance(blocks, list):
         errors.append(
-            "annotations.blocks must still be empty"
+            "annotations.blocks must be an array"
         )
 
     notes = annotations.get("notes")
@@ -261,7 +285,6 @@ def validate_annotations(
         errors.append(
             "annotations.notes must be a string"
         )
-
 
 def validate_internal_lines(
     data: dict[str, Any],

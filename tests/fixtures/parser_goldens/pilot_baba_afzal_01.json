@@ -382,7 +382,946 @@
   "annotations": {
     "schema_version": 1,
     "status": "draft",
-    "blocks": [],
-    "notes": ""
+    "blocks": [
+      {
+        "block_id": "b0001",
+        "block_type": "page_marker",
+        "char_start": 23794,
+        "char_end": 23808,
+        "line_start": 557,
+        "line_end": 557,
+        "raw_text": "~~PageV1P100\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 100
+        }
+      },
+      {
+        "block_id": "b0002",
+        "block_type": "heading",
+        "char_start": 23808,
+        "char_end": 23827,
+        "line_start": 558,
+        "line_end": 558,
+        "raw_text": "### || [genre: R]\r\n",
+        "group_id": "heading_0001",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0003",
+        "block_type": "verse",
+        "char_start": 23827,
+        "char_end": 23897,
+        "line_start": 559,
+        "line_end": 559,
+        "raw_text": "# 1 ای از تو فتاده عالمی در شر و شور %~% فارغ شده غنی و مردم همه عور\r\n",
+        "group_id": "verse_0001",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0004",
+        "block_type": "verse",
+        "char_start": 23897,
+        "char_end": 23969,
+        "line_start": 560,
+        "line_end": 560,
+        "raw_text": "# 2 تو با همه در حدیث و گوش همه کر %~% تو با همه در حضور و چشم همه کور\r\n",
+        "group_id": "verse_0002",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0005",
+        "block_type": "page_marker",
+        "char_start": 23969,
+        "char_end": 23983,
+        "line_start": 561,
+        "line_end": 561,
+        "raw_text": "~~PageV1P101\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 101
+        }
+      },
+      {
+        "block_id": "b0006",
+        "block_type": "heading",
+        "char_start": 23983,
+        "char_end": 23998,
+        "line_start": 562,
+        "line_end": 562,
+        "raw_text": "### || [genre: ",
+        "group_id": "heading_0002",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0007",
+        "block_type": "milestone",
+        "char_start": 23998,
+        "char_end": 24002,
+        "line_start": 562,
+        "line_end": 562,
+        "raw_text": "ms16",
+        "group_id": null,
+        "attributes": {
+          "number": 16
+        }
+      },
+      {
+        "block_id": "b0008",
+        "block_type": "heading",
+        "char_start": 24002,
+        "char_end": 24007,
+        "line_start": 562,
+        "line_end": 562,
+        "raw_text": " R]\r\n",
+        "group_id": "heading_0002",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0009",
+        "block_type": "verse",
+        "char_start": 24007,
+        "char_end": 24076,
+        "line_start": 563,
+        "line_end": 563,
+        "raw_text": "# 1 زنهار در آن کوش که در زیر سپهر %~% با هیچ کس‌ات هیچ نپیوندد مهر\r\n",
+        "group_id": "verse_0003",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0010",
+        "block_type": "verse",
+        "char_start": 24076,
+        "char_end": 24144,
+        "line_start": 564,
+        "line_end": 564,
+        "raw_text": "# 2 تا بو که از این هزاهزکون و فساد %~% بیرون شدنیت زود بنماید چهر\r\n",
+        "group_id": "verse_0004",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0011",
+        "block_type": "page_marker",
+        "char_start": 24144,
+        "char_end": 24158,
+        "line_start": 565,
+        "line_end": 565,
+        "raw_text": "~~PageV1P102\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 102
+        }
+      },
+      {
+        "block_id": "b0012",
+        "block_type": "heading",
+        "char_start": 24158,
+        "char_end": 24177,
+        "line_start": 566,
+        "line_end": 566,
+        "raw_text": "### || [genre: R]\r\n",
+        "group_id": "heading_0003",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0013",
+        "block_type": "verse",
+        "char_start": 24177,
+        "char_end": 24246,
+        "line_start": 567,
+        "line_end": 567,
+        "raw_text": "# 1 عمر از پی افزون زر کاسته گیر %~% صد گنج زر از رنج تن آراسته گیر\r\n",
+        "group_id": "verse_0005",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0014",
+        "block_type": "verse",
+        "char_start": 24246,
+        "char_end": 24318,
+        "line_start": 568,
+        "line_end": 568,
+        "raw_text": "# 2 پس بر سر آن گنج چو بر صحرا برف %~% روزی دو سه بنشسته و برخاسته گیر\r\n",
+        "group_id": "verse_0006",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0015",
+        "block_type": "page_marker",
+        "char_start": 24318,
+        "char_end": 24332,
+        "line_start": 569,
+        "line_end": 569,
+        "raw_text": "~~PageV1P103\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 103
+        }
+      },
+      {
+        "block_id": "b0016",
+        "block_type": "heading",
+        "char_start": 24332,
+        "char_end": 24351,
+        "line_start": 570,
+        "line_end": 570,
+        "raw_text": "### || [genre: R]\r\n",
+        "group_id": "heading_0004",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0017",
+        "block_type": "verse",
+        "char_start": 24351,
+        "char_end": 24424,
+        "line_start": 571,
+        "line_end": 571,
+        "raw_text": "# 1 دانی که چرا زنند این طبلک باز %~% تا گم شده‌گان به راه باز آیند باز\r\n",
+        "group_id": "verse_0007",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0018",
+        "block_type": "verse",
+        "char_start": 24424,
+        "char_end": 24496,
+        "line_start": 572,
+        "line_end": 572,
+        "raw_text": "# 2 دانی که چرا دوخته اند دیده باز %~% تا باز به قدر خود کند دیده فراز\r\n",
+        "group_id": "verse_0008",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0019",
+        "block_type": "page_marker",
+        "char_start": 24496,
+        "char_end": 24510,
+        "line_start": 573,
+        "line_end": 573,
+        "raw_text": "~~PageV1P104\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 104
+        }
+      },
+      {
+        "block_id": "b0020",
+        "block_type": "heading",
+        "char_start": 24510,
+        "char_end": 24529,
+        "line_start": 574,
+        "line_end": 574,
+        "raw_text": "### || [genre: R]\r\n",
+        "group_id": "heading_0005",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0021",
+        "block_type": "verse",
+        "char_start": 24529,
+        "char_end": 24599,
+        "line_start": 575,
+        "line_end": 575,
+        "raw_text": "# 1 در هستی کون خویش مردم ز آغاز %~% با خلق جهان و با جهان است انباز\r\n",
+        "group_id": "verse_0009",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0022",
+        "block_type": "verse",
+        "char_start": 24599,
+        "char_end": 24671,
+        "line_start": 576,
+        "line_end": 576,
+        "raw_text": "# 2 وآنگه ز جهان و هر چه هست اندر وی  %~% آگه شود و همه به او گردد باز\r\n",
+        "group_id": "verse_0010",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0023",
+        "block_type": "page_marker",
+        "char_start": 24671,
+        "char_end": 24685,
+        "line_start": 577,
+        "line_end": 577,
+        "raw_text": "~~PageV1P105\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 105
+        }
+      },
+      {
+        "block_id": "b0024",
+        "block_type": "heading",
+        "char_start": 24685,
+        "char_end": 24704,
+        "line_start": 578,
+        "line_end": 578,
+        "raw_text": "### || [genre: R]\r\n",
+        "group_id": "heading_0006",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0025",
+        "block_type": "verse",
+        "char_start": 24704,
+        "char_end": 24773,
+        "line_start": 579,
+        "line_end": 579,
+        "raw_text": "# 1 تاریک شد از هجر دل افروزم روز %~% شب نیز شد از آه جهان سوزم روز\r\n",
+        "group_id": "verse_0011",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0026",
+        "block_type": "verse",
+        "char_start": 24773,
+        "char_end": 24844,
+        "line_start": 580,
+        "line_end": 580,
+        "raw_text": "# 2 شد روشنی از روز و سیاهی ز شبم %~% اکنون نه شبم شب است نه روزم روز\r\n",
+        "group_id": "verse_0012",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0027",
+        "block_type": "page_marker",
+        "char_start": 24844,
+        "char_end": 24858,
+        "line_start": 581,
+        "line_end": 581,
+        "raw_text": "~~PageV1P106\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 106
+        }
+      },
+      {
+        "block_id": "b0028",
+        "block_type": "heading",
+        "char_start": 24858,
+        "char_end": 24877,
+        "line_start": 582,
+        "line_end": 582,
+        "raw_text": "### || [genre: R]\r\n",
+        "group_id": "heading_0007",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0029",
+        "block_type": "verse",
+        "char_start": 24877,
+        "char_end": 24949,
+        "line_start": 583,
+        "line_end": 583,
+        "raw_text": "# 1 ای خواجه تو خود چه دیده‌ای باش هنوز %~% زین ره به کجا رسیده‌ای باش\r\n",
+        "group_id": "verse_0013",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0030",
+        "block_type": "verse",
+        "char_start": 24949,
+        "char_end": 24957,
+        "line_start": 584,
+        "line_end": 584,
+        "raw_text": "~~هنوز\r\n",
+        "group_id": "verse_0013",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0031",
+        "block_type": "verse",
+        "char_start": 24957,
+        "char_end": 25029,
+        "line_start": 585,
+        "line_end": 585,
+        "raw_text": "# 2 زآن جرعه کز آن سپهر سرگردان شد %~% یک قطره تو کی چشیده‌ای باش هنوز\r\n",
+        "group_id": "verse_0014",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0032",
+        "block_type": "page_marker",
+        "char_start": 25029,
+        "char_end": 25043,
+        "line_start": 586,
+        "line_end": 586,
+        "raw_text": "~~PageV1P107\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 107
+        }
+      },
+      {
+        "block_id": "b0033",
+        "block_type": "heading",
+        "char_start": 25043,
+        "char_end": 25062,
+        "line_start": 587,
+        "line_end": 587,
+        "raw_text": "### || [genre: R]\r\n",
+        "group_id": "heading_0008",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0034",
+        "block_type": "verse",
+        "char_start": 25062,
+        "char_end": 25131,
+        "line_start": 588,
+        "line_end": 588,
+        "raw_text": "# 1 تا کی باشی ز عافیت در پرهیز %~% با خلق به آشتی و با خود به ستیز\r\n",
+        "group_id": "verse_0015",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0035",
+        "block_type": "verse",
+        "char_start": 25131,
+        "char_end": 25203,
+        "line_start": 589,
+        "line_end": 589,
+        "raw_text": "# 2 ای خفته بی خبر اگر مرده نه‌ای %~% روز آمد و رفت تا به کی خسبی خیز!\r\n",
+        "group_id": "verse_0016",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0036",
+        "block_type": "page_marker",
+        "char_start": 25203,
+        "char_end": 25215,
+        "line_start": 590,
+        "line_end": 590,
+        "raw_text": "PageV1P108\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 108
+        }
+      },
+      {
+        "block_id": "b0037",
+        "block_type": "heading",
+        "char_start": 25215,
+        "char_end": 25234,
+        "line_start": 591,
+        "line_end": 591,
+        "raw_text": "### || [genre: R]\r\n",
+        "group_id": "heading_0009",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0038",
+        "block_type": "verse",
+        "char_start": 25234,
+        "char_end": 25303,
+        "line_start": 592,
+        "line_end": 592,
+        "raw_text": "# 1  بیرون ز چهار عنصر و پنج حواس %~% از شش جهت و هفت خط و هشت اساس\r\n",
+        "group_id": "verse_0017",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0039",
+        "block_type": "verse",
+        "char_start": 25303,
+        "char_end": 25377,
+        "line_start": 593,
+        "line_end": 593,
+        "raw_text": "# 2 سری است نهفته در میان خانه جان %~% کان را نتوان یافت به تقلید و قیاس\r\n",
+        "group_id": "verse_0018",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0040",
+        "block_type": "page_marker",
+        "char_start": 25377,
+        "char_end": 25391,
+        "line_start": 594,
+        "line_end": 594,
+        "raw_text": "~~PageV1P109\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 109
+        }
+      },
+      {
+        "block_id": "b0041",
+        "block_type": "heading",
+        "char_start": 25391,
+        "char_end": 25410,
+        "line_start": 595,
+        "line_end": 595,
+        "raw_text": "### || [genre: R]\r\n",
+        "group_id": "heading_0010",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0042",
+        "block_type": "verse",
+        "char_start": 25410,
+        "char_end": 25479,
+        "line_start": 596,
+        "line_end": 596,
+        "raw_text": "# 1 تا چند روی از پی تقلید و قیاس %~% بگذر ز چهار اسم و از پنج حواس\r\n",
+        "group_id": "verse_0019",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0043",
+        "block_type": "verse",
+        "char_start": 25479,
+        "char_end": 25509,
+        "line_start": 597,
+        "line_end": 597,
+        "raw_text": "# 2 گر معرفت خدای خود می طلبی ",
+        "group_id": "verse_0020",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0044",
+        "block_type": "milestone",
+        "char_start": 25509,
+        "char_end": 25513,
+        "line_start": 597,
+        "line_end": 597,
+        "raw_text": "ms17",
+        "group_id": null,
+        "attributes": {
+          "number": 17
+        }
+      },
+      {
+        "block_id": "b0045",
+        "block_type": "verse",
+        "char_start": 25513,
+        "char_end": 25550,
+        "line_start": 597,
+        "line_end": 597,
+        "raw_text": " %~% در خود نگر و خدای خود را بشناس\r\n",
+        "group_id": "verse_0020",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0046",
+        "block_type": "page_marker",
+        "char_start": 25550,
+        "char_end": 25564,
+        "line_start": 598,
+        "line_end": 598,
+        "raw_text": "~~PageV1P110\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 110
+        }
+      },
+      {
+        "block_id": "b0047",
+        "block_type": "heading",
+        "char_start": 25564,
+        "char_end": 25583,
+        "line_start": 599,
+        "line_end": 599,
+        "raw_text": "### || [genre: R]\r\n",
+        "group_id": "heading_0011",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0048",
+        "block_type": "verse",
+        "char_start": 25583,
+        "char_end": 25656,
+        "line_start": 600,
+        "line_end": 600,
+        "raw_text": "# 1 در خرقه چه پیچی ار نه ای شاه شناس %~% کز خرقه نه امید فزاید نه هراس\r\n",
+        "group_id": "verse_0021",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0049",
+        "block_type": "verse",
+        "char_start": 25656,
+        "char_end": 25729,
+        "line_start": 601,
+        "line_end": 601,
+        "raw_text": "# 2 خز برکنی از کرم و بپوشی که لباس %~% چون پوشش تن بود چه دیبا چه پلاس\r\n",
+        "group_id": "verse_0022",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0050",
+        "block_type": "page_marker",
+        "char_start": 25729,
+        "char_end": 25743,
+        "line_start": 602,
+        "line_end": 602,
+        "raw_text": "~~PageV1P111\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 111
+        }
+      },
+      {
+        "block_id": "b0051",
+        "block_type": "heading",
+        "char_start": 25743,
+        "char_end": 25762,
+        "line_start": 603,
+        "line_end": 603,
+        "raw_text": "### || [genre: R]\r\n",
+        "group_id": "heading_0012",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0052",
+        "block_type": "verse",
+        "char_start": 25762,
+        "char_end": 25827,
+        "line_start": 604,
+        "line_end": 604,
+        "raw_text": "# 1 ز افسانه گری ای دل دانش نشناس %~% پیوسته قرین شک ندیم وسواس\r\n",
+        "group_id": "verse_0023",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0053",
+        "block_type": "verse",
+        "char_start": 25827,
+        "char_end": 25897,
+        "line_start": 605,
+        "line_end": 605,
+        "raw_text": "# 2 تا تو تهی از عقل و پر از پنداری %~% فربه نه‌ای از فریب داری آماس\r\n",
+        "group_id": "verse_0024",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0054",
+        "block_type": "page_marker",
+        "char_start": 25897,
+        "char_end": 25911,
+        "line_start": 606,
+        "line_end": 606,
+        "raw_text": "~~PageV1P112\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 112
+        }
+      },
+      {
+        "block_id": "b0055",
+        "block_type": "heading",
+        "char_start": 25911,
+        "char_end": 25930,
+        "line_start": 607,
+        "line_end": 607,
+        "raw_text": "### || [genre: R]\r\n",
+        "group_id": "heading_0013",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0056",
+        "block_type": "verse",
+        "char_start": 25930,
+        "char_end": 25996,
+        "line_start": 608,
+        "line_end": 608,
+        "raw_text": "# 1 هان ای دل بد زهره ز شمشیر مترس %~% بفشار قدم ز حمله شیر مترس\r\n",
+        "group_id": "verse_0025",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0057",
+        "block_type": "verse",
+        "char_start": 25996,
+        "char_end": 26061,
+        "line_start": 609,
+        "line_end": 609,
+        "raw_text": "# 2 در ساحت این زمانه عاریتی %~% ز اقبال مشو شاد و ز ادبیر مترس\r\n",
+        "group_id": "verse_0026",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0058",
+        "block_type": "page_marker",
+        "char_start": 26061,
+        "char_end": 26075,
+        "line_start": 610,
+        "line_end": 610,
+        "raw_text": "~~PageV1P113\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 113
+        }
+      },
+      {
+        "block_id": "b0059",
+        "block_type": "heading",
+        "char_start": 26075,
+        "char_end": 26094,
+        "line_start": 611,
+        "line_end": 611,
+        "raw_text": "### || [genre: R]\r\n",
+        "group_id": "heading_0014",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0060",
+        "block_type": "verse",
+        "char_start": 26094,
+        "char_end": 26162,
+        "line_start": 612,
+        "line_end": 612,
+        "raw_text": "# 1  بالا مطلب ز هیچ کس بیش مباش %~% چون مرهم نرم باش چون نیش مباش\r\n",
+        "group_id": "verse_0027",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0061",
+        "block_type": "verse",
+        "char_start": 26162,
+        "char_end": 26234,
+        "line_start": 613,
+        "line_end": 613,
+        "raw_text": "# 2 خواهی که ز هیچ کس به تو بد نرسد %~% بدخواه و بدآموز و بداندیش میاش\r\n",
+        "group_id": "verse_0028",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0062",
+        "block_type": "page_marker",
+        "char_start": 26234,
+        "char_end": 26248,
+        "line_start": 614,
+        "line_end": 614,
+        "raw_text": "~~PageV1P114\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 114
+        }
+      },
+      {
+        "block_id": "b0063",
+        "block_type": "heading",
+        "char_start": 26248,
+        "char_end": 26267,
+        "line_start": 615,
+        "line_end": 615,
+        "raw_text": "### || [genre: R]\r\n",
+        "group_id": "heading_0015",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0064",
+        "block_type": "verse",
+        "char_start": 26267,
+        "char_end": 26337,
+        "line_start": 616,
+        "line_end": 616,
+        "raw_text": "# 1 واپس منگر دمی و در پیش مباش %~% با خویش مباش و خالی از خویش مباش\r\n",
+        "group_id": "verse_0029",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0065",
+        "block_type": "verse",
+        "char_start": 26337,
+        "char_end": 26395,
+        "line_start": 617,
+        "line_end": 617,
+        "raw_text": "# 2 خواهی که غریق بحر توحید شوی %~% مشنو منگر میندیش مباش ",
+        "group_id": "verse_0030",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0066",
+        "block_type": "page_marker",
+        "char_start": 26395,
+        "char_end": 26407,
+        "line_start": 617,
+        "line_end": 617,
+        "raw_text": "PageV1P115\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 115
+        }
+      }
+    ],
+    "notes": "Automatically drafted using deterministic structured-poetry rules. Manual review is required.\nManually reviewed: block types, marker attributes, logical groups, offsets, and reconstruction verified."
   }
 }
