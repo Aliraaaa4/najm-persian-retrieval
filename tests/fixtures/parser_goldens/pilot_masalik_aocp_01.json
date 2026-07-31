@@ -381,8 +381,929 @@
   ],
   "annotations": {
     "schema_version": 1,
-    "status": "draft",
-    "blocks": [],
-    "notes": ""
+    "status": "complete",
+    "blocks": [
+      {
+        "block_id": "b0001",
+        "block_type": "page_marker",
+        "char_start": 250616,
+        "char_end": 250629,
+        "line_start": 5284,
+        "line_end": 5284,
+        "raw_text": "PageV01P190\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 190
+        }
+      },
+      {
+        "block_id": "b0002",
+        "block_type": "blank",
+        "char_start": 250629,
+        "char_end": 250631,
+        "line_start": 5285,
+        "line_end": 5285,
+        "raw_text": "\r\n",
+        "group_id": null,
+        "attributes": {}
+      },
+      {
+        "block_id": "b0003",
+        "block_type": "image_reference",
+        "char_start": 250631,
+        "char_end": 250702,
+        "line_start": 5286,
+        "line_end": 5286,
+        "raw_text": "![image filename](./Istakhri_Mamalik_ed_Afshar_1373.pdf_page_249.png)\r\n",
+        "group_id": null,
+        "attributes": {
+          "target": "./Istakhri_Mamalik_ed_Afshar_1373.pdf_page_249.png",
+          "alt_text": "image filename"
+        }
+      },
+      {
+        "block_id": "b0004",
+        "block_type": "blank",
+        "char_start": 250702,
+        "char_end": 250704,
+        "line_start": 5287,
+        "line_end": 5287,
+        "raw_text": "\r\n",
+        "group_id": null,
+        "attributes": {}
+      },
+      {
+        "block_id": "b0005",
+        "block_type": "paragraph",
+        "char_start": 250704,
+        "char_end": 250716,
+        "line_start": 5288,
+        "line_end": 5288,
+        "raw_text": "~~میباشد .\r\n",
+        "group_id": "paragraph_0001",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": true
+        }
+      },
+      {
+        "block_id": "b0006",
+        "block_type": "paragraph",
+        "char_start": 250716,
+        "char_end": 250720,
+        "line_start": 5289,
+        "line_end": 5289,
+        "raw_text": "# و ",
+        "group_id": "paragraph_0002",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0007",
+        "block_type": "milestone",
+        "char_start": 250720,
+        "char_end": 250725,
+        "line_start": 5289,
+        "line_end": 5289,
+        "raw_text": "ms158",
+        "group_id": null,
+        "attributes": {
+          "number": 158
+        }
+      },
+      {
+        "block_id": "b0008",
+        "block_type": "paragraph",
+        "char_start": 250725,
+        "char_end": 250794,
+        "line_start": 5289,
+        "line_end": 5289,
+        "raw_text": " به نزدیکی آن از طرف اسلام بر کنارهآ دریا روستایی هست به مسقط معروف\r\n",
+        "group_id": "paragraph_0002",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0009",
+        "block_type": "paragraph",
+        "char_start": 250794,
+        "char_end": 250866,
+        "line_start": 5290,
+        "line_end": 5290,
+        "raw_text": "~~و شهر لکز به نزدیک آن است و ایشان گروهی بسیاراند خداوند شتران بزرگ و\r\n",
+        "group_id": "paragraph_0002",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0010",
+        "block_type": "paragraph",
+        "char_start": 250866,
+        "char_end": 250939,
+        "line_start": 5291,
+        "line_end": 5291,
+        "raw_text": "~~ضخیم و درخت وضیاع و مزرعهآ معمور وشهرها[ی] بسیار وانبوهاند. واز احرار\r\n",
+        "group_id": "paragraph_0002",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0011",
+        "block_type": "paragraph",
+        "char_start": 250939,
+        "char_end": 251016,
+        "line_start": 5292,
+        "line_end": 5292,
+        "raw_text": "~~قومی در آنجا متوطن شدهاند که ایشان را «خماشره» می گویند، و از تمامت اقوام\r\n",
+        "group_id": "paragraph_0002",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0012",
+        "block_type": "paragraph",
+        "char_start": 251016,
+        "char_end": 251056,
+        "line_start": 5293,
+        "line_end": 5293,
+        "raw_text": "~~که در آنجا متوطن اند ایشان بیشتراند.\r\n",
+        "group_id": "paragraph_0002",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0013",
+        "block_type": "paragraph",
+        "char_start": 251056,
+        "char_end": 251127,
+        "line_start": 5294,
+        "line_end": 5294,
+        "raw_text": "# اما قوم ملوک ازیشان در عدد بیشترند، و گروه مشاق2 در عدد ازیشان کمتر\r\n",
+        "group_id": "paragraph_0003",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0014",
+        "block_type": "paragraph",
+        "char_start": 251127,
+        "char_end": 251181,
+        "line_start": 5295,
+        "line_end": 5295,
+        "raw_text": "~~میباشد. بعد از آن گروه اکره ، پس از آن گروه مهان2.\r\n",
+        "group_id": "paragraph_0003",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0015",
+        "block_type": "paragraph",
+        "char_start": 251181,
+        "char_end": 251253,
+        "line_start": 5296,
+        "line_end": 5296,
+        "raw_text": "# و شهر طبرسران4 در میانهآ این قوم و باب الابواب است، و آن و اهل او در\r\n",
+        "group_id": "paragraph_0004",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0016",
+        "block_type": "paragraph",
+        "char_start": 251253,
+        "char_end": 251323,
+        "line_start": 5297,
+        "line_end": 5297,
+        "raw_text": "~~صفت وخلقت و عمارت و زراعت مانند لکز است الا آنکه شهر لکز فراختراست\r\n",
+        "group_id": "paragraph_0004",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0017",
+        "block_type": "paragraph",
+        "char_start": 251323,
+        "char_end": 251354,
+        "line_start": 5298,
+        "line_end": 5298,
+        "raw_text": "~~و مردم در آن بیشتر میباشند.\r\n",
+        "group_id": "paragraph_0004",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0018",
+        "block_type": "paragraph",
+        "char_start": 251354,
+        "char_end": 251429,
+        "line_start": 5299,
+        "line_end": 5299,
+        "raw_text": "# و فیلانه بالاتراز آن است و آن کورهٔ‌ کو چک است بر کنارهآ این دریا مبغی.\r\n",
+        "group_id": "paragraph_0005",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0019",
+        "block_type": "paragraph",
+        "char_start": 251429,
+        "char_end": 251505,
+        "line_start": 5300,
+        "line_end": 5300,
+        "raw_text": "~~و در مقدار کمتر ارمسقط شابران6 است و به شابران6 معروف میشود. و آن شهر با\r\n",
+        "group_id": "paragraph_0005",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0020",
+        "block_type": "paragraph",
+        "char_start": 251505,
+        "char_end": 251558,
+        "line_start": 5301,
+        "line_end": 5301,
+        "raw_text": "~~خصب و نعمت و امن و راحت است با روستای پهن و بزرک.\r\n",
+        "group_id": "paragraph_0005",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0021",
+        "block_type": "paragraph",
+        "char_start": 251558,
+        "char_end": 251625,
+        "line_start": 5302,
+        "line_end": 5302,
+        "raw_text": "# و روستای جشمدان7 از آن بالاترست و از پس آن ضیاع و اعمال کوهستان\r\n",
+        "group_id": "paragraph_0006",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0022",
+        "block_type": "paragraph",
+        "char_start": 251625,
+        "char_end": 251701,
+        "line_start": 5303,
+        "line_end": 5303,
+        "raw_text": "~~است و شروان تا حد با که8 و درنیق9 و لکز1 و آنجا که هر دو رودها به یکدیگر\r\n",
+        "group_id": "paragraph_0006",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0023",
+        "block_type": "paragraph",
+        "char_start": 251701,
+        "char_end": 251717,
+        "line_start": 5304,
+        "line_end": 5304,
+        "raw_text": "~~جمع میشوند .\r\n",
+        "group_id": "paragraph_0006",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0024",
+        "block_type": "paragraph",
+        "char_start": 251717,
+        "char_end": 251787,
+        "line_start": 5305,
+        "line_end": 5305,
+        "raw_text": "# و کیران11 از پس شروان است و آنجا قلعهٔ‌ بزرگ و خوش و نزه با خصب، و\r\n",
+        "group_id": "paragraph_0007",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0025",
+        "block_type": "paragraph",
+        "char_start": 251787,
+        "char_end": 251861,
+        "line_start": 5306,
+        "line_end": 5306,
+        "raw_text": "~~راحت هست، و چنان شنیده شد که در آن قلعه چشمه [های] بسیار میباشد چنانکه\r\n",
+        "group_id": "paragraph_0007",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0026",
+        "block_type": "paragraph",
+        "char_start": 251861,
+        "char_end": 251928,
+        "line_start": 5307,
+        "line_end": 5307,
+        "raw_text": "~~در وقت بیرون آمدن آب بانگت و شغب می کند ، و اهل آن موضع مواشی و\r\n",
+        "group_id": "paragraph_0007",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0027",
+        "block_type": "paragraph",
+        "char_start": 251928,
+        "char_end": 252007,
+        "line_start": 5308,
+        "line_end": 5308,
+        "raw_text": "~~گوسفندان خود را بی شبان در آن قلعه به چرا می گذارند از استواری و بزر گی آن.\r\n",
+        "group_id": "paragraph_0007",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0028",
+        "block_type": "paragraph",
+        "char_start": 252007,
+        "char_end": 252072,
+        "line_start": 5309,
+        "line_end": 5309,
+        "raw_text": "# و شهر تفلیس را سه دروازه هست و آن بغایت عمارت و زراعت است) با\r\n",
+        "group_id": "paragraph_0008",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0029",
+        "block_type": "paragraph",
+        "char_start": 252072,
+        "char_end": 252147,
+        "line_start": 5310,
+        "line_end": 5310,
+        "raw_text": "~~میو[5 ]های بسیار، و آن نیز ثغری است از ثغور معدود . اما در طول و عرض از\r\n",
+        "group_id": "paragraph_0008",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0030",
+        "block_type": "paragraph",
+        "char_start": 252147,
+        "char_end": 252179,
+        "line_start": 5311,
+        "line_end": 5311,
+        "raw_text": "~~باب الابواب کمتر میباشد، و در ",
+        "group_id": "paragraph_0008",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0031",
+        "block_type": "milestone",
+        "char_start": 252179,
+        "char_end": 252184,
+        "line_start": 5311,
+        "line_end": 5311,
+        "raw_text": "ms159",
+        "group_id": null,
+        "attributes": {
+          "number": 159
+        }
+      },
+      {
+        "block_id": "b0032",
+        "block_type": "paragraph",
+        "char_start": 252184,
+        "char_end": 252230,
+        "line_start": 5311,
+        "line_end": 5311,
+        "raw_text": " حوالی آن دو سور ازگل ساختهاند و در آنجا نیز\r\n",
+        "group_id": "paragraph_0008",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0033",
+        "block_type": "paragraph",
+        "char_start": 252230,
+        "char_end": 252290,
+        "line_start": 5312,
+        "line_end": 5312,
+        "raw_text": "~~کبوتر12 میباشد مانند کبوتر طبریه ، و آب آنجا گرم میباشد.\r\n",
+        "group_id": "paragraph_0008",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0034",
+        "block_type": "paragraph",
+        "char_start": 252290,
+        "char_end": 252356,
+        "line_start": 5313,
+        "line_end": 5313,
+        "raw_text": "# و در اران هیچ شهری بزرگتر از بردعه و باب الابواب و تفلیس نیست.\r\n",
+        "group_id": "paragraph_0009",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0035",
+        "block_type": "blank",
+        "char_start": 252356,
+        "char_end": 252358,
+        "line_start": 5314,
+        "line_end": 5314,
+        "raw_text": "\r\n",
+        "group_id": null,
+        "attributes": {}
+      },
+      {
+        "block_id": "b0036",
+        "block_type": "page_marker",
+        "char_start": 252358,
+        "char_end": 252371,
+        "line_start": 5315,
+        "line_end": 5315,
+        "raw_text": "PageV01P191\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 191
+        }
+      },
+      {
+        "block_id": "b0037",
+        "block_type": "blank",
+        "char_start": 252371,
+        "char_end": 252373,
+        "line_start": 5316,
+        "line_end": 5316,
+        "raw_text": "\r\n",
+        "group_id": null,
+        "attributes": {}
+      },
+      {
+        "block_id": "b0038",
+        "block_type": "image_reference",
+        "char_start": 252373,
+        "char_end": 252444,
+        "line_start": 5317,
+        "line_end": 5317,
+        "raw_text": "![image filename](./Istakhri_Mamalik_ed_Afshar_1373.pdf_page_250.png)\r\n",
+        "group_id": null,
+        "attributes": {
+          "target": "./Istakhri_Mamalik_ed_Afshar_1373.pdf_page_250.png",
+          "alt_text": "image filename"
+        }
+      },
+      {
+        "block_id": "b0039",
+        "block_type": "blank",
+        "char_start": 252444,
+        "char_end": 252446,
+        "line_start": 5318,
+        "line_end": 5318,
+        "raw_text": "\r\n",
+        "group_id": null,
+        "attributes": {}
+      },
+      {
+        "block_id": "b0040",
+        "block_type": "paragraph",
+        "char_start": 252446,
+        "char_end": 252518,
+        "line_start": 5319,
+        "line_end": 5319,
+        "raw_text": "# و اما بیلقان و ورثان1 و [ بردیج ]2 وبرزنج وشماخیه1 و شروان وابخاز2 و\r\n",
+        "group_id": "paragraph_0010",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0041",
+        "block_type": "paragraph",
+        "char_start": 252518,
+        "char_end": 252590,
+        "line_start": 5320,
+        "line_end": 5320,
+        "raw_text": "~~شابران5 و قبله6 و شکی7 و جنزه 8 و شمکور و خنان1 شهرها[ی] کو چکثاند و\r\n",
+        "group_id": "paragraph_0010",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0042",
+        "block_type": "paragraph",
+        "char_start": 252590,
+        "char_end": 252661,
+        "line_start": 5321,
+        "line_end": 5321,
+        "raw_text": "~~در بزرگی به یکدیگر نزدیکاند، و تمامت با خصب و نعمت و آسایش و راحت و\r\n",
+        "group_id": "paragraph_0010",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0043",
+        "block_type": "paragraph",
+        "char_start": 252661,
+        "char_end": 252681,
+        "line_start": 5322,
+        "line_end": 5322,
+        "raw_text": "~~نرخهای ارزاناند.\r\n",
+        "group_id": "paragraph_0010",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0044",
+        "block_type": "paragraph",
+        "char_start": 252681,
+        "char_end": 252751,
+        "line_start": 5323,
+        "line_end": 5323,
+        "raw_text": "# و اما قبله 1 و شکی 12 هر دو روستای آنجااند مثل شروان12 و اران 12 و\r\n",
+        "group_id": "paragraph_0011",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0045",
+        "block_type": "paragraph",
+        "char_start": 252751,
+        "char_end": 252790,
+        "line_start": 5324,
+        "line_end": 5324,
+        "raw_text": "~~موقانیه، و ایشان ممالک آن دیاراند .\r\n",
+        "group_id": "paragraph_0011",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0046",
+        "block_type": "paragraph",
+        "char_start": 252790,
+        "char_end": 252867,
+        "line_start": 5325,
+        "line_end": 5325,
+        "raw_text": "# و دبیل11 بزرگتر از اردبیل است و آن قصبهآ ارمنیه است و پیوستهآ دار الاماره\r\n",
+        "group_id": "paragraph_0012",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0047",
+        "block_type": "paragraph",
+        "char_start": 252867,
+        "char_end": 252952,
+        "line_start": 5326,
+        "line_end": 5326,
+        "raw_text": "~~به ارمنیه می باشد همچنانکه دار الامارهآ اران15 بردعه است و دار الامارةآ اذر بیجان\r\n",
+        "group_id": "paragraph_0012",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0048",
+        "block_type": "paragraph",
+        "char_start": 252952,
+        "char_end": 253028,
+        "line_start": 5327,
+        "line_end": 5327,
+        "raw_text": "~~اردبیل. و در حوالی آن سوری ساخته هست و در آنجا ترسایان بسیار متوطن ومقیم\r\n",
+        "group_id": "paragraph_0012",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0049",
+        "block_type": "paragraph",
+        "char_start": 253028,
+        "char_end": 253104,
+        "line_start": 5328,
+        "line_end": 5328,
+        "raw_text": "~~می باشند. و مسجد جامع به جنب کنشتها[ی] ترسایان است. و جامهها[ی] ابریشم و\r\n",
+        "group_id": "paragraph_0012",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0050",
+        "block_type": "paragraph",
+        "char_start": 253104,
+        "char_end": 253180,
+        "line_start": 5329,
+        "line_end": 5329,
+        "raw_text": "~~زیلو و بالشت11 وتکهها[ی]17 مشابه و مماثل ارمنی از ابریشم حاز آنجا مرتفعی\r\n",
+        "group_id": "paragraph_0012",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0051",
+        "block_type": "paragraph",
+        "char_start": 253180,
+        "char_end": 253252,
+        "line_start": 5330,
+        "line_end": 5330,
+        "raw_text": "~~میباشد . و ایشان را چیزی دیگر هست که رنگ سرخ می کنند و آن را «قرمز »\r\n",
+        "group_id": "paragraph_0012",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0052",
+        "block_type": "paragraph",
+        "char_start": 253252,
+        "char_end": 253325,
+        "line_start": 5331,
+        "line_end": 5331,
+        "raw_text": "~~میخوانند ، و چنان شنیده شد که آن رنگ را کرمی هست که برخود میتند مانند\r\n",
+        "group_id": "paragraph_0012",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0053",
+        "block_type": "paragraph",
+        "char_start": 253325,
+        "char_end": 253365,
+        "line_start": 5332,
+        "line_end": 5332,
+        "raw_text": "~~کرم «قزه که به نفس وحوالی خود میتند.\r\n",
+        "group_id": "paragraph_0012",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0054",
+        "block_type": "paragraph",
+        "char_start": 253365,
+        "char_end": 253437,
+        "line_start": 5333,
+        "line_end": 5333,
+        "raw_text": "# و آن قصبهآ ارمنیه است، و سنباط بن اشوط در آنجا مقیم می بودی و پیوسته\r\n",
+        "group_id": "paragraph_0013",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0055",
+        "block_type": "paragraph",
+        "char_start": 253437,
+        "char_end": 253509,
+        "line_start": 5334,
+        "line_end": 5334,
+        "raw_text": "~~تحت حکم امرا و رؤسای ترسایان بوده است، و غالب اهل ارمنیه ترسایاناند.\r\n",
+        "group_id": "paragraph_0013",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0056",
+        "block_type": "paragraph",
+        "char_start": 253509,
+        "char_end": 253575,
+        "line_start": 5335,
+        "line_end": 5335,
+        "raw_text": "# و مملکت ارمن به روم متاخم و نزدیک است ویک حد از آن به روم متصل\r\n",
+        "group_id": "paragraph_0014",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0057",
+        "block_type": "paragraph",
+        "char_start": 253575,
+        "char_end": 253645,
+        "line_start": 5336,
+        "line_end": 5336,
+        "raw_text": "~~متصل میشود، و حدی دیگر به بردعه، وحدی دیگر به جزیره، و حدی دیگر به\r\n",
+        "group_id": "paragraph_0014",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0058",
+        "block_type": "paragraph",
+        "char_start": 253645,
+        "char_end": 253720,
+        "line_start": 5337,
+        "line_end": 5337,
+        "raw_text": "~~اذربیجان و کوهستان، و از آنجا می کشد تا به ری و آنچه ازپس ری/ می باشد و\r\n",
+        "group_id": "paragraph_0014",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0059",
+        "block_type": "paragraph",
+        "char_start": 253720,
+        "char_end": 253794,
+        "line_start": 5338,
+        "line_end": 5338,
+        "raw_text": "~~ثغرها که به نزدیک روم است تمامت از حساب و صدد ارمنیهاند و اهل آذربیجان\r\n",
+        "group_id": "paragraph_0014",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0060",
+        "block_type": "paragraph",
+        "char_start": 253794,
+        "char_end": 253813,
+        "line_start": 5339,
+        "line_end": 5339,
+        "raw_text": "~~خود را به ارمنیه ",
+        "group_id": "paragraph_0014",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0061",
+        "block_type": "milestone",
+        "char_start": 253813,
+        "char_end": 253818,
+        "line_start": 5339,
+        "line_end": 5339,
+        "raw_text": "ms160",
+        "group_id": null,
+        "attributes": {
+          "number": 160
+        }
+      },
+      {
+        "block_id": "b0062",
+        "block_type": "paragraph",
+        "char_start": 253818,
+        "char_end": 253835,
+        "line_start": 5339,
+        "line_end": 5339,
+        "raw_text": " نسبت می کنند .\r\n",
+        "group_id": "paragraph_0014",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0063",
+        "block_type": "paragraph",
+        "char_start": 253835,
+        "char_end": 253904,
+        "line_start": 5340,
+        "line_end": 5340,
+        "raw_text": "# و موضعی هست در آن دیار به طرابزنده18 معروف و بازرگانان در آنجا از\r\n",
+        "group_id": "paragraph_0015",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0064",
+        "block_type": "paragraph",
+        "char_start": 253904,
+        "char_end": 253961,
+        "line_start": 5341,
+        "line_end": 5341,
+        "raw_text": "~~اطراف مجتمع میشوند و از آنجا به روم به تجارت می روند.\r\n",
+        "group_id": "paragraph_0015",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0065",
+        "block_type": "paragraph",
+        "char_start": 253961,
+        "char_end": 254027,
+        "line_start": 5342,
+        "line_end": 5342,
+        "raw_text": "# و هرشهری ودیهی که درحو الی واضعاف و نواحی و اطراف آن دیاراست و\r\n",
+        "group_id": "paragraph_0016",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0066",
+        "block_type": "paragraph",
+        "char_start": 254027,
+        "char_end": 254108,
+        "line_start": 5343,
+        "line_end": 5343,
+        "raw_text": "~~[ دبابیج و بزیون و جامهآ رومی از آنها خیزد219، تا بدین ناحیت از طرابزنده است.\r\n",
+        "group_id": "paragraph_0016",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0067",
+        "block_type": "paragraph",
+        "char_start": 254108,
+        "char_end": 254182,
+        "line_start": 5344,
+        "line_end": 5344,
+        "raw_text": "# و اما نشوی وبر کری21 واخلاط12 ومناز گرد 11 وبدلیس26وقالیقلا25 و ارزن26\r\n",
+        "group_id": "paragraph_0017",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      }
+    ],
+    "notes": "Manually reviewed: paragraph boundaries, continuations, orphan continuation, page markers, image references, milestones, logical groups, offsets, and exact reconstruction verified."
   }
 }
