@@ -1,4 +1,4 @@
-﻿"""Production handlers for OpenITI prose and OCR text profiles."""
+﻿"""Production handlers for OpenITI prose and OCR profiles."""
 
 from __future__ import annotations
 
@@ -15,12 +15,16 @@ from najm_retrieval.parsing.core import (
 from najm_retrieval.parsing.mixed_prose_drafting import (
     draft_mixed_prose_blocks,
 )
+from najm_retrieval.parsing.raw_ocr_drafting import (
+    draft_raw_ocr_blocks,
+)
 from najm_retrieval.parsing.models import (
     ParseMetrics,
     ParsedDocument,
 )
 from najm_retrieval.parsing.profiles import (
     MIXED_PROSE_OCR,
+    RAW_OCR_REFERENCE,
 )
 
 
@@ -30,14 +34,22 @@ MIXED_PROSE_PARSER_NAME = (
 
 MIXED_PROSE_PARSER_VERSION = "0.1.0"
 
+RAW_OCR_PARSER_NAME = (
+    "conservative_raw_ocr_parser"
+)
 
-def build_mixed_prose_records(
+RAW_OCR_PARSER_VERSION = "0.1.0"
+
+
+def _build_sample(
     source: OpenITISource,
-) -> list[dict[str, Any]]:
-    """Create lossless records for a complete mixed-prose body."""
+    *,
+    profile: str,
+) -> dict[str, Any]:
+    """Convert an exact source body to drafting input."""
 
-    sample = {
-        "profile": MIXED_PROSE_OCR,
+    return {
+        "profile": profile,
         "lines": [
             {
                 "line_number": line.line_number,
@@ -49,9 +61,14 @@ def build_mixed_prose_records(
         ],
     }
 
-    records = draft_mixed_prose_blocks(
-        sample
-    )
+
+def _validate_record_reconstruction(
+    *,
+    source: OpenITISource,
+    records: list[dict[str, Any]],
+    parser_label: str,
+) -> None:
+    """Require exact reconstruction before typed assembly."""
 
     reconstructed = "".join(
         record["raw_text"]
@@ -60,9 +77,30 @@ def build_mixed_prose_records(
 
     if reconstructed != source.body_text:
         raise ValueError(
-            "Mixed-prose records do not reconstruct "
-            "the exact source body."
+            f"{parser_label} records do not "
+            "reconstruct the exact source body."
         )
+
+
+def build_mixed_prose_records(
+    source: OpenITISource,
+) -> list[dict[str, Any]]:
+    """Create lossless records for a mixed-prose body."""
+
+    sample = _build_sample(
+        source,
+        profile=MIXED_PROSE_OCR,
+    )
+
+    records = draft_mixed_prose_blocks(
+        sample
+    )
+
+    _validate_record_reconstruction(
+        source=source,
+        records=records,
+        parser_label="Mixed-prose",
+    )
 
     return records
 
@@ -93,20 +131,83 @@ def parse_mixed_prose(
         ),
     )
 
-    runtime_seconds = (
-        perf_counter() - started_at
-    )
-
     metrics = compute_parse_metrics(
         source=source,
         document=document,
-        runtime_seconds=runtime_seconds,
+        runtime_seconds=(
+            perf_counter() - started_at
+        ),
         peak_memory_bytes=0,
     )
 
     if not metrics.passes_lossless_gate:
         raise ValueError(
             "Mixed-prose parser failed "
+            "the strict lossless gate."
+        )
+
+    return document, metrics
+
+
+def build_raw_ocr_records(
+    source: OpenITISource,
+) -> list[dict[str, Any]]:
+    """Create conservative lossless records for raw OCR."""
+
+    sample = _build_sample(
+        source,
+        profile=RAW_OCR_REFERENCE,
+    )
+
+    records = draft_raw_ocr_blocks(
+        sample
+    )
+
+    _validate_record_reconstruction(
+        source=source,
+        records=records,
+        parser_label="Raw OCR",
+    )
+
+    return records
+
+
+def parse_raw_ocr_reference(
+    source: OpenITISource,
+) -> tuple[
+    ParsedDocument,
+    ParseMetrics,
+]:
+    """Parse one complete raw OCR reference source."""
+
+    started_at = perf_counter()
+
+    records = build_raw_ocr_records(
+        source
+    )
+
+    document = build_parsed_document(
+        source=source,
+        profile=RAW_OCR_REFERENCE,
+        block_records=records,
+        parser_name=RAW_OCR_PARSER_NAME,
+        parser_version=(
+            RAW_OCR_PARSER_VERSION
+        ),
+    )
+
+    metrics = compute_parse_metrics(
+        source=source,
+        document=document,
+        runtime_seconds=(
+            perf_counter() - started_at
+        ),
+        peak_memory_bytes=0,
+    )
+
+    if not metrics.passes_lossless_gate:
+        raise ValueError(
+            "Raw OCR parser failed "
             "the strict lossless gate."
         )
 
