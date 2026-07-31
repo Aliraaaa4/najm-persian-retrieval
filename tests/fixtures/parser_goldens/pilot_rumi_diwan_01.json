@@ -447,8 +447,1205 @@
   ],
   "annotations": {
     "schema_version": 1,
-    "status": "draft",
-    "blocks": [],
-    "notes": ""
+    "status": "complete",
+    "blocks": [
+      {
+        "block_id": "b0001",
+        "block_type": "verse",
+        "char_start": 2181317,
+        "char_end": 2181388,
+        "line_start": 45554,
+        "line_end": 45554,
+        "raw_text": "# 10 ما نیز خیالات بدستیم و از این دم %~% هستی پذرفتیم ز دم‌های خدایی\r\n",
+        "group_id": "verse_0001",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 10
+        }
+      },
+      {
+        "block_id": "b0002",
+        "block_type": "verse",
+        "char_start": 2181388,
+        "char_end": 2181457,
+        "line_start": 45555,
+        "line_end": 45555,
+        "raw_text": "# 11 صد هستی دیگر بجز این هست بگیری %~% کاین را تو فراموش کنی خواجه\r\n",
+        "group_id": "verse_0002",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 11
+        }
+      },
+      {
+        "block_id": "b0003",
+        "block_type": "verse",
+        "char_start": 2181457,
+        "char_end": 2181465,
+        "line_start": 45556,
+        "line_end": 45556,
+        "raw_text": "~~کجایی ",
+        "group_id": "verse_0002",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 11
+        }
+      },
+      {
+        "block_id": "b0004",
+        "block_type": "page_marker",
+        "char_start": 2181465,
+        "char_end": 2181478,
+        "line_start": 45556,
+        "line_end": 45556,
+        "raw_text": "PageV1P2634\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 2634
+        }
+      },
+      {
+        "block_id": "b0005",
+        "block_type": "heading",
+        "char_start": 2181478,
+        "char_end": 2181498,
+        "line_start": 45557,
+        "line_end": 45557,
+        "raw_text": "### || [genre: Gh]\r\n",
+        "group_id": "heading_0001",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0006",
+        "block_type": "verse",
+        "char_start": 2181498,
+        "char_end": 2181568,
+        "line_start": 45558,
+        "line_end": 45558,
+        "raw_text": "# 1 ای مونس ما خواجه ابوبکر ربابی %~% گر دلشده‌ای چند پی نان و کبابی\r\n",
+        "group_id": "verse_0003",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0007",
+        "block_type": "verse",
+        "char_start": 2181568,
+        "char_end": 2181637,
+        "line_start": 45559,
+        "line_end": 45559,
+        "raw_text": "# 2 آتش خور در عشق به مانند شترمرغ %~% اندر عقب طعمه چه شاگرد عقابی\r\n",
+        "group_id": "verse_0004",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0008",
+        "block_type": "verse",
+        "char_start": 2181637,
+        "char_end": 2181709,
+        "line_start": 45560,
+        "line_end": 45560,
+        "raw_text": "# 3 لقمه دهدت تا کند او لقمه خویشت %~% این چرخ فریبنده و این برق سحابی\r\n",
+        "group_id": "verse_0005",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 3
+        }
+      },
+      {
+        "block_id": "b0009",
+        "block_type": "verse",
+        "char_start": 2181709,
+        "char_end": 2181778,
+        "line_start": 45561,
+        "line_end": 45561,
+        "raw_text": "# 4 هین لقمه مخور لقمه مشو آتش او را %~% بی‌لقمه او در دل و جان رزق\r\n",
+        "group_id": "verse_0006",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 4
+        }
+      },
+      {
+        "block_id": "b0010",
+        "block_type": "verse",
+        "char_start": 2181778,
+        "char_end": 2181787,
+        "line_start": 45562,
+        "line_end": 45562,
+        "raw_text": "~~بیابی\r\n",
+        "group_id": "verse_0006",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 4
+        }
+      },
+      {
+        "block_id": "b0011",
+        "block_type": "verse",
+        "char_start": 2181787,
+        "char_end": 2181858,
+        "line_start": 45563,
+        "line_end": 45563,
+        "raw_text": "# 5 آن وقت که از ناف همی‌خورد تنت خون %~% نی حلق و گلو بود و نه خرمای\r\n",
+        "group_id": "verse_0007",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 5
+        }
+      },
+      {
+        "block_id": "b0012",
+        "block_type": "verse",
+        "char_start": 2181858,
+        "char_end": 2181867,
+        "line_start": 45564,
+        "line_end": 45564,
+        "raw_text": "~~رطابی\r\n",
+        "group_id": "verse_0007",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 5
+        }
+      },
+      {
+        "block_id": "b0013",
+        "block_type": "verse",
+        "char_start": 2181867,
+        "char_end": 2181897,
+        "line_start": 45565,
+        "line_end": 45565,
+        "raw_text": "# 6 آن ماهی چه خورده‌ست که او ",
+        "group_id": "verse_0008",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 6
+        }
+      },
+      {
+        "block_id": "b0014",
+        "block_type": "milestone",
+        "char_start": 2181897,
+        "char_end": 2181903,
+        "line_start": 45565,
+        "line_end": 45565,
+        "raw_text": "ms1496",
+        "group_id": null,
+        "attributes": {
+          "number": 1496
+        }
+      },
+      {
+        "block_id": "b0015",
+        "block_type": "verse",
+        "char_start": 2181903,
+        "char_end": 2181947,
+        "line_start": 45565,
+        "line_end": 45565,
+        "raw_text": " لقمه ما شد %~% در چشم نیاید خورش مردم آبی\r\n",
+        "group_id": "verse_0008",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 6
+        }
+      },
+      {
+        "block_id": "b0016",
+        "block_type": "verse",
+        "char_start": 2181947,
+        "char_end": 2182016,
+        "line_start": 45566,
+        "line_end": 45566,
+        "raw_text": "# 7 از نعمت پنهان خورد این نعمت پیدا %~% زان راه شود فربه و زان ماه\r\n",
+        "group_id": "verse_0009",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 7
+        }
+      },
+      {
+        "block_id": "b0017",
+        "block_type": "verse",
+        "char_start": 2182016,
+        "char_end": 2182025,
+        "line_start": 45567,
+        "line_end": 45567,
+        "raw_text": "~~خضابی\r\n",
+        "group_id": "verse_0009",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 7
+        }
+      },
+      {
+        "block_id": "b0018",
+        "block_type": "verse",
+        "char_start": 2182025,
+        "char_end": 2182096,
+        "line_start": 45568,
+        "line_end": 45568,
+        "raw_text": "# 8 گر ز آنک خرابت کند این عشق برونی %~% چون سنبله شد دانه در این روز\r\n",
+        "group_id": "verse_0010",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 8
+        }
+      },
+      {
+        "block_id": "b0019",
+        "block_type": "verse",
+        "char_start": 2182096,
+        "char_end": 2182105,
+        "line_start": 45569,
+        "line_end": 45569,
+        "raw_text": "~~خرابی\r\n",
+        "group_id": "verse_0010",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 8
+        }
+      },
+      {
+        "block_id": "b0020",
+        "block_type": "verse",
+        "char_start": 2182105,
+        "char_end": 2182178,
+        "line_start": 45570,
+        "line_end": 45570,
+        "raw_text": "# 9 آن سنبله از خاک برآورد سر و گفت %~% من مردم و زنده شدم از داد ثوابی\r\n",
+        "group_id": "verse_0011",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 9
+        }
+      },
+      {
+        "block_id": "b0021",
+        "block_type": "verse",
+        "char_start": 2182178,
+        "char_end": 2182247,
+        "line_start": 45571,
+        "line_end": 45571,
+        "raw_text": "# 10 خواهی که قیامت نگری نقد به باغ آی %~% نظاره سرسبزی اموات ترابی\r\n",
+        "group_id": "verse_0012",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 10
+        }
+      },
+      {
+        "block_id": "b0022",
+        "block_type": "verse",
+        "char_start": 2182247,
+        "char_end": 2182319,
+        "line_start": 45572,
+        "line_end": 45572,
+        "raw_text": "# 11 ماییم که پوسیده و ریزیده خاکیم %~% امروز چو سرویم سرافراز و خطابی\r\n",
+        "group_id": "verse_0013",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 11
+        }
+      },
+      {
+        "block_id": "b0023",
+        "block_type": "verse",
+        "char_start": 2182319,
+        "char_end": 2182388,
+        "line_start": 45573,
+        "line_end": 45573,
+        "raw_text": "# 12 بی‌حرف سخن گوی که تا خصم نگوید %~% کاین گفت کسان است و سخن‌های\r\n",
+        "group_id": "verse_0014",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 12
+        }
+      },
+      {
+        "block_id": "b0024",
+        "block_type": "verse",
+        "char_start": 2182388,
+        "char_end": 2182396,
+        "line_start": 45574,
+        "line_end": 45574,
+        "raw_text": "~~کتابی ",
+        "group_id": "verse_0014",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 12
+        }
+      },
+      {
+        "block_id": "b0025",
+        "block_type": "page_marker",
+        "char_start": 2182396,
+        "char_end": 2182409,
+        "line_start": 45574,
+        "line_end": 45574,
+        "raw_text": "PageV1P2635\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 2635
+        }
+      },
+      {
+        "block_id": "b0026",
+        "block_type": "heading",
+        "char_start": 2182409,
+        "char_end": 2182429,
+        "line_start": 45575,
+        "line_end": 45575,
+        "raw_text": "### || [genre: Gh]\r\n",
+        "group_id": "heading_0002",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0027",
+        "block_type": "verse",
+        "char_start": 2182429,
+        "char_end": 2182500,
+        "line_start": 45576,
+        "line_end": 45576,
+        "raw_text": "# 1 امروز سماع است و شراب است و صراحی %~% یک ساقی بدمست یکی جمع مباحی\r\n",
+        "group_id": "verse_0015",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0028",
+        "block_type": "verse",
+        "char_start": 2182500,
+        "char_end": 2182571,
+        "line_start": 45577,
+        "line_end": 45577,
+        "raw_text": "# 2 زان جنس مباحی که از آن سوی وجود است %~% نی اباحتی گیج حشیشی مزاحی\r\n",
+        "group_id": "verse_0016",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0029",
+        "block_type": "verse",
+        "char_start": 2182571,
+        "char_end": 2182640,
+        "line_start": 45578,
+        "line_end": 45578,
+        "raw_text": "# 3 روحی است مباحی که از آن روح چشیده‌ست %~% کو روح قدیمی و کجا روح\r\n",
+        "group_id": "verse_0017",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 3
+        }
+      },
+      {
+        "block_id": "b0030",
+        "block_type": "verse",
+        "char_start": 2182640,
+        "char_end": 2182649,
+        "line_start": 45579,
+        "line_end": 45579,
+        "raw_text": "~~ریاحی\r\n",
+        "group_id": "verse_0017",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 3
+        }
+      },
+      {
+        "block_id": "b0031",
+        "block_type": "verse",
+        "char_start": 2182649,
+        "char_end": 2182722,
+        "line_start": 45580,
+        "line_end": 45580,
+        "raw_text": "# 4 در پیش چنین فتنه و در دست چنین می %~% یا رب چه شود جان مسلمان صلاحی\r\n",
+        "group_id": "verse_0018",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 4
+        }
+      },
+      {
+        "block_id": "b0032",
+        "block_type": "verse",
+        "char_start": 2182722,
+        "char_end": 2182792,
+        "line_start": 45581,
+        "line_end": 45581,
+        "raw_text": "# 5 زین باده کسی را جگر تشنه خنک شد %~% کو خون جگر ریخت در این ره به\r\n",
+        "group_id": "verse_0019",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 5
+        }
+      },
+      {
+        "block_id": "b0033",
+        "block_type": "verse",
+        "char_start": 2182792,
+        "char_end": 2182801,
+        "line_start": 45582,
+        "line_end": 45582,
+        "raw_text": "~~سفاحی\r\n",
+        "group_id": "verse_0019",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 5
+        }
+      },
+      {
+        "block_id": "b0034",
+        "block_type": "verse",
+        "char_start": 2182801,
+        "char_end": 2182871,
+        "line_start": 45583,
+        "line_end": 45583,
+        "raw_text": "# 6 جاوید شود عمر بدین کاس صبوحی %~% ایمن شود از مرگ و ز افغان نیاحی\r\n",
+        "group_id": "verse_0020",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 6
+        }
+      },
+      {
+        "block_id": "b0035",
+        "block_type": "verse",
+        "char_start": 2182871,
+        "char_end": 2182942,
+        "line_start": 45584,
+        "line_end": 45584,
+        "raw_text": "# 7 این صورت غیب است که سرخیش ز خون نیست %~% اسپید ز نور است نه کافور\r\n",
+        "group_id": "verse_0021",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 7
+        }
+      },
+      {
+        "block_id": "b0036",
+        "block_type": "verse",
+        "char_start": 2182942,
+        "char_end": 2182951,
+        "line_start": 45585,
+        "line_end": 45585,
+        "raw_text": "~~رباحی\r\n",
+        "group_id": "verse_0021",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 7
+        }
+      },
+      {
+        "block_id": "b0037",
+        "block_type": "verse",
+        "char_start": 2182951,
+        "char_end": 2183020,
+        "line_start": 45586,
+        "line_end": 45586,
+        "raw_text": "# 8 شمعی است برافروخته وز عرش گذشته %~% پروانه او سینه دل‌های فلاحی\r\n",
+        "group_id": "verse_0022",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 8
+        }
+      },
+      {
+        "block_id": "b0038",
+        "block_type": "verse",
+        "char_start": 2183020,
+        "char_end": 2183092,
+        "line_start": 45587,
+        "line_end": 45587,
+        "raw_text": "# 9 سوزیده ز نورش حجب سبع سماوات %~% پران شده جان‌ها و روان‌ها ز نواحی\r\n",
+        "group_id": "verse_0023",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 9
+        }
+      },
+      {
+        "block_id": "b0039",
+        "block_type": "verse",
+        "char_start": 2183092,
+        "char_end": 2183163,
+        "line_start": 45588,
+        "line_end": 45588,
+        "raw_text": "# 10 این حلقه مستان خرابات خراب است %~% دور از لب و دندان تو ای خواجه\r\n",
+        "group_id": "verse_0024",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 10
+        }
+      },
+      {
+        "block_id": "b0040",
+        "block_type": "verse",
+        "char_start": 2183163,
+        "char_end": 2183171,
+        "line_start": 45589,
+        "line_end": 45589,
+        "raw_text": "~~صاحی\r\n",
+        "group_id": "verse_0024",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 10
+        }
+      },
+      {
+        "block_id": "b0041",
+        "block_type": "verse",
+        "char_start": 2183171,
+        "char_end": 2183240,
+        "line_start": 45590,
+        "line_end": 45590,
+        "raw_text": "# 11 شاباش زهی حال که از حال رهیدیت %~% شاباش زهی عیش صبوحی و صباحی\r\n",
+        "group_id": "verse_0025",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 11
+        }
+      },
+      {
+        "block_id": "b0042",
+        "block_type": "verse",
+        "char_start": 2183240,
+        "char_end": 2183314,
+        "line_start": 45591,
+        "line_end": 45591,
+        "raw_text": "# 12 با خود ملک الموت بگوید هله واگرد %~% کاین جا نکند هیچ سلاح تو سلاحی\r\n",
+        "group_id": "verse_0026",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 12
+        }
+      },
+      {
+        "block_id": "b0043",
+        "block_type": "verse",
+        "char_start": 2183314,
+        "char_end": 2183375,
+        "line_start": 45592,
+        "line_end": 45592,
+        "raw_text": "# 13 ما را خبری نی که خبر نیز چه باشد %~% خود مغفرت این باشد ",
+        "group_id": "verse_0027",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 13
+        }
+      },
+      {
+        "block_id": "b0044",
+        "block_type": "milestone",
+        "char_start": 2183375,
+        "char_end": 2183381,
+        "line_start": 45592,
+        "line_end": 45592,
+        "raw_text": "ms1497",
+        "group_id": null,
+        "attributes": {
+          "number": 1497
+        }
+      },
+      {
+        "block_id": "b0045",
+        "block_type": "verse",
+        "char_start": 2183381,
+        "char_end": 2183391,
+        "line_start": 45592,
+        "line_end": 45592,
+        "raw_text": " و آمرزش\r\n",
+        "group_id": "verse_0027",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 13
+        }
+      },
+      {
+        "block_id": "b0046",
+        "block_type": "verse",
+        "char_start": 2183391,
+        "char_end": 2183399,
+        "line_start": 45593,
+        "line_end": 45593,
+        "raw_text": "~~ماحی\r\n",
+        "group_id": "verse_0027",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 13
+        }
+      },
+      {
+        "block_id": "b0047",
+        "block_type": "verse",
+        "char_start": 2183399,
+        "char_end": 2183466,
+        "line_start": 45594,
+        "line_end": 45594,
+        "raw_text": "# 14 از غیب شنو نعره مستان و خمش کن %~% یک غلغله پاک ز آواز صیاحی\r\n",
+        "group_id": "verse_0028",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 14
+        }
+      },
+      {
+        "block_id": "b0048",
+        "block_type": "verse",
+        "char_start": 2183466,
+        "char_end": 2183540,
+        "line_start": 45595,
+        "line_end": 45595,
+        "raw_text": "# 15 ور نه بدو نان بنده دونان و خسان باش %~% می‌خور پی سه نان ز سنان زخم\r\n",
+        "group_id": "verse_0029",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 15
+        }
+      },
+      {
+        "block_id": "b0049",
+        "block_type": "verse",
+        "char_start": 2183540,
+        "char_end": 2183549,
+        "line_start": 45596,
+        "line_end": 45596,
+        "raw_text": "~~رماحی\r\n",
+        "group_id": "verse_0029",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 15
+        }
+      },
+      {
+        "block_id": "b0050",
+        "block_type": "verse",
+        "char_start": 2183549,
+        "char_end": 2183618,
+        "line_start": 45597,
+        "line_end": 45597,
+        "raw_text": "# 16 فارس شده شمس الحق تبریز همیشه %~% بر شمس شموس و نکند شمس جماحی\r\n",
+        "group_id": "verse_0030",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 16
+        }
+      },
+      {
+        "block_id": "b0051",
+        "block_type": "page_marker",
+        "char_start": 2183618,
+        "char_end": 2183633,
+        "line_start": 45598,
+        "line_end": 45598,
+        "raw_text": "~~PageV1P2636\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 2636
+        }
+      },
+      {
+        "block_id": "b0052",
+        "block_type": "heading",
+        "char_start": 2183633,
+        "char_end": 2183653,
+        "line_start": 45599,
+        "line_end": 45599,
+        "raw_text": "### || [genre: Gh]\r\n",
+        "group_id": "heading_0003",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0053",
+        "block_type": "verse",
+        "char_start": 2183653,
+        "char_end": 2183722,
+        "line_start": 45600,
+        "line_end": 45600,
+        "raw_text": "# 1 ای آنک به دل‌ها ز حسد خار خلیدی %~% این‌ها همه کردی و در آن گور\r\n",
+        "group_id": "verse_0031",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0054",
+        "block_type": "verse",
+        "char_start": 2183722,
+        "char_end": 2183731,
+        "line_start": 45601,
+        "line_end": 45601,
+        "raw_text": "~~خزیدی\r\n",
+        "group_id": "verse_0031",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0055",
+        "block_type": "verse",
+        "char_start": 2183731,
+        "char_end": 2183802,
+        "line_start": 45602,
+        "line_end": 45602,
+        "raw_text": "# 2 تلخی دهد امروز تو را در دل و در کام %~% آن زهرگیاهی که در این دشت\r\n",
+        "group_id": "verse_0032",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0056",
+        "block_type": "verse",
+        "char_start": 2183802,
+        "char_end": 2183811,
+        "line_start": 45603,
+        "line_end": 45603,
+        "raw_text": "~~چریدی\r\n",
+        "group_id": "verse_0032",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0057",
+        "block_type": "verse",
+        "char_start": 2183811,
+        "char_end": 2183877,
+        "line_start": 45604,
+        "line_end": 45604,
+        "raw_text": "# 3 آن آهن تو نرم شد امروز ببینی %~% که قفل دری یا جهت قفل کلیدی\r\n",
+        "group_id": "verse_0033",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 3
+        }
+      },
+      {
+        "block_id": "b0058",
+        "block_type": "verse",
+        "char_start": 2183877,
+        "char_end": 2183945,
+        "line_start": 45605,
+        "line_end": 45605,
+        "raw_text": "# 4 طوق ملکی این دم اگر گوهر پاکی %~% رد فلکی این دم اگر جان پلیدی\r\n",
+        "group_id": "verse_0034",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 4
+        }
+      },
+      {
+        "block_id": "b0059",
+        "block_type": "verse",
+        "char_start": 2183945,
+        "char_end": 2184015,
+        "line_start": 45606,
+        "line_end": 45606,
+        "raw_text": "# 5 با جمله روان‌ها به تک روح روانی %~% سلطان جهادی اگر از نفس جهیدی\r\n",
+        "group_id": "verse_0035",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 5
+        }
+      },
+      {
+        "block_id": "b0060",
+        "block_type": "verse",
+        "char_start": 2184015,
+        "char_end": 2184082,
+        "line_start": 45607,
+        "line_end": 45607,
+        "raw_text": "# 6 با خالق آرام تو آرام گرفتی %~% وز دیو رمیده تو به هنگام رهیدی\r\n",
+        "group_id": "verse_0036",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 6
+        }
+      },
+      {
+        "block_id": "b0061",
+        "block_type": "verse",
+        "char_start": 2184082,
+        "char_end": 2184154,
+        "line_start": 45608,
+        "line_end": 45608,
+        "raw_text": "# 7 امروز تو را بازخرد از غمش آن نور %~% کو را چو دل و جان به دل و جان\r\n",
+        "group_id": "verse_0037",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 7
+        }
+      },
+      {
+        "block_id": "b0062",
+        "block_type": "verse",
+        "char_start": 2184154,
+        "char_end": 2184164,
+        "line_start": 45609,
+        "line_end": 45609,
+        "raw_text": "~~بخریدی\r\n",
+        "group_id": "verse_0037",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 7
+        }
+      },
+      {
+        "block_id": "b0063",
+        "block_type": "verse",
+        "char_start": 2184164,
+        "char_end": 2184237,
+        "line_start": 45610,
+        "line_end": 45610,
+        "raw_text": "# 8 آن سیمبر اندر بر سیمین تو آید %~% کو را چو نثار زر از این خاک بچیدی\r\n",
+        "group_id": "verse_0038",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 8
+        }
+      },
+      {
+        "block_id": "b0064",
+        "block_type": "verse",
+        "char_start": 2184237,
+        "char_end": 2184311,
+        "line_start": 45611,
+        "line_end": 45611,
+        "raw_text": "# 9 ای عشق ببخشای بر این خاک که دانی %~% کز خاک همان رست که در خاک دمیدی\r\n",
+        "group_id": "verse_0039",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 9
+        }
+      },
+      {
+        "block_id": "b0065",
+        "block_type": "verse",
+        "char_start": 2184311,
+        "char_end": 2184383,
+        "line_start": 45612,
+        "line_end": 45612,
+        "raw_text": "# 10 خامش کن و منمای به هر کس سر دل ز آنک %~% در دیده هر ذره چو خورشید\r\n",
+        "group_id": "verse_0040",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 10
+        }
+      },
+      {
+        "block_id": "b0066",
+        "block_type": "verse",
+        "char_start": 2184383,
+        "char_end": 2184391,
+        "line_start": 45613,
+        "line_end": 45613,
+        "raw_text": "~~پدیدی ",
+        "group_id": "verse_0040",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 10
+        }
+      },
+      {
+        "block_id": "b0067",
+        "block_type": "page_marker",
+        "char_start": 2184391,
+        "char_end": 2184404,
+        "line_start": 45613,
+        "line_end": 45613,
+        "raw_text": "PageV1P2637\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 2637
+        }
+      },
+      {
+        "block_id": "b0068",
+        "block_type": "heading",
+        "char_start": 2184404,
+        "char_end": 2184424,
+        "line_start": 45614,
+        "line_end": 45614,
+        "raw_text": "### || [genre: Gh]\r\n",
+        "group_id": "heading_0004",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0069",
+        "block_type": "verse",
+        "char_start": 2184424,
+        "char_end": 2184497,
+        "line_start": 45615,
+        "line_end": 45615,
+        "raw_text": "# 1 برخیز که صبح است و صبوح است و سکاری %~% بگشای کنار آمد آن یار کناری\r\n",
+        "group_id": "verse_0041",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 1
+        }
+      },
+      {
+        "block_id": "b0070",
+        "block_type": "verse",
+        "char_start": 2184497,
+        "char_end": 2184564,
+        "line_start": 45616,
+        "line_end": 45616,
+        "raw_text": "# 2 برخیز بیا دبدبه عمر ابد بین %~% رستند و گذشتند ز دم‌های شماری\r\n",
+        "group_id": "verse_0042",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 2
+        }
+      },
+      {
+        "block_id": "b0071",
+        "block_type": "verse",
+        "char_start": 2184564,
+        "char_end": 2184636,
+        "line_start": 45617,
+        "line_end": 45617,
+        "raw_text": "# 3 آن رفت که اقبال بخارید سر ما %~% ای دل سر اقبال از این بار تو خاری\r\n",
+        "group_id": "verse_0043",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 3
+        }
+      },
+      {
+        "block_id": "b0072",
+        "block_type": "verse",
+        "char_start": 2184636,
+        "char_end": 2184707,
+        "line_start": 45618,
+        "line_end": 45618,
+        "raw_text": "# 4 گنجی تو عجب نیست که در توده خاکی %~% ماهی تو عجب نیست که در گرد و\r\n",
+        "group_id": "verse_0044",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 4
+        }
+      },
+      {
+        "block_id": "b0073",
+        "block_type": "verse",
+        "char_start": 2184707,
+        "char_end": 2184716,
+        "line_start": 45619,
+        "line_end": 45619,
+        "raw_text": "~~غباری\r\n",
+        "group_id": "verse_0044",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 4
+        }
+      },
+      {
+        "block_id": "b0074",
+        "block_type": "verse",
+        "char_start": 2184716,
+        "char_end": 2184783,
+        "line_start": 45620,
+        "line_end": 45620,
+        "raw_text": "# 5 اندر حرم کعبه اقبال خرامید %~% از بادیه ایمن شده وز ناز مکاری\r\n",
+        "group_id": "verse_0045",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 5
+        }
+      },
+      {
+        "block_id": "b0075",
+        "block_type": "verse",
+        "char_start": 2184783,
+        "char_end": 2184797,
+        "line_start": 45621,
+        "line_end": 45621,
+        "raw_text": "# 6 گردان شده ",
+        "group_id": "verse_0046",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 6
+        }
+      },
+      {
+        "block_id": "b0076",
+        "block_type": "milestone",
+        "char_start": 2184797,
+        "char_end": 2184803,
+        "line_start": 45621,
+        "line_end": 45621,
+        "raw_text": "ms1498",
+        "group_id": null,
+        "attributes": {
+          "number": 1498
+        }
+      },
+      {
+        "block_id": "b0077",
+        "block_type": "verse",
+        "char_start": 2184803,
+        "char_end": 2184863,
+        "line_start": 45621,
+        "line_end": 45621,
+        "raw_text": " بین چرخ که صد ماه در او هست %~% جز تابش یک روزه تو ای چرخ\r\n",
+        "group_id": "verse_0046",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 6
+        }
+      },
+      {
+        "block_id": "b0078",
+        "block_type": "verse",
+        "char_start": 2184863,
+        "char_end": 2184874,
+        "line_start": 45622,
+        "line_end": 45622,
+        "raw_text": "~~چه داری\r\n",
+        "group_id": "verse_0046",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": true,
+          "verse_number": 6
+        }
+      },
+      {
+        "block_id": "b0079",
+        "block_type": "verse",
+        "char_start": 2184874,
+        "char_end": 2184945,
+        "line_start": 45623,
+        "line_end": 45623,
+        "raw_text": "# 7 آن ساغر جان که ملک الموت اجل شد %~% نی شورش دل آرد و نی رنج خماری\r\n",
+        "group_id": "verse_0047",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 7
+        }
+      },
+      {
+        "block_id": "b0080",
+        "block_type": "verse",
+        "char_start": 2184945,
+        "char_end": 2185019,
+        "line_start": 45624,
+        "line_end": 45624,
+        "raw_text": "# 8 بس کن که اگر جان بخورد صورت ما را %~% صد عذر بخواهد لبش از خوب عذاری\r\n",
+        "group_id": "verse_0048",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "verse_number": 8
+        }
+      },
+      {
+        "block_id": "b0081",
+        "block_type": "page_marker",
+        "char_start": 2185019,
+        "char_end": 2185034,
+        "line_start": 45625,
+        "line_end": 45625,
+        "raw_text": "~~PageV1P2638\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 2638
+        }
+      }
+    ],
+    "notes": "Automatically drafted using deterministic structured-poetry rules. Manual review is required.\nManually reviewed: verse blocks, continuations, page markers, milestones, headings, logical groups, offsets, and reconstruction verified."
   }
 }
