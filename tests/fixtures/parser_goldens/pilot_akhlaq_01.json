@@ -381,8 +381,927 @@
   ],
   "annotations": {
     "schema_version": 1,
-    "status": "draft",
-    "blocks": [],
-    "notes": ""
+    "status": "complete",
+    "blocks": [
+      {
+        "block_id": "b0001",
+        "block_type": "heading",
+        "char_start": 7374,
+        "char_end": 7386,
+        "line_start": 171,
+        "line_end": 171,
+        "raw_text": "### | شعر:\r\n",
+        "group_id": "heading_0001",
+        "attributes": {
+          "level": 3
+        }
+      },
+      {
+        "block_id": "b0002",
+        "block_type": "verse",
+        "char_start": 7386,
+        "char_end": 7400,
+        "line_start": 172,
+        "line_end": 172,
+        "raw_text": "# کیفیة المرء ",
+        "group_id": "verse_0001",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "embedded_in_prose": true
+        }
+      },
+      {
+        "block_id": "b0003",
+        "block_type": "milestone",
+        "char_start": 7400,
+        "char_end": 7405,
+        "line_start": 172,
+        "line_end": 172,
+        "raw_text": "ms004",
+        "group_id": null,
+        "attributes": {
+          "number": 4
+        }
+      },
+      {
+        "block_id": "b0004",
+        "block_type": "verse",
+        "char_start": 7405,
+        "char_end": 7456,
+        "line_start": 172,
+        "line_end": 172,
+        "raw_text": " لیس آلمرء یدر کها %~% فکیف کیفیة آلجتار ذی القدم\r\n",
+        "group_id": "verse_0001",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "embedded_in_prose": true
+        }
+      },
+      {
+        "block_id": "b0005",
+        "block_type": "verse",
+        "char_start": 7456,
+        "char_end": 7515,
+        "line_start": 173,
+        "line_end": 173,
+        "raw_text": "# هو الذی أنشاء آلاشیاء مبتدعا %~% فکیف پدرکه مستحدث آلنسم ",
+        "group_id": "verse_0002",
+        "attributes": {
+          "has_hemistich_separator": true,
+          "continuation": false,
+          "embedded_in_prose": true
+        }
+      },
+      {
+        "block_id": "b0006",
+        "block_type": "page_marker",
+        "char_start": 7515,
+        "char_end": 7528,
+        "line_start": 173,
+        "line_end": 173,
+        "raw_text": "PageV01P010\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 10
+        }
+      },
+      {
+        "block_id": "b0007",
+        "block_type": "image_reference",
+        "char_start": 7528,
+        "char_end": 7595,
+        "line_start": 174,
+        "line_end": 174,
+        "raw_text": "# ![image filename](./0672NasirDinTusi.AkhlaqMuhtashami_0110.png)\r\n",
+        "group_id": null,
+        "attributes": {
+          "target": "./0672NasirDinTusi.AkhlaqMuhtashami_0110.png",
+          "alt_text": "image filename"
+        }
+      },
+      {
+        "block_id": "b0008",
+        "block_type": "blank",
+        "char_start": 7595,
+        "char_end": 7597,
+        "line_start": 175,
+        "line_end": 175,
+        "raw_text": "\r\n",
+        "group_id": null,
+        "attributes": {}
+      },
+      {
+        "block_id": "b0009",
+        "block_type": "paragraph",
+        "char_start": 7597,
+        "char_end": 7667,
+        "line_start": 176,
+        "line_end": 176,
+        "raw_text": "# (25) الآول بلا اول کان قله ، و الآخر بلا آخر یکون بعده ، الذی قصرت\r\n",
+        "group_id": "paragraph_0001",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0010",
+        "block_type": "paragraph",
+        "char_start": 7667,
+        "char_end": 7738,
+        "line_start": 177,
+        "line_end": 177,
+        "raw_text": "# ~~عن رؤیته آبصار النا ظرین، و عجزت عن نعته اوهام الواصفین . ترجمه :\r\n",
+        "group_id": "paragraph_0002",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0011",
+        "block_type": "paragraph",
+        "char_start": 7738,
+        "char_end": 7751,
+        "line_start": 178,
+        "line_end": 178,
+        "raw_text": "~~اولیست که\r\n",
+        "group_id": "paragraph_0002",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0012",
+        "block_type": "paragraph",
+        "char_start": 7751,
+        "char_end": 7825,
+        "line_start": 179,
+        "line_end": 179,
+        "raw_text": "# ~~پیش از و اولی نبود، و آخریست که بعد ازو آخری نباشد ، آنکه از دیدن او\r\n",
+        "group_id": "paragraph_0003",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0013",
+        "block_type": "paragraph",
+        "char_start": 7825,
+        "char_end": 7832,
+        "line_start": 180,
+        "line_end": 180,
+        "raw_text": "~~چشم\r\n",
+        "group_id": "paragraph_0003",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0014",
+        "block_type": "paragraph",
+        "char_start": 7832,
+        "char_end": 7889,
+        "line_start": 181,
+        "line_end": 181,
+        "raw_text": "# ~~ناظران قاصرست، و از نعت کردن او اوهام واصفان عاجز .\r\n",
+        "group_id": "paragraph_0004",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0015",
+        "block_type": "paragraph",
+        "char_start": 7889,
+        "char_end": 7961,
+        "line_start": 182,
+        "line_end": 182,
+        "raw_text": "# (26) لایحس بالحواس ولایحصی بالا نفاس، ولا تحله الحرکات والخطرات، ولا\r\n",
+        "group_id": "paragraph_0005",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0016",
+        "block_type": "paragraph",
+        "char_start": 7961,
+        "char_end": 8034,
+        "line_start": 183,
+        "line_end": 183,
+        "raw_text": "# ~~تغرفه المقول ، ولا تخمله العلة و المعلول ، فات الاوهام وضصفه ، وسبق\r\n",
+        "group_id": "paragraph_0006",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0017",
+        "block_type": "paragraph",
+        "char_start": 8034,
+        "char_end": 8052,
+        "line_start": 184,
+        "line_end": 184,
+        "raw_text": "~~الأفهام نغته .\r\n",
+        "group_id": "paragraph_0006",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0018",
+        "block_type": "paragraph",
+        "char_start": 8052,
+        "char_end": 8119,
+        "line_start": 185,
+        "line_end": 185,
+        "raw_text": "# ~~ترجمه : بحسها او را احساس نکنند، و بنفسها او را در حصر و احصا\r\n",
+        "group_id": "paragraph_0007",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0019",
+        "block_type": "paragraph",
+        "char_start": 8119,
+        "char_end": 8136,
+        "line_start": 186,
+        "line_end": 186,
+        "raw_text": "~~نتوانند آورد،\r\n",
+        "group_id": "paragraph_0007",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0020",
+        "block_type": "paragraph",
+        "char_start": 8136,
+        "char_end": 8207,
+        "line_start": 187,
+        "line_end": 187,
+        "raw_text": "# ~~و حرکات و اندیشهها دروحلول نکنند، و عقلها او را نشناسند، و در زیر\r\n",
+        "group_id": "paragraph_0008",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0021",
+        "block_type": "paragraph",
+        "char_start": 8207,
+        "char_end": 8220,
+        "line_start": 188,
+        "line_end": 188,
+        "raw_text": "~~بار علت و\r\n",
+        "group_id": "paragraph_0008",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0022",
+        "block_type": "paragraph",
+        "char_start": 8220,
+        "char_end": 8290,
+        "line_start": 189,
+        "line_end": 189,
+        "raw_text": "# ~~معلول نیاید، صفت او از افهام فایت شده، ونعتش برافهام سبقت گرفته.\r\n",
+        "group_id": "paragraph_0009",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0023",
+        "block_type": "paragraph",
+        "char_start": 8290,
+        "char_end": 8362,
+        "line_start": 190,
+        "line_end": 190,
+        "raw_text": "# (27) شدوا بعری الدین، و اعتدوا عدة المو منین، وأتعوا لنا با خسان إلی\r\n",
+        "group_id": "paragraph_0010",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0024",
+        "block_type": "paragraph",
+        "char_start": 8362,
+        "char_end": 8368,
+        "line_start": 191,
+        "line_end": 191,
+        "raw_text": "~~ان\r\n",
+        "group_id": "paragraph_0010",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0025",
+        "block_type": "paragraph",
+        "char_start": 8368,
+        "char_end": 8441,
+        "line_start": 192,
+        "line_end": 192,
+        "raw_text": "# ~~یندی لکم السرهان . ترجمه : دست در عروههای دین زنید، وسازی که مؤمنان\r\n",
+        "group_id": "paragraph_0011",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0026",
+        "block_type": "paragraph",
+        "char_start": 8441,
+        "char_end": 8515,
+        "line_start": 193,
+        "line_end": 193,
+        "raw_text": "# ~~سازند ساخته کنید ، و متابعت کنید بنیکوئی، تا آنگاه که برهان شما روشن\r\n",
+        "group_id": "paragraph_0012",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0027",
+        "block_type": "paragraph",
+        "char_start": 8515,
+        "char_end": 8526,
+        "line_start": 194,
+        "line_end": 194,
+        "raw_text": "# ~~شود .\r\n",
+        "group_id": "paragraph_0013",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0028",
+        "block_type": "paragraph",
+        "char_start": 8526,
+        "char_end": 8595,
+        "line_start": 195,
+        "line_end": 195,
+        "raw_text": "# (28) تعالی من ان یکون مدرکا لعقله و نفسه ، ان ادراک المدرک للمدرک\r\n",
+        "group_id": "paragraph_0014",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0029",
+        "block_type": "paragraph",
+        "char_start": 8595,
+        "char_end": 8664,
+        "line_start": 196,
+        "line_end": 196,
+        "raw_text": "# ~~یقع بمناسبة ألجن لجنسه، وهو سحاذه المنره عن المناسة لعالمی عقله\r\n",
+        "group_id": "paragraph_0015",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0030",
+        "block_type": "paragraph",
+        "char_start": 8664,
+        "char_end": 8678,
+        "line_start": 197,
+        "line_end": 197,
+        "raw_text": "~~وحسه، اذهو\r\n",
+        "group_id": "paragraph_0015",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0031",
+        "block_type": "paragraph",
+        "char_start": 8678,
+        "char_end": 8750,
+        "line_start": 198,
+        "line_end": 198,
+        "raw_text": "# ~~مبد ع انیس و لیس فلا یوجد فی مضمار انیسه ولیسه . ترجمه : بلندتر از\r\n",
+        "group_id": "paragraph_0016",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0032",
+        "block_type": "paragraph",
+        "char_start": 8750,
+        "char_end": 8760,
+        "line_start": 199,
+        "line_end": 199,
+        "raw_text": "~~آنستکه\r\n",
+        "group_id": "paragraph_0016",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0033",
+        "block_type": "paragraph",
+        "char_start": 8760,
+        "char_end": 8829,
+        "line_start": 200,
+        "line_end": 200,
+        "raw_text": "# ~~مدرک عقل و نفس که مصنوع اواند گردد، ادراک مدرک مدرک [را] از جهت\r\n",
+        "group_id": "paragraph_0017",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0034",
+        "block_type": "paragraph",
+        "char_start": 8829,
+        "char_end": 8839,
+        "line_start": 201,
+        "line_end": 201,
+        "raw_text": "~~مناسبت\r\n",
+        "group_id": "paragraph_0017",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0035",
+        "block_type": "paragraph",
+        "char_start": 8839,
+        "char_end": 8912,
+        "line_start": 202,
+        "line_end": 202,
+        "raw_text": "# ~~جنسی با جنسی دیگر تواند بود ، و او سبحانه از مناسبت هردو عالم [عقل]\r\n",
+        "group_id": "paragraph_0018",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0036",
+        "block_type": "paragraph",
+        "char_start": 8912,
+        "char_end": 8920,
+        "line_start": 203,
+        "line_end": 203,
+        "raw_text": "~~و حس\r\n",
+        "group_id": "paragraph_0018",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0037",
+        "block_type": "paragraph",
+        "char_start": 8920,
+        "char_end": 8991,
+        "line_start": 204,
+        "line_end": 204,
+        "raw_text": "# ~~منزهاست، وچون اویدیدارندهآ هستی ونیستی است یس اودرتحت هستی ونیستی\r\n",
+        "group_id": "paragraph_0019",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0038",
+        "block_type": "paragraph",
+        "char_start": 8991,
+        "char_end": 9001,
+        "line_start": 205,
+        "line_end": 205,
+        "raw_text": "~~نیاید.\r\n",
+        "group_id": "paragraph_0019",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0039",
+        "block_type": "paragraph",
+        "char_start": 9001,
+        "char_end": 9028,
+        "line_start": 206,
+        "line_end": 206,
+        "raw_text": "# من کلام الحکماء والدعاة\r\n",
+        "group_id": "paragraph_0020",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0040",
+        "block_type": "paragraph",
+        "char_start": 9028,
+        "char_end": 9100,
+        "line_start": 207,
+        "line_end": 207,
+        "raw_text": "# (29) سئل واحد منهم من التوحیدفقال : هو استقامة القلب علی رفض التعطیل\r\n",
+        "group_id": "paragraph_0021",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0041",
+        "block_type": "page_marker",
+        "char_start": 9100,
+        "char_end": 9115,
+        "line_start": 208,
+        "line_end": 208,
+        "raw_text": "~~PageV01P011\r\n",
+        "group_id": null,
+        "attributes": {
+          "volume": 1,
+          "page": 11
+        }
+      },
+      {
+        "block_id": "b0042",
+        "block_type": "image_reference",
+        "char_start": 9115,
+        "char_end": 9182,
+        "line_start": 209,
+        "line_end": 209,
+        "raw_text": "# ![image filename](./0672NasirDinTusi.AkhlaqMuhtashami_0111.png)\r\n",
+        "group_id": null,
+        "attributes": {
+          "target": "./0672NasirDinTusi.AkhlaqMuhtashami_0111.png",
+          "alt_text": "image filename"
+        }
+      },
+      {
+        "block_id": "b0043",
+        "block_type": "blank",
+        "char_start": 9182,
+        "char_end": 9184,
+        "line_start": 210,
+        "line_end": 210,
+        "raw_text": "\r\n",
+        "group_id": null,
+        "attributes": {}
+      },
+      {
+        "block_id": "b0044",
+        "block_type": "paragraph",
+        "char_start": 9184,
+        "char_end": 9255,
+        "line_start": 211,
+        "line_end": 211,
+        "raw_text": "# ~~و إنکار التشبیه با ثبات التنزیه، فایاک وآلغوص فی التنزیه ، فغایته\r\n",
+        "group_id": "paragraph_0022",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0045",
+        "block_type": "paragraph",
+        "char_start": 9255,
+        "char_end": 9275,
+        "line_start": 212,
+        "line_end": 212,
+        "raw_text": "~~التعطیل ، و إیاک\r\n",
+        "group_id": "paragraph_0022",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0046",
+        "block_type": "paragraph",
+        "char_start": 9275,
+        "char_end": 9313,
+        "line_start": 213,
+        "line_end": 213,
+        "raw_text": "# ~~والتعمق فی الإثبات فغایته التشنه، ",
+        "group_id": "paragraph_0023",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0047",
+        "block_type": "milestone",
+        "char_start": 9313,
+        "char_end": 9318,
+        "line_start": 213,
+        "line_end": 213,
+        "raw_text": "ms005",
+        "group_id": null,
+        "attributes": {
+          "number": 5
+        }
+      },
+      {
+        "block_id": "b0048",
+        "block_type": "paragraph",
+        "char_start": 9318,
+        "char_end": 9352,
+        "line_start": 213,
+        "line_end": 213,
+        "raw_text": " وآلنترحید کله فی کلمة واحدة: کل\r\n",
+        "group_id": "paragraph_0023",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0049",
+        "block_type": "paragraph",
+        "char_start": 9352,
+        "char_end": 9367,
+        "line_start": 214,
+        "line_end": 214,
+        "raw_text": "~~ماخیله الوم\r\n",
+        "group_id": "paragraph_0023",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0050",
+        "block_type": "paragraph",
+        "char_start": 9367,
+        "char_end": 9439,
+        "line_start": 215,
+        "line_end": 215,
+        "raw_text": "# ~~و صوره الفهم و جرده القول و استقر علیه الرأی ، فألحق بخلافه ومباین\r\n",
+        "group_id": "paragraph_0024",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0051",
+        "block_type": "paragraph",
+        "char_start": 9439,
+        "char_end": 9454,
+        "line_start": 216,
+        "line_end": 216,
+        "raw_text": "~~له غیر داخل\r\n",
+        "group_id": "paragraph_0024",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0052",
+        "block_type": "paragraph",
+        "char_start": 9454,
+        "char_end": 9523,
+        "line_start": 217,
+        "line_end": 217,
+        "raw_text": "# ~~تحته ولا مستعیر نعته . ترحجمه : از یکی ازایشان پرسیدند که توحید\r\n",
+        "group_id": "paragraph_0025",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0053",
+        "block_type": "paragraph",
+        "char_start": 9523,
+        "char_end": 9537,
+        "line_start": 218,
+        "line_end": 218,
+        "raw_text": "~~چیست؟ گفت:\r\n",
+        "group_id": "paragraph_0025",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0054",
+        "block_type": "paragraph",
+        "char_start": 9537,
+        "char_end": 9610,
+        "line_start": 219,
+        "line_end": 219,
+        "raw_text": "# ~~استقامت دل برفرو گذاشتن تعطیل و انکار تشبیه باثبات تنزیه، پس بپرهیز\r\n",
+        "group_id": "paragraph_0026",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0055",
+        "block_type": "paragraph",
+        "char_start": 9610,
+        "char_end": 9623,
+        "line_start": 220,
+        "line_end": 220,
+        "raw_text": "~~از مبالغت\r\n",
+        "group_id": "paragraph_0026",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0056",
+        "block_type": "paragraph",
+        "char_start": 9623,
+        "char_end": 9693,
+        "line_start": 221,
+        "line_end": 221,
+        "raw_text": "# ~~در تنزیه که غایتش تعطیل بود ، و حذر کن از درون درشدن در اثبات که\r\n",
+        "group_id": "paragraph_0027",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0057",
+        "block_type": "paragraph",
+        "char_start": 9693,
+        "char_end": 9703,
+        "line_start": 222,
+        "line_end": 222,
+        "raw_text": "~~نهایتش\r\n",
+        "group_id": "paragraph_0027",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0058",
+        "block_type": "paragraph",
+        "char_start": 9703,
+        "char_end": 9777,
+        "line_start": 223,
+        "line_end": 223,
+        "raw_text": "# ~~تشبیه باشد، و توحید همه در یک کلمه حاصل است و آن آنست که : هرچه آنرا\r\n",
+        "group_id": "paragraph_0028",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0059",
+        "block_type": "paragraph",
+        "char_start": 9777,
+        "char_end": 9784,
+        "line_start": 224,
+        "line_end": 224,
+        "raw_text": "~~وهم\r\n",
+        "group_id": "paragraph_0028",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0060",
+        "block_type": "paragraph",
+        "char_start": 9784,
+        "char_end": 9853,
+        "line_start": 225,
+        "line_end": 225,
+        "raw_text": "# ~~در تخیل آرد و فهم تصور کند و سخن آنرا مجرد کند و رای بر آن قرار\r\n",
+        "group_id": "paragraph_0029",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0061",
+        "block_type": "paragraph",
+        "char_start": 9853,
+        "char_end": 9865,
+        "line_start": 226,
+        "line_end": 226,
+        "raw_text": "~~کیرد؛ حق\r\n",
+        "group_id": "paragraph_0029",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0062",
+        "block_type": "paragraph",
+        "char_start": 9865,
+        "char_end": 9938,
+        "line_start": 227,
+        "line_end": 227,
+        "raw_text": "# ~~بخلاف آن باشد، واز آن مباین بود ، و درتحت آن داخل نباشد، وحقنعت هیچ\r\n",
+        "group_id": "paragraph_0030",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0063",
+        "block_type": "paragraph",
+        "char_start": 9938,
+        "char_end": 9945,
+        "line_start": 228,
+        "line_end": 228,
+        "raw_text": "~~چیز\r\n",
+        "group_id": "paragraph_0030",
+        "attributes": {
+          "continuation": true,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0064",
+        "block_type": "paragraph",
+        "char_start": 9945,
+        "char_end": 9980,
+        "line_start": 229,
+        "line_end": 229,
+        "raw_text": "# ~~را بعاریت از آن چیز نبستاند .\r\n",
+        "group_id": "paragraph_0031",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0065",
+        "block_type": "paragraph",
+        "char_start": 9980,
+        "char_end": 10044,
+        "line_start": 230,
+        "line_end": 230,
+        "raw_text": "# (30) الیس من اصیب بألحق اکثر ممن اصاب منه ، ومن موه عنه اکثر\r\n",
+        "group_id": "paragraph_0032",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      },
+      {
+        "block_id": "b0066",
+        "block_type": "paragraph",
+        "char_start": 10044,
+        "char_end": 10113,
+        "line_start": 231,
+        "line_end": 231,
+        "raw_text": "# ~~ممن حقق به، علی ان الإشارة الی غیره عدول عنه، والعبارة عن معناه\r\n",
+        "group_id": "paragraph_0033",
+        "attributes": {
+          "continuation": false,
+          "orphan_continuation": false
+        }
+      }
+    ],
+    "notes": "Manually reviewed: heading, embedded verses, paragraph groups, page markers, image references, milestones, inline splits, source offsets, and exact reconstruction verified."
   }
 }
