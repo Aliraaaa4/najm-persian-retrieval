@@ -446,6 +446,8 @@
     }
   ],
   "annotations": {
+    "schema_version": 1,
+    "status": "draft",
     "blocks": [],
     "notes": ""
   }
