@@ -49,3 +49,4 @@ data/processed/
 .DS_Store
 Thumbs.db
 desktop.ini
+parser_outputs.zip
