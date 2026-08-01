@@ -471,4 +471,3 @@ def test_preserves_literal_pipe_inside_paragraph() -> None:
     assert result.retrieval_text == (
         "متن سمت اول | متن سمت دوم"
     )
-
