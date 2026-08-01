@@ -6,6 +6,9 @@ from najm_retrieval.text_preparation.assembly import (
 from najm_retrieval.text_preparation.attributes import (
     attributes_to_dict,
 )
+from najm_retrieval.text_preparation.context_resolver import (
+    resolve_logical_unit_contexts,
+)
 from najm_retrieval.text_preparation.context_models import (
     ContextIssue,
     ContextMarker,
@@ -20,6 +23,7 @@ from najm_retrieval.text_preparation.models import (
 )
 
 __all__ = [
+    "resolve_logical_unit_contexts",
     "ContextIssue",
     "ContextMarker",
     "ContextualLogicalUnit",
