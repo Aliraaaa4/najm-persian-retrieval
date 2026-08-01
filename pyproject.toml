@@ -8,10 +8,15 @@ version = "0.1.0"
 description = "Local semantic retrieval for historical Persian and Islamic texts"
 requires-python = ">=3.11"
 dependencies = [
+    "numpy>=1.26,<3.0",
     "PyYAML>=6.0,<7.0",
 ]
 
 [project.optional-dependencies]
+dense = [
+    "sentence-transformers>=5.4,<6.0",
+    "torch>=2.2,<3.0",
+]
 dev = [
     "pytest>=8.0,<9.0",
 ]
