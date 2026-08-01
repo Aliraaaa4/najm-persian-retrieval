@@ -6,6 +6,13 @@ from najm_retrieval.text_preparation.assembly import (
 from najm_retrieval.text_preparation.attributes import (
     attributes_to_dict,
 )
+from najm_retrieval.text_preparation.context_models import (
+    ContextIssue,
+    ContextMarker,
+    ContextualLogicalUnit,
+    LogicalUnitContext,
+    STRUCTURAL_CONTEXT_TYPES,
+)
 from najm_retrieval.text_preparation.models import (
     AssemblyIssue,
     CONTENT_BLOCK_TYPES,
@@ -13,6 +20,11 @@ from najm_retrieval.text_preparation.models import (
 )
 
 __all__ = [
+    "ContextIssue",
+    "ContextMarker",
+    "ContextualLogicalUnit",
+    "LogicalUnitContext",
+    "STRUCTURAL_CONTEXT_TYPES",
     "AssemblyIssue",
     "CONTENT_BLOCK_TYPES",
     "LogicalUnit",
