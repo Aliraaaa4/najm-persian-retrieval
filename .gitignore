@@ -50,3 +50,5 @@ data/processed/
 Thumbs.db
 desktop.ini
 parser_outputs.zip
+
+/artifacts/indexes/
