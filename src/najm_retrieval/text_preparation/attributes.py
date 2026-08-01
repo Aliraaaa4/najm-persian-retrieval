@@ -1,4 +1,4 @@
-﻿"""Adapters for parser attributes stored in Python or JSON form."""
+"""Adapters for parser attributes stored in Python or JSON form."""
 
 from __future__ import annotations
 
@@ -35,10 +35,19 @@ def attributes_to_dict(
         return {}
 
     if isinstance(value, Mapping):
-        return {
-            str(key): item_value
-            for key, item_value in value.items()
-        }
+        result: dict[str, Any] = {}
+
+        for key, item_value in value.items():
+            key_text = str(key)
+
+            if key_text in result:
+                raise ValueError(
+                    f"Duplicate attribute key: {key_text!r}."
+                )
+
+            result[key_text] = item_value
+
+        return result
 
     if (
         isinstance(

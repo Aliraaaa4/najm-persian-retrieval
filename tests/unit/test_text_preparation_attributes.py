@@ -1,4 +1,4 @@
-﻿"""Tests for parser attribute adapters."""
+"""Tests for parser attribute adapters."""
 
 from __future__ import annotations
 
@@ -80,6 +80,19 @@ def test_rejects_duplicate_attribute_keys() -> None:
                 ["group_id", "verse_0002"],
             ]
         )
+
+
+def test_rejects_mapping_keys_that_collide_after_conversion() -> None:
+    source = {
+        1: "numeric key",
+        "1": "string key",
+    }
+
+    with pytest.raises(
+        ValueError,
+        match="Duplicate attribute key",
+    ):
+        attributes_to_dict(source)
 
 
 def test_rejects_unsupported_top_level_value() -> None:
