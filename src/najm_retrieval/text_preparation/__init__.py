@@ -16,6 +16,12 @@ from najm_retrieval.text_preparation.context_models import (
     LogicalUnitContext,
     STRUCTURAL_CONTEXT_TYPES,
 )
+from najm_retrieval.text_preparation.structural_cleanup import (
+    CleanupIssue,
+    StructurallyCleanedText,
+    clean_logical_unit_text,
+    clean_logical_units,
+)
 from najm_retrieval.text_preparation.models import (
     AssemblyIssue,
     CONTENT_BLOCK_TYPES,
@@ -23,6 +29,10 @@ from najm_retrieval.text_preparation.models import (
 )
 
 __all__ = [
+    "CleanupIssue",
+    "StructurallyCleanedText",
+    "clean_logical_unit_text",
+    "clean_logical_units",
     "resolve_logical_unit_contexts",
     "ContextIssue",
     "ContextMarker",
