@@ -10,6 +10,8 @@ import json
 import re
 import unicodedata
 
+from najm_retrieval.text_preparation.attributes import attributes_to_dict
+
 
 INPUT_DIR = Path(
     "data/processed/parser/versions"
@@ -205,10 +207,9 @@ def get_group_id(
 ) -> str | None:
     """Read group identifier from block attributes."""
 
-    attributes = block.get("attributes")
-
-    if not isinstance(attributes, dict):
-        return None
+    attributes = attributes_to_dict(
+        block.get("attributes")
+    )
 
     value = attributes.get("group_id")
 
