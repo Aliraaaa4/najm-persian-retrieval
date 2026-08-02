@@ -1,0 +1,104 @@
+{
+  "calibration": {
+    "query_ids": [
+      "q_exact_001",
+      "q_exact_002",
+      "q_exact_004",
+      "q_partial_001",
+      "q_partial_002",
+      "q_partial_003",
+      "q_semantic_002",
+      "q_semantic_004",
+      "q_entity_001",
+      "q_entity_002",
+      "q_entity_003",
+      "q_orthographic_002",
+      "q_orthographic_003",
+      "q_orthographic_004",
+      "q_ooc_001",
+      "q_ooc_002",
+      "q_ooc_003",
+      "q_ooc_candidate_002",
+      "q_ooc_candidate_003",
+      "q_ooc_candidate_004",
+      "q_ooc_candidate_006",
+      "q_ooc_candidate_008",
+      "q_ooc_candidate_010",
+      "q_ooc_candidate_011",
+      "q_ooc_candidate_012",
+      "q_ooc_candidate_013",
+      "q_ooc_candidate_014",
+      "q_ooc_candidate_015",
+      "q_ooc_candidate_017",
+      "q_ooc_candidate_018"
+    ],
+    "summary": {
+      "answerable_count": 14,
+      "ooc_failure_mode_counts": {
+        "easy_negative": 3,
+        "false_premise": 3,
+        "hard_negative": 10,
+        "lexical_trap": 2,
+        "scope_guard_required": 5,
+        "source_attribution_trap": 4
+      },
+      "out_of_corpus_count": 16,
+      "query_type_counts": {
+        "entity": 3,
+        "exact_quote": 3,
+        "orthographic_variant": 3,
+        "out_of_corpus": 16,
+        "partial_quote": 3,
+        "semantic": 2
+      },
+      "total_count": 30
+    }
+  },
+  "purpose": "Freeze a reproducible calibration/validation partition for interpretable abstention-policy development.",
+  "schema_version": "1.0.0",
+  "selection_policy": "Manual stratification preserves all answerable query families and places diverse OOC failure modes in validation, including source scope, attribution, paratext, lexical traps, and an easy negative.",
+  "source_evaluation_path": "data/evaluation/retrieval_answerability_v1.jsonl",
+  "split_id": "answerability-calibration-validation-v1",
+  "trustworthiness_note": "This validation partition is not a fully blind held-out test, because aggregate and per-query diagnostics were inspected before the split was frozen. A separate blind evaluation set must be collected after the policy is frozen.",
+  "validation": {
+    "query_ids": [
+      "q_exact_003",
+      "q_partial_004",
+      "q_semantic_001",
+      "q_semantic_003",
+      "q_entity_004",
+      "q_orthographic_001",
+      "q_ooc_004",
+      "q_ooc_candidate_001",
+      "q_ooc_candidate_005",
+      "q_ooc_candidate_007",
+      "q_ooc_candidate_009",
+      "q_ooc_candidate_016",
+      "q_ooc_candidate_019",
+      "q_ooc_candidate_020"
+    ],
+    "summary": {
+      "answerable_count": 6,
+      "ooc_failure_mode_counts": {
+        "easy_negative": 1,
+        "hard_negative": 6,
+        "lexical_trap": 2,
+        "modern_domain_shift": 2,
+        "near_domain_absent_source": 1,
+        "paratext_trap": 1,
+        "scope_guard_required": 3,
+        "source_attribution_trap": 3
+      },
+      "out_of_corpus_count": 8,
+      "query_type_counts": {
+        "entity": 1,
+        "exact_quote": 1,
+        "orthographic_variant": 1,
+        "out_of_corpus": 8,
+        "partial_quote": 1,
+        "semantic": 2
+      },
+      "total_count": 14
+    }
+  }
+}
