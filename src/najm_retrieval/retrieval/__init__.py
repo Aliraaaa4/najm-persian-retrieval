@@ -1,5 +1,13 @@
 """Retrieval indexes, models, and search utilities."""
 
+from najm_retrieval.retrieval.abstention_features import (
+    AbstentionFeatureExtractor,
+)
+from najm_retrieval.retrieval.abstention_models import (
+    ABSTENTION_FEATURE_SCHEMA_VERSION,
+    AbstentionFeatures,
+)
+
 from najm_retrieval.retrieval.dense_index import (
     DenseIndex,
     DenseIndexError,
@@ -33,6 +41,9 @@ from najm_retrieval.retrieval.models import (
 
 
 __all__ = [
+    "ABSTENTION_FEATURE_SCHEMA_VERSION",
+    "AbstentionFeatureExtractor",
+    "AbstentionFeatures",
     "DENSE_INDEX_SCHEMA_VERSION",
     "HYBRID_RETRIEVAL_SCHEMA_VERSION",
     "LEXICAL_INDEX_SCHEMA_VERSION",
