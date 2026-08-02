@@ -1,5 +1,16 @@
 """Retrieval indexes, models, and search utilities."""
 
+from najm_retrieval.retrieval.abstention_policy import (
+    AbstentionPolicy,
+)
+from najm_retrieval.retrieval.policy_models import (
+    ABSTENTION_POLICY_SCHEMA_VERSION,
+    AbstentionPolicyConfig,
+    AbstentionReason,
+    DecisionAction,
+    RetrievalDecision,
+)
+
 from najm_retrieval.retrieval.paratext_catalog import (
     ParatextCatalog,
     ParatextCatalogError,
@@ -73,6 +84,12 @@ from najm_retrieval.retrieval.models import (
 
 
 __all__ = [
+    "ABSTENTION_POLICY_SCHEMA_VERSION",
+    "AbstentionPolicy",
+    "AbstentionPolicyConfig",
+    "AbstentionReason",
+    "DecisionAction",
+    "RetrievalDecision",
     "PARATEXT_CATALOG_SCHEMA_VERSION",
     "ContentRole",
     "ParatextCatalog",
