@@ -1,5 +1,21 @@
 """Retrieval indexes, models, and search utilities."""
 
+from najm_retrieval.retrieval.scope_catalog import (
+    CorpusScopeCatalog,
+    ScopeCatalogError,
+    normalize_scope_text,
+)
+from najm_retrieval.retrieval.scope_features import (
+    ScopeEvidenceExtractor,
+)
+from najm_retrieval.retrieval.scope_models import (
+    SCOPE_CATALOG_SCHEMA_VERSION,
+    ScopeCatalogEntity,
+    ScopeEntityKind,
+    ScopeEvidence,
+    ScopeMention,
+)
+
 from najm_retrieval.retrieval.abstention_features import (
     AbstentionFeatureExtractor,
 )
@@ -41,6 +57,15 @@ from najm_retrieval.retrieval.models import (
 
 
 __all__ = [
+    "CorpusScopeCatalog",
+    "SCOPE_CATALOG_SCHEMA_VERSION",
+    "ScopeCatalogEntity",
+    "ScopeCatalogError",
+    "ScopeEntityKind",
+    "ScopeEvidence",
+    "ScopeEvidenceExtractor",
+    "ScopeMention",
+    "normalize_scope_text",
     "ABSTENTION_FEATURE_SCHEMA_VERSION",
     "AbstentionFeatureExtractor",
     "AbstentionFeatures",

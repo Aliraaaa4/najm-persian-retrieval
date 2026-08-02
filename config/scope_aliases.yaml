@@ -1,0 +1,149 @@
+schema_version: "1.0.0"
+
+in_corpus:
+  authors:
+    "0667BabaAfzal":
+      label_fa: "بابا افضل کاشانی"
+      aliases:
+        - "بابا افضل"
+        - "بابا افضل کاشانی"
+        - "افضل الدین کاشانی"
+
+    "0670IbnAscadHanati":
+      label_fa: "ابن اسعد حناطی"
+      aliases:
+        - "ابن اسعد حناطی"
+        - "محمد بن اسعد حناطی"
+        - "حناطی"
+
+    "0672JalalDinRumi":
+      label_fa: "مولانا جلال‌الدین رومی"
+      aliases:
+        - "مولوی"
+        - "مولانا"
+        - "جلال الدین رومی"
+        - "مولانا جلال الدین"
+        - "مولانا جلال الدین رومی"
+        - "رومی"
+
+    "0672NasirDinTusi":
+      label_fa: "خواجه نصیرالدین طوسی"
+      aliases:
+        - "خواجه نصیر"
+        - "خواجه نصیرالدین طوسی"
+        - "نصیرالدین طوسی"
+        - "نصیر الدین طوسی"
+        - "طوسی"
+
+  works:
+    "0667BabaAfzal.Diwan":
+      label_fa: "دیوان بابا افضل"
+      aliases:
+        - "دیوان بابا افضل"
+
+    "0670IbnAscadHanati.Masalik":
+      label_fa: "مسالک و ممالک"
+      aliases:
+        - "مسالک و ممالک"
+        - "ممالک و مسالک"
+
+    "0672JalalDinRumi.Diwan":
+      label_fa: "دیوان شمس"
+      aliases:
+        - "دیوان شمس"
+        - "دیوان کبیر"
+        - "کلیات شمس"
+        - "غزلیات شمس"
+
+    "0672JalalDinRumi.MajalisSabica":
+      label_fa: "مجالس سبعه"
+      aliases:
+        - "مجالس سبعه"
+        - "مجالس هفتگانه مولوی"
+        - "هفت مجلس مولوی"
+
+    "0672JalalDinRumi.Mathnawi":
+      label_fa: "مثنوی معنوی"
+      aliases:
+        - "مثنوی معنوی"
+        - "مثنوی مولوی"
+        - "مثنوی"
+
+    "0672NasirDinTusi.AkhlaqMuhtashami":
+      label_fa: "اخلاق محتشمی"
+      aliases:
+        - "اخلاق محتشمی"
+
+known_out_of_corpus:
+  authors:
+    "external:Ferdowsi":
+      label_fa: "فردوسی"
+      aliases:
+        - "فردوسی"
+        - "حکیم فردوسی"
+        - "ابوالقاسم فردوسی"
+
+    "external:Saadi":
+      label_fa: "سعدی"
+      aliases:
+        - "سعدی"
+        - "سعدی شیرازی"
+        - "شیخ سعدی"
+
+    "external:Hafez":
+      label_fa: "حافظ"
+      aliases:
+        - "حافظ"
+        - "حافظ شیرازی"
+        - "خواجه حافظ"
+
+    "external:Attar":
+      label_fa: "عطار"
+      aliases:
+        - "عطار"
+        - "عطار نیشابوری"
+        - "فریدالدین عطار"
+
+    "external:IbnSina":
+      label_fa: "ابن سینا"
+      aliases:
+        - "ابن سینا"
+        - "بوعلی سینا"
+        - "شیخ الرئیس"
+
+  works:
+    "external:Shahnameh":
+      label_fa: "شاهنامه"
+      aliases:
+        - "شاهنامه"
+        - "شاهنامه فردوسی"
+
+    "external:Golestan":
+      label_fa: "گلستان سعدی"
+      aliases:
+        - "گلستان سعدی"
+        - "گلستان"
+
+    "external:Bustan":
+      label_fa: "بوستان سعدی"
+      aliases:
+        - "بوستان سعدی"
+
+    "external:HafezDivan":
+      label_fa: "دیوان حافظ"
+      aliases:
+        - "دیوان حافظ"
+        - "غزلیات حافظ"
+
+    "external:MantiqAlTayr":
+      label_fa: "منطق‌الطیر"
+      aliases:
+        - "منطق الطیر"
+        - "منطق‌الطیر"
+
+    "external:Qanun":
+      label_fa: "قانون ابن سینا"
+      aliases:
+        - "قانون ابن سینا"
+        - "کتاب قانون"
+        - "القانون فی الطب"
