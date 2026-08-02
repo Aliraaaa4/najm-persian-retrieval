@@ -1,5 +1,21 @@
 """Retrieval indexes, models, and search utilities."""
 
+from najm_retrieval.retrieval.paratext_catalog import (
+    ParatextCatalog,
+    ParatextCatalogError,
+    parse_passage_ordinal,
+)
+from najm_retrieval.retrieval.paratext_features import (
+    ParatextEvidenceExtractor,
+)
+from najm_retrieval.retrieval.paratext_models import (
+    PARATEXT_CATALOG_SCHEMA_VERSION,
+    ContentRole,
+    ParatextEvidence,
+    ParatextZone,
+    PassageRoleEvidence,
+)
+
 from najm_retrieval.retrieval.scope_catalog import (
     CorpusScopeCatalog,
     ScopeCatalogError,
@@ -57,6 +73,15 @@ from najm_retrieval.retrieval.models import (
 
 
 __all__ = [
+    "PARATEXT_CATALOG_SCHEMA_VERSION",
+    "ContentRole",
+    "ParatextCatalog",
+    "ParatextCatalogError",
+    "ParatextEvidence",
+    "ParatextEvidenceExtractor",
+    "ParatextZone",
+    "PassageRoleEvidence",
+    "parse_passage_ordinal",
     "CorpusScopeCatalog",
     "SCOPE_CATALOG_SCHEMA_VERSION",
     "ScopeCatalogEntity",

@@ -1,0 +1,20 @@
+schema_version: "1.0.0"
+
+versions:
+  "0672JalalDinRumi.MajalisSabica.AOCP202502141236-per1":
+    expected_passage_count: 239
+    zones:
+      - start_ordinal: 1
+        end_ordinal: 24
+        role: "paratext"
+        reason: "editorial_front_matter"
+
+      - start_ordinal: 25
+        end_ordinal: 25
+        role: "mixed"
+        reason: "front_matter_to_authorial_transition"
+
+      - start_ordinal: 26
+        end_ordinal: 239
+        role: "authorial"
+        reason: "main_work"
