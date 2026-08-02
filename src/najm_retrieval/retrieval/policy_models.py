@@ -2,11 +2,12 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from enum import Enum
+import math
 
 
-ABSTENTION_POLICY_SCHEMA_VERSION = "1.0.0"
+ABSTENTION_POLICY_SCHEMA_VERSION = "1.2.0"
 
 
 class DecisionAction(str, Enum):
@@ -17,7 +18,7 @@ class DecisionAction(str, Enum):
 
 
 class AbstentionReason(str, Enum):
-    """Auditable reasons emitted by the baseline policy."""
+    """Auditable reasons emitted by the calibrated policy."""
 
     KNOWN_OUT_OF_CORPUS_SCOPE = (
         "known_out_of_corpus_scope"
@@ -28,19 +29,189 @@ class AbstentionReason(str, Enum):
     TOP_HIT_PARATEXT = "top_hit_paratext"
     TOP_HIT_MIXED = "top_hit_mixed"
     NO_HYBRID_HITS = "no_hybrid_hits"
+    WEAK_CROSS_RETRIEVER_EVIDENCE = (
+        "weak_cross_retriever_evidence"
+    )
     BASELINE_EVIDENCE_PASSED = (
         "baseline_evidence_passed"
     )
 
 
 @dataclass(frozen=True)
+class RetrievalProfileConfig:
+    """Frozen retrieval settings for which the policy was calibrated."""
+
+    corpus_artifact_id: str = (
+        "corpus-ad111acd912e"
+    )
+    dense_model_name: str = (
+        "intfloat/multilingual-e5-small"
+    )
+    lexical_weight: float = 2.0
+    dense_weight: float = 1.0
+    rrf_constant: float = 60.0
+    candidate_limit: int = 100
+    return_limit: int = 10
+
+    def __post_init__(self) -> None:
+        for label, value in (
+            (
+                "corpus_artifact_id",
+                self.corpus_artifact_id,
+            ),
+            (
+                "dense_model_name",
+                self.dense_model_name,
+            ),
+        ):
+            if (
+                not isinstance(
+                    value,
+                    str,
+                )
+                or not value.strip()
+            ):
+                raise ValueError(
+                    f"{label} must not be empty."
+                )
+
+        for label, value in (
+            (
+                "lexical_weight",
+                self.lexical_weight,
+            ),
+            (
+                "dense_weight",
+                self.dense_weight,
+            ),
+        ):
+            if (
+                isinstance(
+                    value,
+                    bool,
+                )
+                or not isinstance(
+                    value,
+                    (
+                        int,
+                        float,
+                    ),
+                )
+                or not math.isfinite(
+                    float(
+                        value
+                    )
+                )
+                or float(
+                    value
+                )
+                < 0
+            ):
+                raise ValueError(
+                    f"{label} must be finite and non-negative."
+                )
+
+        if (
+            float(
+                self.lexical_weight
+            )
+            == 0.0
+            and float(
+                self.dense_weight
+            )
+            == 0.0
+        ):
+            raise ValueError(
+                "At least one retrieval weight must be positive."
+            )
+
+        if (
+            isinstance(
+                self.rrf_constant,
+                bool,
+            )
+            or not isinstance(
+                self.rrf_constant,
+                (
+                    int,
+                    float,
+                ),
+            )
+            or not math.isfinite(
+                float(
+                    self.rrf_constant
+                )
+            )
+            or float(
+                self.rrf_constant
+            )
+            <= 0
+        ):
+            raise ValueError(
+                "rrf_constant must be finite and positive."
+            )
+
+        for label, value in (
+            (
+                "candidate_limit",
+                self.candidate_limit,
+            ),
+            (
+                "return_limit",
+                self.return_limit,
+            ),
+        ):
+            if (
+                not isinstance(
+                    value,
+                    int,
+                )
+                or isinstance(
+                    value,
+                    bool,
+                )
+                or not 1
+                <= value
+                <= 100
+            ):
+                raise ValueError(
+                    f"{label} must be an integer between 1 and 100."
+                )
+
+        if (
+            self.return_limit
+            > self.candidate_limit
+        ):
+            raise ValueError(
+                "return_limit must not exceed candidate_limit."
+            )
+
+
+@dataclass(frozen=True)
 class AbstentionPolicyConfig:
-    """Switches for strong deterministic abstention rules."""
+    """Frozen switches, thresholds, and retrieval provenance."""
+
+    policy_id: str = (
+        "abstention-calibration-v1"
+    )
+    calibration_split_id: str = (
+        "answerability-calibration-validation-v1"
+    )
+
+    retrieval_profile: RetrievalProfileConfig = field(
+        default_factory=RetrievalProfileConfig
+    )
 
     reject_known_out_of_corpus_scope: bool = True
     reject_source_attribution_conflict: bool = True
     reject_paratext_top_hit: bool = True
     reject_mixed_top_hit: bool = True
+    reject_weak_cross_retriever_evidence: bool = True
+
+    weak_evidence_dense_top_1_threshold: float = (
+        0.863
+    )
+    weak_evidence_max_overlap_at_10: int = 0
 
     schema_version: str = (
         ABSTENTION_POLICY_SCHEMA_VERSION
@@ -54,6 +225,35 @@ class AbstentionPolicyConfig:
             raise ValueError(
                 "Unsupported abstention-policy schema version: "
                 f"{self.schema_version}"
+            )
+
+        for label, value in (
+            (
+                "policy_id",
+                self.policy_id,
+            ),
+            (
+                "calibration_split_id",
+                self.calibration_split_id,
+            ),
+        ):
+            if (
+                not isinstance(
+                    value,
+                    str,
+                )
+                or not value.strip()
+            ):
+                raise ValueError(
+                    f"{label} must not be empty."
+                )
+
+        if not isinstance(
+            self.retrieval_profile,
+            RetrievalProfileConfig,
+        ):
+            raise ValueError(
+                "retrieval_profile must be a RetrievalProfileConfig."
             )
 
         for label, value in (
@@ -73,11 +273,69 @@ class AbstentionPolicyConfig:
                 "reject_mixed_top_hit",
                 self.reject_mixed_top_hit,
             ),
+            (
+                "reject_weak_cross_retriever_evidence",
+                self.reject_weak_cross_retriever_evidence,
+            ),
         ):
             if not isinstance(value, bool):
                 raise ValueError(
                     f"{label} must be Boolean."
                 )
+
+        threshold = (
+            self.weak_evidence_dense_top_1_threshold
+        )
+
+        if (
+            isinstance(
+                threshold,
+                bool,
+            )
+            or not isinstance(
+                threshold,
+                (
+                    int,
+                    float,
+                ),
+            )
+            or not math.isfinite(
+                float(
+                    threshold
+                )
+            )
+            or not -1.0
+            <= float(
+                threshold
+            )
+            <= 1.0
+        ):
+            raise ValueError(
+                "weak_evidence_dense_top_1_threshold "
+                "must be finite and between -1 and 1."
+            )
+
+        overlap_cap = (
+            self.weak_evidence_max_overlap_at_10
+        )
+
+        if (
+            not isinstance(
+                overlap_cap,
+                int,
+            )
+            or isinstance(
+                overlap_cap,
+                bool,
+            )
+            or not 0
+            <= overlap_cap
+            <= 10
+        ):
+            raise ValueError(
+                "weak_evidence_max_overlap_at_10 "
+                "must be an integer between 0 and 10."
+            )
 
 
 @dataclass(frozen=True)
@@ -219,4 +477,5 @@ __all__ = [
     "AbstentionReason",
     "DecisionAction",
     "RetrievalDecision",
+    "RetrievalProfileConfig",
 ]

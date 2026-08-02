@@ -1,5 +1,10 @@
 """Retrieval indexes, models, and search utilities."""
 
+from najm_retrieval.retrieval.policy_config import (
+    AbstentionPolicyConfigError,
+    load_abstention_policy_config,
+)
+
 from najm_retrieval.retrieval.abstention_policy import (
     AbstentionPolicy,
 )
@@ -9,6 +14,7 @@ from najm_retrieval.retrieval.policy_models import (
     AbstentionReason,
     DecisionAction,
     RetrievalDecision,
+    RetrievalProfileConfig,
 )
 
 from najm_retrieval.retrieval.paratext_catalog import (
@@ -25,6 +31,11 @@ from najm_retrieval.retrieval.paratext_models import (
     ParatextEvidence,
     ParatextZone,
     PassageRoleEvidence,
+)
+
+from najm_retrieval.retrieval.retrieval_profile import (
+    RetrievalProfileMismatchError,
+    validate_retrieval_profile,
 )
 
 from najm_retrieval.retrieval.scope_catalog import (
@@ -84,6 +95,11 @@ from najm_retrieval.retrieval.models import (
 
 
 __all__ = [
+    "RetrievalProfileConfig",
+    "RetrievalProfileMismatchError",
+    "validate_retrieval_profile",
+    "AbstentionPolicyConfigError",
+    "load_abstention_policy_config",
     "ABSTENTION_POLICY_SCHEMA_VERSION",
     "AbstentionPolicy",
     "AbstentionPolicyConfig",

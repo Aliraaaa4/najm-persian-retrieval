@@ -1,0 +1,30 @@
+schema_version: "1.2.0"
+policy_id: "abstention-calibration-v1"
+calibration_split_id: "answerability-calibration-validation-v1"
+
+# The score threshold below is valid only for this exact retrieval profile.
+retrieval_profile:
+  corpus_artifact_id: "corpus-ad111acd912e"
+  dense_model_name: "intfloat/multilingual-e5-small"
+  lexical_weight: 2.0
+  dense_weight: 1.0
+  rrf_constant: 60.0
+  candidate_limit: 100
+  return_limit: 10
+
+rules:
+  reject_known_out_of_corpus_scope: true
+  reject_source_attribution_conflict: true
+  reject_paratext_top_hit: true
+  reject_mixed_top_hit: true
+
+  weak_cross_retriever_evidence:
+    enabled: true
+
+    # Frozen from the 30-query calibration partition only.
+    # The zero-error grid plateau was 0.861 through 0.865.
+    # 0.863 is the midpoint, avoiding either edge of the plateau.
+    dense_top_1_score_less_than: 0.863
+
+    # Require no shared passage between lexical and dense top-10 results.
+    overlap_at_10_less_than_or_equal: 0

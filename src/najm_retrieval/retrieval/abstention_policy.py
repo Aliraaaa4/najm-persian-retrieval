@@ -1,4 +1,4 @@
-"""Deterministic baseline abstention policy."""
+"""Deterministic calibrated abstention policy."""
 
 from __future__ import annotations
 
@@ -20,10 +20,11 @@ from najm_retrieval.retrieval.scope_models import (
 
 
 class AbstentionPolicy:
-    """Apply strong evidence rules without score thresholds.
+    """Apply frozen, interpretable abstention rules.
 
-    This baseline intentionally avoids treating retrieval scores as
-    probabilities. Threshold-based rules are added only after calibration.
+    Retrieval scores are evidence features, not probabilities. The calibrated
+    score rule is therefore used only in conjunction with zero lexical/dense
+    overlap at depth 10.
     """
 
     def __init__(
@@ -91,6 +92,20 @@ class AbstentionPolicy:
         if retrieval.hybrid_hit_count == 0:
             triggered.append(
                 AbstentionReason.NO_HYBRID_HITS
+            )
+
+        if (
+            self.config.reject_weak_cross_retriever_evidence
+            and retrieval.hybrid_hit_count > 0
+            and retrieval.dense_top_1_score
+            is not None
+            and retrieval.dense_top_1_score
+            < self.config.weak_evidence_dense_top_1_threshold
+            and retrieval.overlap_at_10
+            <= self.config.weak_evidence_max_overlap_at_10
+        ):
+            triggered.append(
+                AbstentionReason.WEAK_CROSS_RETRIEVER_EVIDENCE
             )
 
         if triggered:
