@@ -1,128 +1,161 @@
-# API Documentation
+# REST API
 
 ## Overview
 
-This document describes the REST API for the Historical Persian Text Retrieval System.
+NAJM provides a local FastAPI interface for trusted passage retrieval over a
+selected corpus of historical Persian texts.
 
-The API provides access to a local semantic search engine built for retrieving relevant passages from historical Persian and Islamic texts. The current document contains the planned API structure and will be updated as the implementation progresses.
+The API uses lexical and dense retrieval, hybrid ranking, scope validation, and
+an abstention policy. It returns source passages and does not generate answers
+with a large language model.
 
-## Base URL
+## Schema version
+
+The current public API schema version is:
 
 ```text
-http://127.0.0.1:8000
+1.1.0
 ```
 
-## Interactive Documentation
+Version `1.1.0` adds deterministic query suggestions to abstained responses.
 
-After starting the API server, the automatically generated Swagger documentation will be available at:
+## Start the server
+
+```powershell
+python -m uvicorn najm_retrieval.api.app:app --host 127.0.0.1 --port 8000
+```
+
+Swagger UI:
 
 ```text
 http://127.0.0.1:8000/docs
 ```
 
-The alternative ReDoc documentation will be available at:
+ReDoc:
 
 ```text
 http://127.0.0.1:8000/redoc
 ```
 
-## Planned Endpoints
+## Endpoints
 
-### Health Check
+### Health
 
 ```http
 GET /health
 ```
 
-This endpoint checks whether the API service is running correctly.
+Checks whether the HTTP application is running.
 
-#### Example Request
+### Readiness
 
 ```http
-GET http://127.0.0.1:8000/health
+GET /ready
 ```
 
-#### Planned Response
+Returns HTTP `200` when retrieval artifacts are ready and HTTP `503` when the
+runtime could not be initialized.
+
+### Trusted retrieval
+
+```http
+POST /v1/retrieve
+```
+
+Request:
 
 ```json
 {
-  "status": "ok"
+  "query": "اختیار در مثنوی معنوی",
+  "limit": 3
 }
 ```
 
----
+Request fields:
 
-### Semantic Search
+- `query`: required text from 1 through 1000 characters.
+- `limit`: number of public results from 1 through 10; default is 10.
 
-```http
-GET /search
-```
+Unknown request fields are rejected.
 
-This endpoint receives a natural-language query and returns the most relevant passages from the indexed historical texts.
+## Accepted response
 
-#### Query Parameters
+When trusted evidence is sufficient, `return_results` is `true`, `results`
+contains public passages, and `suggestions` is empty.
 
-- `q`: The search query entered by the user.
-- `top_k`: The maximum number of search results to return. The default value will be `5`.
+Retriever scores are ranking values, not calibrated probabilities.
 
-#### Example Request
+## Abstained response
 
-```http
-GET http://127.0.0.1:8000/search?q=صبر در آثار مولانا&top_k=5
-```
+When evidence is insufficient, the API still returns HTTP `200`, but:
 
-#### Planned Response
+- `action` is `abstain`;
+- `return_results` is `false`;
+- `results` is empty;
+- `top_passage_id` is `null`;
+- safe query suggestions may be returned.
+
+Diagnostic passages are never exposed publicly.
+
+Example suggestion:
 
 ```json
 {
-  "query": "صبر در آثار مولانا",
-  "top_k": 5,
-  "results": [
-    {
-      "rank": 1,
-      "score": 0.87,
-      "author": "Jalal al-Din Rumi",
-      "title": "Mathnawi",
-      "document_id": "rumi_mathnawi",
-      "passage_id": "rumi_mathnawi_000123",
-      "snippet": "A relevant passage from the retrieved document."
-    }
+  "query": "فقط بر اساس متن اصلی دیوان شمس: درباره عشق چه می‌گوید؟",
+  "label": "جست‌وجوی همین پرسش در دیوان شمس",
+  "kind": "replace_out_of_scope",
+  "entity_id": "0672JalalDinRumi.Diwan",
+  "entity_kind": "work",
+  "version_ids": [
+    "0672JalalDinRumi.Diwan.PDL00047-per1"
   ]
 }
 ```
 
-## Search Result Fields
+## Query suggestions
 
-Each search result is planned to contain the following information:
+Suggestions are deterministic and based on the frozen corpus scope catalog.
+They are produced only for abstained responses, refer only to indexed works,
+do not modify the abstention decision, and never expose diagnostic passages.
 
-- `rank`: The position of the result in the ranked result list.
-- `score`: The semantic similarity score assigned to the passage.
-- `author`: The author of the source document.
-- `title`: The title of the source document.
-- `document_id`: A unique identifier for the source document.
-- `passage_id`: A unique identifier for the retrieved passage.
-- `snippet`: A short excerpt from the retrieved text.
+Suggestion kinds:
 
-## Error Responses
+- `replace_out_of_scope`
+- `restrict_scope`
+- `search_primary_text`
+- `scope_query`
 
-The API will return an appropriate HTTP error response when the request is invalid or when the retrieval index is unavailable.
+## Abstention reasons
 
-A planned validation error response may look like this:
+Possible values include:
 
-```json
-{
-  "detail": "The search query must not be empty."
-}
+- `known_out_of_corpus_scope`
+- `source_attribution_conflict`
+- `top_hit_paratext`
+- `top_hit_mixed`
+- `no_hybrid_hits`
+- `weak_cross_retriever_evidence`
+- `baseline_evidence_passed`
+
+## PowerShell example
+
+```powershell
+$Body = @{
+    query = "در مثنوی معنوی درباره اختیار چه آمده است؟"
+    limit = 3
+} | ConvertTo-Json
+
+Invoke-RestMethod `
+    -Method Post `
+    -Uri "http://127.0.0.1:8000/v1/retrieve" `
+    -ContentType "application/json; charset=utf-8" `
+    -Body $Body
 ```
 
-## Notes
+## Errors
 
-- The API is designed to run locally.
-- The search endpoint will use semantic retrieval rather than exact keyword matching.
-- The API does not generate answers using a large language model.
-- The returned results are passages retrieved directly from the indexed source texts.
-- Endpoint details and response formats may be refined during implementation.
+- HTTP `422`: invalid request body.
+- HTTP `503`: retrieval runtime is unavailable.
+- HTTP `500`: retrieval execution failed.
 
-## Implementation Status
-
-The API is currently under development. This document will be updated after the search service, response schemas, validation rules, and error-handling behavior are fully implemented.
+Internal exception details are not returned to clients.

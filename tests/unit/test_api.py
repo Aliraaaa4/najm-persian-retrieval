@@ -11,6 +11,9 @@ from fastapi.testclient import (
 from najm_retrieval.api.app import (
     create_app,
 )
+from najm_retrieval.api.query_suggestions import (
+    QuerySuggestion,
+)
 from najm_retrieval.retrieval import (
     AbstentionReason,
     DecisionAction,
@@ -94,6 +97,50 @@ class _FakeService:
         assert self.response is not None
 
         return self.response
+
+
+@dataclass
+class _FakeSuggestionEngine:
+    suggestions: tuple[
+        QuerySuggestion,
+        ...,
+    ] = ()
+
+    error: Exception | None = None
+
+    def __post_init__(
+        self,
+    ) -> None:
+        self.calls: list[
+            tuple[
+                str,
+                AbstentionReason,
+                bool,
+            ]
+        ] = []
+
+    def suggest(
+        self,
+        *,
+        query_text: str,
+        reason: AbstentionReason,
+        return_results: bool,
+    ) -> tuple[
+        QuerySuggestion,
+        ...,
+    ]:
+        self.calls.append(
+            (
+                query_text,
+                reason,
+                return_results,
+            )
+        )
+
+        if self.error is not None:
+            raise self.error
+
+        return self.suggestions
 
 
 def _passage(
@@ -218,7 +265,7 @@ def test_health_endpoint_is_live() -> None:
     assert response.status_code == 200
 
     assert response.json() == {
-        "schema_version": "1.0.0",
+        "schema_version": "1.1.0",
         "status": "ok",
         "service": (
             "najm-persian-retrieval"
@@ -407,6 +454,172 @@ def test_retrieve_abstention_hides_diagnostics() -> None:
 
     assert (
         PASSAGE_ONE
+        not in response.text
+    )
+
+
+def test_retrieve_returns_safe_suggestions_on_abstention(
+) -> None:
+    engine = _FakeSuggestionEngine(
+        suggestions=(
+            QuerySuggestion(
+                query_text=(
+                    "مثنوی معنوی درباره عشق"
+                ),
+                label=(
+                    "جست‌وجوی همین پرسش "
+                    "در مثنوی معنوی"
+                ),
+                kind=(
+                    "replace_out_of_scope"
+                ),
+                entity_id=(
+                    "0672JalalDinRumi.Mathnawi"
+                ),
+                entity_kind="work",
+                version_ids=(
+                    VERSION_ID,
+                ),
+            ),
+        )
+    )
+
+    app = create_app(
+        service=_FakeService(
+            response=_trusted_response(
+                return_results=False
+            )
+        ),
+        suggestion_engine=engine,
+    )
+
+    with TestClient(
+        app
+    ) as client:
+        response = client.post(
+            "/v1/retrieve",
+            json={
+                "query": (
+                    "حافظ درباره عشق"
+                ),
+            },
+        )
+
+    assert response.status_code == 200
+
+    payload = response.json()
+
+    assert payload["results"] == []
+
+    assert payload["suggestions"] == [
+        {
+            "query": (
+                "مثنوی معنوی درباره عشق"
+            ),
+            "label": (
+                "جست‌وجوی همین پرسش "
+                "در مثنوی معنوی"
+            ),
+            "kind": (
+                "replace_out_of_scope"
+            ),
+            "entity_id": (
+                "0672JalalDinRumi.Mathnawi"
+            ),
+            "entity_kind": "work",
+            "version_ids": [
+                VERSION_ID,
+            ],
+        },
+    ]
+
+    assert engine.calls == [
+        (
+            "پرسش آزمایشی",
+            ABSTAIN_REASON,
+            False,
+        ),
+    ]
+
+    assert (
+        PASSAGE_ONE
+        not in response.text
+    )
+
+
+def test_retrieve_skips_suggestions_when_returning_results(
+) -> None:
+    engine = _FakeSuggestionEngine()
+
+    app = create_app(
+        service=_FakeService(
+            response=_trusted_response(
+                return_results=True
+            )
+        ),
+        suggestion_engine=engine,
+    )
+
+    with TestClient(
+        app
+    ) as client:
+        response = client.post(
+            "/v1/retrieve",
+            json={
+                "query": (
+                    "پرسش آزمایشی"
+                ),
+            },
+        )
+
+    assert response.status_code == 200
+
+    assert response.json()[
+        "suggestions"
+    ] == []
+
+    assert engine.calls == []
+
+
+def test_retrieve_survives_suggestion_engine_failure(
+) -> None:
+    engine = _FakeSuggestionEngine(
+        error=RuntimeError(
+            "private suggestion failure"
+        )
+    )
+
+    app = create_app(
+        service=_FakeService(
+            response=_trusted_response(
+                return_results=False
+            )
+        ),
+        suggestion_engine=engine,
+    )
+
+    with TestClient(
+        app,
+        raise_server_exceptions=False,
+    ) as client:
+        response = client.post(
+            "/v1/retrieve",
+            json={
+                "query": (
+                    "حافظ درباره عشق"
+                ),
+            },
+        )
+
+    assert response.status_code == 200
+
+    payload = response.json()
+
+    assert payload["suggestions"] == []
+    assert payload["results"] == []
+
+    assert (
+        "private suggestion failure"
         not in response.text
     )
 

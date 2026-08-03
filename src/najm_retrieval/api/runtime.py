@@ -7,6 +7,9 @@ import os
 from pathlib import Path
 from tempfile import gettempdir
 
+from najm_retrieval.api.query_suggestions import (
+    QuerySuggestionEngine,
+)
 from najm_retrieval.retrieval import (
     CorpusScopeCatalog,
     DenseIndex,
@@ -298,6 +301,45 @@ def build_retrieval_service(
     )
 
 
+def build_query_suggestion_engine(
+    settings: ApiSettings | None = None,
+) -> QuerySuggestionEngine:
+    """Build the lightweight deterministic suggestion engine."""
+
+    resolved = (
+        settings
+        if settings is not None
+        else ApiSettings.from_environment()
+    )
+
+    required_paths = (
+        resolved.corpus_manifest_path,
+        resolved.scope_aliases_path,
+    )
+
+    for path in required_paths:
+        if not path.is_file():
+            raise ApiRuntimeError(
+                "Required suggestion file "
+                f"not found: {path}"
+            )
+
+    catalog = (
+        CorpusScopeCatalog.from_files(
+            manifest_path=(
+                resolved.corpus_manifest_path
+            ),
+            aliases_path=(
+                resolved.scope_aliases_path
+            ),
+        )
+    )
+
+    return QuerySuggestionEngine(
+        catalog
+    )
+
+
 def _resolve_project_root(
 ) -> Path:
     configured = os.environ.get(
@@ -366,5 +408,6 @@ def _positive_integer(
 __all__ = [
     "ApiRuntimeError",
     "ApiSettings",
+    "build_query_suggestion_engine",
     "build_retrieval_service",
 ]

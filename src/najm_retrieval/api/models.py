@@ -9,7 +9,7 @@ from pydantic import (
 )
 
 
-API_SCHEMA_VERSION = "1.0.0"
+API_SCHEMA_VERSION = "1.1.0"
 
 
 class RetrieveRequest(BaseModel):
@@ -103,6 +103,18 @@ class RetrievalResultResponse(BaseModel):
     scores: RetrievalScoresResponse
 
 
+class QuerySuggestionResponse(BaseModel):
+    """One public clickable query suggestion."""
+
+    query: str
+    label: str
+    kind: str
+
+    entity_id: str
+    entity_kind: str
+    version_ids: list[str]
+
+
 class RetrieveResponse(BaseModel):
     """Public policy-aware response."""
 
@@ -126,6 +138,12 @@ class RetrieveResponse(BaseModel):
         RetrievalResultResponse
     ]
 
+    suggestions: list[
+        QuerySuggestionResponse
+    ] = Field(
+        default_factory=list
+    )
+
     retrieval_latency_ms: float
 
 
@@ -141,6 +159,7 @@ __all__ = [
     "ErrorDetail",
     "HealthResponse",
     "PassageReferenceResponse",
+    "QuerySuggestionResponse",
     "ReadinessResponse",
     "RetrieveRequest",
     "RetrieveResponse",

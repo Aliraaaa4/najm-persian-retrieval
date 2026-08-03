@@ -19,16 +19,22 @@ from fastapi import (
 from najm_retrieval.api.models import (
     HealthResponse,
     PassageReferenceResponse,
+    QuerySuggestionResponse,
     ReadinessResponse,
     RetrieveRequest,
     RetrieveResponse,
     RetrievalResultResponse,
     RetrievalScoresResponse,
 )
+from najm_retrieval.api.query_suggestions import (
+    QuerySuggestion,
+)
 from najm_retrieval.api.runtime import (
+    build_query_suggestion_engine,
     build_retrieval_service,
 )
 from najm_retrieval.retrieval import (
+    AbstentionReason,
     RetrievalService,
     TrustedRetrievalResponse,
 )
@@ -49,9 +55,30 @@ class _RetrievalServiceProtocol(
         """Return one trusted retrieval response."""
 
 
+class _SuggestionEngineProtocol(
+    Protocol
+):
+    def suggest(
+        self,
+        *,
+        query_text: str,
+        reason: AbstentionReason,
+        return_results: bool,
+    ) -> tuple[
+        QuerySuggestion,
+        ...,
+    ]:
+        """Return safe deterministic query suggestions."""
+
+
 RuntimeLoader = Callable[
     [],
     _RetrievalServiceProtocol,
+]
+
+SuggestionLoader = Callable[
+    [],
+    _SuggestionEngineProtocol,
 ]
 
 
@@ -65,8 +92,20 @@ def create_app(
         RuntimeLoader
         | None
     ) = build_retrieval_service,
+    suggestion_engine: (
+        _SuggestionEngineProtocol
+        | None
+    ) = None,
+    suggestion_loader: (
+        SuggestionLoader
+        | None
+    ) = build_query_suggestion_engine,
 ) -> FastAPI:
     """Create an API without loading the dense model during import."""
+
+    service_was_injected = (
+        service is not None
+    )
 
     @asynccontextmanager
     async def lifespan(
@@ -93,6 +132,31 @@ def create_app(
                     type(error).__name__
                 )
 
+        if (
+            application.state.retrieval_service
+            is not None
+            and application.state
+            .query_suggestion_engine
+            is None
+            and suggestion_loader
+            is not None
+            and not service_was_injected
+        ):
+            try:
+                application.state.query_suggestion_engine = (
+                    suggestion_loader()
+                )
+
+            except Exception as error:
+                logger.exception(
+                    "NAJM query suggestion "
+                    "initialization failed."
+                )
+
+                application.state.suggestion_error = (
+                    type(error).__name__
+                )
+
         yield
 
     application = FastAPI(
@@ -112,6 +176,14 @@ def create_app(
     )
 
     application.state.startup_error = (
+        None
+    )
+
+    application.state.query_suggestion_engine = (
+        suggestion_engine
+    )
+
+    application.state.suggestion_error = (
         None
     )
 
@@ -272,6 +344,10 @@ def create_app(
         return _public_response(
             result,
             limit=payload.limit,
+            suggestion_engine=(
+                request.app.state
+                .query_suggestion_engine
+            ),
         )
 
     return application
@@ -281,6 +357,10 @@ def _public_response(
     result: TrustedRetrievalResponse,
     *,
     limit: int,
+    suggestion_engine: (
+        _SuggestionEngineProtocol
+        | None
+    ) = None,
 ) -> RetrieveResponse:
     public_passages = (
         result.passages[
@@ -319,10 +399,79 @@ def _public_response(
             serialized
         ),
         results=serialized,
+        suggestions=_safe_suggestions(
+            result,
+            suggestion_engine=(
+                suggestion_engine
+            ),
+        ),
         retrieval_latency_ms=(
             result.retrieval_latency_ms
         ),
     )
+
+
+def _safe_suggestions(
+    result: TrustedRetrievalResponse,
+    *,
+    suggestion_engine: (
+        _SuggestionEngineProtocol
+        | None
+    ),
+) -> list[
+    QuerySuggestionResponse
+]:
+    if (
+        suggestion_engine is None
+        or result.return_results
+    ):
+        return []
+
+    try:
+        suggestions = (
+            suggestion_engine.suggest(
+                query_text=(
+                    result.query_text
+                ),
+                reason=result.reason,
+                return_results=(
+                    result.return_results
+                ),
+            )
+        )
+
+        return [
+            QuerySuggestionResponse(
+                query=(
+                    suggestion.query_text
+                ),
+                label=(
+                    suggestion.label
+                ),
+                kind=(
+                    suggestion.kind
+                ),
+                entity_id=(
+                    suggestion.entity_id
+                ),
+                entity_kind=(
+                    suggestion.entity_kind
+                ),
+                version_ids=list(
+                    suggestion.version_ids
+                ),
+            )
+            for suggestion
+            in suggestions
+        ]
+
+    except Exception:
+        logger.exception(
+            "Query suggestion generation "
+            "failed."
+        )
+
+        return []
 
 
 def _serialize_passage(
