@@ -53,3 +53,6 @@ parser_outputs.zip
 
 /artifacts/indexes/
 /artifacts/diagnostics/
+/najm-runtime-artifacts-*.zip
+/najm-runtime-artifacts-*.zip.sha256
+/artifacts/runtime/

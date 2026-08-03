@@ -5,7 +5,6 @@ from __future__ import annotations
 from dataclasses import dataclass
 import os
 from pathlib import Path
-from tempfile import gettempdir
 
 from najm_retrieval.api.query_suggestions import (
     QuerySuggestionEngine,
@@ -54,6 +53,8 @@ class ApiSettings:
         "intfloat/multilingual-e5-small"
     )
 
+    dense_local_files_only: bool = False
+
     return_limit: int = 10
 
     @classmethod
@@ -63,10 +64,6 @@ class ApiSettings:
         """Resolve settings from environment variables and local defaults."""
 
         project_root = _resolve_project_root()
-
-        temporary_root = Path(
-            gettempdir()
-        )
 
         corpus_artifact_id = (
             os.environ.get(
@@ -85,6 +82,23 @@ class ApiSettings:
             ).strip()
         )
 
+        dense_local_files_only = _environment_boolean(
+            os.environ.get(
+                "NAJM_DENSE_LOCAL_FILES_ONLY",
+                "false",
+            ),
+            field_name=(
+                "NAJM_DENSE_LOCAL_FILES_ONLY"
+            ),
+        )
+
+        runtime_root = (
+            project_root
+            / "artifacts"
+            / "runtime"
+            / corpus_artifact_id
+        )
+
         return_limit = _positive_integer(
             os.environ.get(
                 "NAJM_RETURN_LIMIT",
@@ -100,24 +114,21 @@ class ApiSettings:
             lexical_index_path=_environment_path(
                 "NAJM_LEXICAL_INDEX_PATH",
                 (
-                    temporary_root
-                    / "najm_real_lexical_index.sqlite3"
+                    runtime_root
+                    / "lexical.sqlite3"
                 ),
             ),
             passage_store_path=_environment_path(
                 "NAJM_PASSAGE_STORE_PATH",
                 (
-                    temporary_root
-                    / "najm_real_passage_store.sqlite3"
+                    runtime_root
+                    / "passage_store.sqlite3"
                 ),
             ),
             dense_artifact_root=_environment_path(
                 "NAJM_DENSE_ARTIFACT_ROOT",
                 (
-                    project_root
-                    / "artifacts"
-                    / "indexes"
-                    / corpus_artifact_id
+                    runtime_root
                     / "dense"
                     / "intfloat__multilingual-e5-small"
                 ),
@@ -159,6 +170,9 @@ class ApiSettings:
             ),
             dense_model_name=(
                 dense_model_name
+            ),
+            dense_local_files_only=(
+                dense_local_files_only
             ),
             return_limit=return_limit,
         )
@@ -230,7 +244,9 @@ def build_retrieval_service(
     dense_index = DenseIndex(
         resolved.dense_artifact_root,
         device="cpu",
-        local_files_only=True,
+        local_files_only=(
+            resolved.dense_local_files_only
+        ),
         verify_hashes=True,
     )
 
@@ -364,6 +380,37 @@ def _resolve_project_root(
         Path(__file__)
         .resolve()
         .parents[3]
+    )
+
+
+def _environment_boolean(
+    value: str,
+    *,
+    field_name: str,
+) -> bool:
+    """Parse one explicit boolean environment setting."""
+
+    normalized = value.strip().casefold()
+
+    if normalized in {
+        "1",
+        "true",
+        "yes",
+        "on",
+    }:
+        return True
+
+    if normalized in {
+        "0",
+        "false",
+        "no",
+        "off",
+    }:
+        return False
+
+    raise ApiRuntimeError(
+        f"{field_name} must be one of: "
+        "true, false, 1, 0, yes, no, on, off."
     )
 
 

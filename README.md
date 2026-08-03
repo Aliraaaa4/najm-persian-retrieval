@@ -38,6 +38,61 @@ python -m venv .venv
 python -m pip install -r requirements.txt
 ```
 
+## Runtime artifacts
+
+The API needs the prepared lexical index, passage store, and dense index.
+Download these two assets from the GitHub Release attached to `v0.1.0`:
+
+- `najm-runtime-artifacts-v1.zip`
+- `najm-runtime-artifacts-v1.zip.sha256`
+
+Place both files in the repository root. On Windows, verify the archive:
+
+```powershell
+Get-FileHash .\najm-runtime-artifacts-v1.zip -Algorithm SHA256
+Get-Content .\najm-runtime-artifacts-v1.zip.sha256
+```
+
+The two SHA-256 values must match. Extract the archive into the repository root:
+
+```powershell
+Expand-Archive `
+    -LiteralPath .\najm-runtime-artifacts-v1.zip `
+    -DestinationPath . `
+    -Force
+```
+
+A cross-platform alternative is:
+
+```bash
+python -m zipfile -e najm-runtime-artifacts-v1.zip .
+```
+
+The extracted runtime layout is:
+
+```text
+artifacts/runtime/corpus-ad111acd912e/
+├── lexical.sqlite3
+├── passage_store.sqlite3
+└── dense/intfloat__multilingual-e5-small/
+```
+
+The embedding model `intfloat/multilingual-e5-small` is loaded from the local
+Hugging Face cache when available. On a fresh machine, the first retrieval may
+download the model once and cache it for later local use.
+
+For a fully offline run after the model is cached:
+
+```powershell
+$env:NAJM_DENSE_LOCAL_FILES_ONLY = "true"
+```
+
+Maintainers can rebuild the release bundle from validated local artifacts:
+
+```powershell
+python .\scripts\build_runtime_bundle.py --force
+```
+
 ## Run the demo UI
 
 From the project root, activate the virtual environment and start the local
@@ -58,8 +113,8 @@ http://127.0.0.1:8000/
 The interface supports Persian right-to-left search, source-aware result cards,
 trusted abstention, and clickable query suggestions.
 
-The first request may take longer while the local dense model and indexes are
-loaded.
+The first retrieval may take longer while the dense model is loaded or
+downloaded into the local cache.
 
 ## API documentation
 
