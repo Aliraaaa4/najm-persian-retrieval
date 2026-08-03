@@ -716,4 +716,3 @@ def test_missing_indexable_version_is_rejected(
                 / "store.sqlite3"
             ),
         )
-
