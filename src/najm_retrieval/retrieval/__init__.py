@@ -62,6 +62,16 @@ from najm_retrieval.retrieval.abstention_models import (
     AbstentionFeatures,
 )
 
+from najm_retrieval.retrieval.passage_store import (
+    PassageStore,
+    PassageStoreError,
+    PassageStoreLookupError,
+)
+from najm_retrieval.retrieval.passage_store_models import (
+    PASSAGE_STORE_SCHEMA_VERSION,
+    PassageStoreRecord,
+)
+
 from najm_retrieval.retrieval.dense_index import (
     DenseIndex,
     DenseIndexError,
@@ -135,6 +145,11 @@ __all__ = [
     "ABSTENTION_FEATURE_SCHEMA_VERSION",
     "AbstentionFeatureExtractor",
     "AbstentionFeatures",
+    "PASSAGE_STORE_SCHEMA_VERSION",
+    "PassageStore",
+    "PassageStoreError",
+    "PassageStoreLookupError",
+    "PassageStoreRecord",
     "DENSE_INDEX_SCHEMA_VERSION",
     "HYBRID_RETRIEVAL_SCHEMA_VERSION",
     "LEXICAL_INDEX_SCHEMA_VERSION",
