@@ -5,6 +5,13 @@ from __future__ import annotations
 from dataclasses import dataclass
 import math
 
+from najm_retrieval.retrieval.dense_models import (
+    DenseSearchResult,
+)
+from najm_retrieval.retrieval.models import (
+    LexicalSearchResult,
+)
+
 
 HYBRID_RETRIEVAL_SCHEMA_VERSION = "1.0.0"
 
@@ -158,8 +165,38 @@ class HybridSearchResult:
             )
 
 
+
+@dataclass(frozen=True)
+class HybridRetrievalRun:
+    """Component and fused results from one retrieval execution."""
+
+    lexical_result: LexicalSearchResult | None
+    dense_result: DenseSearchResult
+    hybrid_result: HybridSearchResult
+
+    def __post_init__(self) -> None:
+        """Require all available results to describe one query."""
+
+        query_texts = {
+            self.dense_result.query_text,
+            self.hybrid_result.query_text,
+        }
+
+        if self.lexical_result is not None:
+            query_texts.add(
+                self.lexical_result.query_text
+            )
+
+        if len(query_texts) != 1:
+            raise ValueError(
+                "Hybrid retrieval run contains results "
+                "from different queries."
+            )
+
+
 __all__ = [
     "HYBRID_RETRIEVAL_SCHEMA_VERSION",
+    "HybridRetrievalRun",
     "HybridSearchHit",
     "HybridSearchResult",
 ]

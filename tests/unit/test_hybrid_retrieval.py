@@ -9,6 +9,7 @@ import pytest
 from najm_retrieval.retrieval import (
     DenseSearchHit,
     DenseSearchResult,
+    HybridRetrievalRun,
     HybridRetriever,
     HybridRetrieverError,
     LexicalSearchMode,
@@ -83,9 +84,11 @@ def _lexical_result(
 
 def _dense_result(
     hits: tuple[DenseSearchHit, ...],
+    *,
+    query_text: str = "پرسش",
 ) -> DenseSearchResult:
     return DenseSearchResult(
-        query_text="پرسش",
+        query_text=query_text,
         model_name="example/model",
         hits=hits,
         latency_ms=3.0,
@@ -279,7 +282,8 @@ def test_lexical_token_failure_falls_back_to_dense() -> None:
     )
     dense = _FakeDenseIndex(
         _dense_result(
-            (_dense_hit("dense-only", 1),)
+            (_dense_hit("dense-only", 1),),
+            query_text="!!!",
         )
     )
 
@@ -430,3 +434,102 @@ def test_search_validates_input(
             query_text,
             limit=limit,
         )
+
+def test_search_with_components_preserves_all_results() -> None:
+    lexical_result = _lexical_result(
+        (
+            _lexical_hit("shared", 1),
+            _lexical_hit("lexical-only", 2),
+        )
+    )
+    dense_result = _dense_result(
+        (
+            _dense_hit("shared", 1),
+            _dense_hit("dense-only", 2),
+        )
+    )
+
+    lexical = _FakeLexicalIndex(
+        result=lexical_result
+    )
+    dense = _FakeDenseIndex(
+        result=dense_result
+    )
+
+    run = HybridRetriever(
+        lexical,
+        dense,
+        candidate_limit=2,
+    ).search_with_components(
+        "پرسش",
+        limit=2,
+    )
+
+    assert isinstance(
+        run,
+        HybridRetrievalRun,
+    )
+    assert run.lexical_result is lexical_result
+    assert run.dense_result is dense_result
+    assert [
+        hit.passage_id
+        for hit in run.hybrid_result.hits
+    ] == [
+        "shared",
+        "lexical-only",
+    ]
+
+    assert lexical.calls == [
+        (
+            "پرسش",
+            2,
+            LexicalSearchMode.AUTO,
+        )
+    ]
+    assert dense.calls == [
+        ("پرسش", 2)
+    ]
+
+
+def test_search_with_components_preserves_dense_fallback() -> None:
+    lexical = _FakeLexicalIndex(
+        error=ValueError(
+            "Query contains no searchable terms."
+        )
+    )
+    dense_result = _dense_result(
+        (
+            _dense_hit("dense-only", 1),
+        ),
+        query_text="!!!",
+    )
+    dense = _FakeDenseIndex(
+        result=dense_result
+    )
+
+    run = HybridRetriever(
+        lexical,
+        dense,
+        candidate_limit=1,
+    ).search_with_components(
+        "!!!",
+        limit=1,
+    )
+
+    assert run.lexical_result is None
+    assert run.dense_result is dense_result
+    assert (
+        run.hybrid_result.hits[0].passage_id
+        == "dense-only"
+    )
+
+    assert lexical.calls == [
+        (
+            "!!!",
+            1,
+            LexicalSearchMode.AUTO,
+        )
+    ]
+    assert dense.calls == [
+        ("!!!", 1)
+    ]

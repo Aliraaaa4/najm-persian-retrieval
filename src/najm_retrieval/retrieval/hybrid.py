@@ -11,6 +11,7 @@ from najm_retrieval.retrieval.dense_models import (
     DenseSearchResult,
 )
 from najm_retrieval.retrieval.hybrid_models import (
+    HybridRetrievalRun,
     HybridSearchHit,
     HybridSearchResult,
 )
@@ -114,6 +115,25 @@ class HybridRetriever:
         ),
     ) -> HybridSearchResult:
         """Search both indexes and return a fused ranking."""
+
+        run = self.search_with_components(
+            query_text,
+            limit=limit,
+            lexical_mode=lexical_mode,
+        )
+
+        return run.hybrid_result
+
+    def search_with_components(
+        self,
+        query_text: str,
+        *,
+        limit: int = 10,
+        lexical_mode: LexicalSearchMode = (
+            LexicalSearchMode.AUTO
+        ),
+    ) -> HybridRetrievalRun:
+        """Search once and preserve component and fused results."""
 
         if not isinstance(query_text, str) or not query_text.strip():
             raise ValueError(
@@ -221,7 +241,7 @@ class HybridRetriever:
             perf_counter() - started_at
         ) * 1000.0
 
-        return HybridSearchResult(
+        hybrid_result = HybridSearchResult(
             query_text=query_text,
             hits=hits,
             latency_ms=latency_ms,
@@ -235,6 +255,12 @@ class HybridRetriever:
             dense_weight=self.dense_weight,
             rrf_constant=self.rrf_constant,
             candidate_limit=self.candidate_limit,
+        )
+
+        return HybridRetrievalRun(
+            lexical_result=lexical_result,
+            dense_result=dense_result,
+            hybrid_result=hybrid_result,
         )
 
     def _add_lexical_candidates(

@@ -77,6 +77,7 @@ from najm_retrieval.retrieval.hybrid import (
 )
 from najm_retrieval.retrieval.hybrid_models import (
     HYBRID_RETRIEVAL_SCHEMA_VERSION,
+    HybridRetrievalRun,
     HybridSearchHit,
     HybridSearchResult,
 )
@@ -134,6 +135,7 @@ __all__ = [
     "DenseIndexError",
     "DenseSearchHit",
     "DenseSearchResult",
+    "HybridRetrievalRun",
     "HybridRetriever",
     "HybridRetrieverError",
     "HybridSearchHit",
