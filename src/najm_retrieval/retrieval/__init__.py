@@ -62,6 +62,10 @@ from najm_retrieval.retrieval.abstention_models import (
     AbstentionFeatures,
 )
 
+from najm_retrieval.retrieval.passage_store_builder import (
+    PassageStoreBuildError,
+    build_passage_store,
+)
 from najm_retrieval.retrieval.passage_store import (
     PassageStore,
     PassageStoreError,
@@ -69,6 +73,7 @@ from najm_retrieval.retrieval.passage_store import (
 )
 from najm_retrieval.retrieval.passage_store_models import (
     PASSAGE_STORE_SCHEMA_VERSION,
+    PassageStoreBuildReport,
     PassageStoreRecord,
 )
 
@@ -147,9 +152,12 @@ __all__ = [
     "AbstentionFeatures",
     "PASSAGE_STORE_SCHEMA_VERSION",
     "PassageStore",
+    "PassageStoreBuildError",
+    "PassageStoreBuildReport",
     "PassageStoreError",
     "PassageStoreLookupError",
     "PassageStoreRecord",
+    "build_passage_store",
     "DENSE_INDEX_SCHEMA_VERSION",
     "HYBRID_RETRIEVAL_SCHEMA_VERSION",
     "LEXICAL_INDEX_SCHEMA_VERSION",

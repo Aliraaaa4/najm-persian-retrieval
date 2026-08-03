@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from pathlib import Path
 
 
 PASSAGE_STORE_SCHEMA_VERSION = "1.0.0"
@@ -182,7 +183,67 @@ class PassageStoreRecord:
         )
 
 
+@dataclass(frozen=True)
+class PassageStoreBuildReport:
+    """Summary of one completed SQLite passage-store build."""
+
+    output_path: Path
+    passage_count: int
+    version_count: int
+    source_file_count: int
+    database_byte_count: int
+    source_manifest_sha256: str
+    schema_version: str = (
+        PASSAGE_STORE_SCHEMA_VERSION
+    )
+
+    def __post_init__(self) -> None:
+        if (
+            self.schema_version
+            != PASSAGE_STORE_SCHEMA_VERSION
+        ):
+            raise ValueError(
+                "Unsupported passage store "
+                f"schema version: {self.schema_version}"
+            )
+
+        for field_name in (
+            "passage_count",
+            "version_count",
+            "source_file_count",
+            "database_byte_count",
+        ):
+            value = getattr(
+                self,
+                field_name,
+            )
+
+            if value < 0:
+                raise ValueError(
+                    f"{field_name} cannot be negative."
+                )
+
+        digest = (
+            self.source_manifest_sha256
+            .lower()
+        )
+
+        if (
+            len(digest) != 64
+            or any(
+                character
+                not in "0123456789abcdef"
+                for character in digest
+            )
+        ):
+            raise ValueError(
+                "source_manifest_sha256 must "
+                "contain 64 hexadecimal characters."
+            )
+
+
 __all__ = [
     "PASSAGE_STORE_SCHEMA_VERSION",
+    "PassageStoreBuildReport",
     "PassageStoreRecord",
 ]
