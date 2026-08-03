@@ -76,6 +76,15 @@ from najm_retrieval.retrieval.passage_store_models import (
     PassageStoreBuildReport,
     PassageStoreRecord,
 )
+from najm_retrieval.retrieval.retrieval_service import (
+    RetrievalService,
+    RetrievalServiceError,
+)
+from najm_retrieval.retrieval.retrieval_service_models import (
+    RETRIEVAL_SERVICE_SCHEMA_VERSION,
+    RetrievedPassage,
+    TrustedRetrievalResponse,
+)
 
 from najm_retrieval.retrieval.dense_index import (
     DenseIndex,
@@ -158,6 +167,11 @@ __all__ = [
     "PassageStoreLookupError",
     "PassageStoreRecord",
     "build_passage_store",
+    "RETRIEVAL_SERVICE_SCHEMA_VERSION",
+    "RetrievalService",
+    "RetrievalServiceError",
+    "RetrievedPassage",
+    "TrustedRetrievalResponse",
     "DENSE_INDEX_SCHEMA_VERSION",
     "HYBRID_RETRIEVAL_SCHEMA_VERSION",
     "LEXICAL_INDEX_SCHEMA_VERSION",
