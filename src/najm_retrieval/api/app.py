@@ -5,6 +5,7 @@ from __future__ import annotations
 from collections.abc import Callable
 from contextlib import asynccontextmanager
 import logging
+from pathlib import Path
 from threading import Lock
 from typing import Any, Protocol
 
@@ -14,6 +15,13 @@ from fastapi import (
     Request,
     Response,
     status,
+)
+
+from fastapi.responses import (
+    FileResponse,
+)
+from fastapi.staticfiles import (
+    StaticFiles,
 )
 
 from najm_retrieval.api.models import (
@@ -42,6 +50,17 @@ from najm_retrieval.retrieval import (
 
 logger = logging.getLogger(
     __name__
+)
+
+
+STATIC_DIRECTORY = (
+    Path(__file__).resolve().parent
+    / "static"
+)
+
+DEMO_INDEX_PATH = (
+    STATIC_DIRECTORY
+    / "index.html"
 )
 
 
@@ -170,6 +189,28 @@ def create_app(
         version="0.1.0",
         lifespan=lifespan,
     )
+
+    application.mount(
+        "/static",
+        StaticFiles(
+            directory=STATIC_DIRECTORY
+        ),
+        name="static",
+    )
+
+    @application.get(
+        "/",
+        include_in_schema=False,
+        response_class=FileResponse,
+    )
+    def demo_ui(
+    ) -> FileResponse:
+        """Serve the dependency-free browser demo."""
+
+        return FileResponse(
+            DEMO_INDEX_PATH,
+            media_type="text/html",
+        )
 
     application.state.retrieval_service = (
         service

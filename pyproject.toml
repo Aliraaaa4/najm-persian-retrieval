@@ -29,6 +29,14 @@ dev = [
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+"najm_retrieval.api" = [
+    "static/*.html",
+    "static/*.css",
+    "static/*.js",
+    "static/*.png",
+]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]

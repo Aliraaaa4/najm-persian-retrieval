@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="رابط بازیابی قابل اعتماد متون تاریخی فارسی">
+  <title>نجم | بازیابی متون تاریخی فارسی</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#search-form">رفتن به جست‌وجو</a>
+
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="صفحه اصلی نجم">
+      <img class="brand-logo" src="/static/najm-logo.png" alt="" width="52" height="52">
+      <span class="brand-copy">
+        <strong>NAJM</strong>
+        <span>Persian Retrieval</span>
+      </span>
+    </a>
+    <a class="docs-link" href="/docs">مستندات API</a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-mark" aria-hidden="true"></div>
+      <h1 id="page-title">بازیابی قابل اعتماد متون تاریخی فارسی</h1>
+      <p>بازیابی قطعه‌های منبع با ارجاع روشن و پیشنهادهای امن.</p>
+
+      <form id="search-form" class="search-card" novalidate>
+        <label class="visually-hidden" for="query">پرسش فارسی</label>
+
+        <div class="query-row">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input
+            id="query"
+            name="query"
+            type="search"
+            maxlength="1000"
+            required
+            autocomplete="off"
+            placeholder="عبارت یا سؤال خود را وارد کنید..."
+          >
+        </div>
+
+        <div class="search-actions">
+          <button id="submit-button" type="submit">
+            <span class="button-label">جست‌وجو</span>
+            <span class="button-progress" hidden>در حال بازیابی…</span>
+          </button>
+
+          <label class="limit-control" for="limit">
+            <span>حداکثر نتایج</span>
+            <select id="limit" name="limit">
+              <option value="3" selected>۳</option>
+              <option value="5">۵</option>
+              <option value="10">۱۰</option>
+            </select>
+          </label>
+        </div>
+      </form>
+    </section>
+
+    <section id="status-panel" class="status-panel" aria-live="polite" hidden></section>
+
+    <section id="results-section" class="panel" aria-labelledby="results-title" hidden>
+      <div class="panel-heading">
+        <h2 id="results-title">نتایج</h2>
+        <span id="result-count" class="result-count"></span>
+      </div>
+      <div id="results" class="results"></div>
+    </section>
+
+    <section
+      id="suggestions-section"
+      class="panel suggestions-panel"
+      aria-labelledby="suggestions-title"
+      hidden
+    >
+      <div class="panel-heading">
+        <h2 id="suggestions-title">پیشنهادهای امن</h2>
+      </div>
+      <p class="suggestions-note">
+        برای دقیق‌تر شدن جست‌وجو، یکی از پیشنهادهای زیر را انتخاب کنید.
+      </p>
+      <div id="suggestions" class="suggestions"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span class="footer-star" aria-hidden="true">✦</span>
+    <p>NAJM — بازیابی ترکیبی، ارجاع پایدار و سیاست عدم پاسخ</p>
+  </footer>
+
+  <noscript>برای استفاده از رابط نمایشی، JavaScript مرورگر باید فعال باشد.</noscript>
+</body>
+</html>

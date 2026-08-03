@@ -32,6 +32,49 @@ See [`docs/api.md`](docs/api.md) for the implemented API contract.
 
 ## Installation
 
-```bash
+```powershell
 python -m venv .venv
+.\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
+```
+
+## Run the demo UI
+
+From the project root, activate the virtual environment and start the local
+FastAPI server:
+
+```powershell
+Set-Location D:\projects\najm-retrieval
+.\.venv\Scripts\Activate.ps1
+python -m uvicorn najm_retrieval.api.app:app --host 127.0.0.1 --port 8000
+```
+
+Then open the browser interface:
+
+```text
+http://127.0.0.1:8000/
+```
+
+The interface supports Persian right-to-left search, source-aware result cards,
+trusted abstention, and clickable query suggestions.
+
+The first request may take longer while the local dense model and indexes are
+loaded.
+
+## API documentation
+
+Swagger UI is available while the server is running:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+See [`docs/api.md`](docs/api.md) for the public API contract.
+
+## Tests
+
+Run the full test suite:
+
+```powershell
+python -m pytest -q
+```
