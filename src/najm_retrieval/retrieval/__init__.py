@@ -81,6 +81,13 @@ from najm_retrieval.retrieval.hybrid_models import (
     HybridSearchHit,
     HybridSearchResult,
 )
+from najm_retrieval.retrieval.trusted_models import (
+    TRUSTED_RETRIEVAL_SCHEMA_VERSION,
+    TrustedRetrievalResult,
+)
+from najm_retrieval.retrieval.trusted_retriever import (
+    TrustedRetriever,
+)
 from najm_retrieval.retrieval.lexical_index import (
     LexicalIndex,
     LexicalIndexError,
@@ -140,6 +147,9 @@ __all__ = [
     "HybridRetrieverError",
     "HybridSearchHit",
     "HybridSearchResult",
+    "TRUSTED_RETRIEVAL_SCHEMA_VERSION",
+    "TrustedRetrievalResult",
+    "TrustedRetriever",
     "LexicalIndex",
     "LexicalIndexBuildReport",
     "LexicalIndexError",
